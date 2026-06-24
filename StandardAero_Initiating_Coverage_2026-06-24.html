@@ -169,6 +169,9 @@ iframe.tech{width:100%;height:760px;border:1px solid var(--border);border-radius
 .h-tall{height:360px} .h-mid{height:300px} .h-sm{height:196px} .h-donut{height:300px}
 figure.exhibit .chart-wrap{margin:0}
 .donuts{display:flex;gap:18px;flex-wrap:wrap}
+.donut-col{flex:1;min-width:200px;text-align:center}                 /* Exhibit 2 dual donut: one column per period */
+.donut-col .chart-wrap{width:100%}
+.donut-yr{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin-bottom:4px}
 .legend{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--t-border)}
 .lg-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--t-text)}
 .lg-sw{width:11px;height:11px;border-radius:3px;flex-shrink:0}
@@ -373,11 +376,19 @@ Engine Services (dilutive). The evidence is mixed near term — CRS margin is cl
 but its small base caps the group-margin uplift while LEAP/CFM56 DFW weigh on the larger segment.</p>
 </blockquote>
 <h3 id="company-overview-geographies"><span><b class="num">1.4</b>Geographies</span><a class="backtoc" href="#toc">↑</a></h3>
-<p>Operations span 11 countries — the US, Canada, the UK, France, Ireland, Singapore, Australia, the Netherlands,
-Romania, South Africa, Brazil and Kenya — concentrated in North America. Revenue from outside the US and Canada
-was ~32% of total in FY2025 (30% in FY2024). Geographic concentration is moderate and rising abroad; it reads
-as a diversification lever rather than a present risk.</p>
-<figure class="exhibit"><div class="chart-wrap h-donut"><canvas id="geopie"></canvas></div><figcaption><span class="exn">Exhibit 2</span> — Revenue by geography — FY2025 (%) · Source: FY2025 10-K</figcaption></figure>
+<p>StandardAero operates across 11 countries — the US, Canada, the UK, France, Ireland, Singapore, Australia, the
+Netherlands, Romania, South Africa, Brazil and Kenya — but revenue is anchored in North America, with the US and
+Canada together roughly two-thirds of FY2025 revenue and the balance spread across the UK, the rest of Europe, Asia
+and a long tail of other markets. Revenue is reported by location of customer, and engine-MRO demand follows the
+installed base and operators' fleets, so the geographic mix tracks where StandardAero holds platform authorizations
+more than where its shops sit.</p>
+<p>The concentration read is benign and improving: no single country outside the US is individually material (each under
+~13% of revenue), and the mix is broadening over time — the US has gradually ceded share to faster-growing regions,
+led by Asia (commercial-fleet growth) and Canada, while the UK has given back share. There is no acute single-country
+dependency; the more relevant geographic risk is indirect — exposure to US / allied <strong>military budgets</strong> and to
+<strong>cross-border OEM parts supply</strong> rather than to demand in any one customer geography — plus FX translation on the
+~one-third of revenue earned outside the US.</p>
+<figure class="exhibit"><div class="donuts"><div class="donut-col"><div class="donut-yr">FY2023 · $4,563M</div><div class="chart-wrap h-donut"><canvas id="geomix_0"></canvas></div></div><div class="donut-col"><div class="donut-yr">FY2025 · $6,063M</div><div class="chart-wrap h-donut"><canvas id="geomix_1"></canvas></div></div></div><div class="legend" id="geomix_lg"></div><figcaption><span class="exn">Exhibit 2</span> — Geographic revenue mix shift — FY2023 vs FY2025, by region · Source: FY2025 10-K</figcaption></figure>
 <h3 id="company-overview-revenue-model"><span><b class="num">1.5</b>Revenue Model</span><a class="backtoc" href="#toc">↑</a></h3>
 <p>Roughly 80% of FY2025 revenue was under long-term customer agreements, with most of the rest repeat shop-visit
 work tied to the installed base — so revenue is relatively sticky for an aerospace aftermarket business, closer
@@ -1543,6 +1554,20 @@ function pie(id,c){
   else if(wrap){ const d=document.createElement('div'); d.className='legend'; d.innerHTML=cats;
     wrap.parentNode.insertBefore(d, wrap.nextSibling); }   // else inject a below-legend after the chart
 }
+function dualDonut(id,c){
+  // Exhibit 2 — two side-by-side donuts (one per period), shared category legend; centre shows the period total.
+  // c.cats + c.donuts:[{data,center,sub,yr}]; build_report emits a canvas per donut (id_0, id_1) + the legend (id_lg).
+  const opt=(d)=>({responsive:true,maintainAspectRatio:false,cutout:'66%',
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:x=>` ${x.label}: ${x.raw}%`}},
+      datalabels:{display:true,color:'#fff',font:{size:12,weight:'600'},formatter:v=>v>=10?v+'%':''},
+      centerText:{value:d.center||'',sub:d.sub||c.centerSub||''}}});
+  (c.donuts||[]).forEach((d,i)=>{ const el=document.getElementById(id+'_'+i); if(!el) return;
+    charts[id+'_'+i]=new Chart(el,{type:'doughnut',plugins:[centerTextPlugin],
+      data:{labels:c.cats,datasets:[{data:d.data,backgroundColor:T.cat.slice(0,c.cats.length),
+        borderColor:T.card,borderWidth:3,hoverOffset:6}]},options:opt(d)}); });
+  const lg=document.getElementById(c.legendEl||id+'_lg');
+  if(lg) lg.innerHTML=c.cats.map((s,i)=>`<span class="lg-item"><span class="lg-sw" style="background:${T.cat[i%6]}"></span>${s}</span>`).join('');
+}
 function stacked(id,c){
   // stacked bar: c.series=[{label,data,stack?}], c.labels; c.pct→0-100 axis; c.labelMin hides small segment labels
   const f=FMT(c.fmt||'money'), thr=c.labelMin!=null?c.labelMin:0;
@@ -1685,7 +1710,7 @@ function renderFin(elId, FIN){
 }
 
 /* ---------------- dispatch ---------------- */
-const KINDS={columnLine,columnLineChip,singleColumn,line:lineChart,groupedColumn,hbar,bubble,scatter:bubble,nestedDonut,pie,stacked,waterfall};
+const KINDS={columnLine,columnLineChip,singleColumn,line:lineChart,groupedColumn,hbar,bubble,scatter:bubble,nestedDonut,dualDonut,pie,stacked,waterfall};
 function buildReport(REPORT){
   applyTheme(REPORT.theme||'naturalforest');
   (REPORT.charts||[]).forEach(c=>{ try{ (KINDS[c.kind]||(()=>{}))(c.id,c); }catch(e){ console.error('chart',c.id,e); } });
@@ -1866,18 +1891,46 @@ function buildReport(REPORT){
    "insight": "CRS is 11.5% of revenue but 22.6% of segment EBITDA \u2014 above-portfolio margins; Engine Services is 88.5% of revenue and 77.4% of segment EBITDA."
   },
   {
-   "id": "geopie",
-   "kind": "pie",
+   "id": "geomix",
+   "kind": "dualDonut",
    "h": "h-donut",
-   "caption": "Revenue by geography \u2014 FY2025 (%)",
+   "caption": "Geographic revenue mix shift \u2014 FY2023 vs FY2025, by region",
    "source": "FY2025 10-K",
-   "labels": [
-    "U.S. & Canada",
-    "International"
+   "cats": [
+    "United States",
+    "Canada",
+    "Rest of Europe",
+    "Asia",
+    "United Kingdom",
+    "Rest of world"
    ],
-   "data": [
-    68,
-    32
+   "donuts": [
+    {
+     "yr": "FY2023 \u00b7 $4,563M",
+     "center": "FY2023",
+     "sub": "$4,563M",
+     "data": [
+      62.7,
+      8.2,
+      7.9,
+      4.6,
+      9.9,
+      6.7
+     ]
+    },
+    {
+     "yr": "FY2025 \u00b7 $6,063M",
+     "center": "FY2025",
+     "sub": "$6,063M",
+     "data": [
+      55.9,
+      12.5,
+      9.0,
+      8.4,
+      7.4,
+      6.9
+     ]
+    }
    ]
   },
   {
