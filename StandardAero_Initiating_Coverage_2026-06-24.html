@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html><html lang="en" data-ddr-theme="forest"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>StandardAero, Inc. — Initiating Coverage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,8 +146,14 @@ figure.exhibit.side figcaption{font-size:.7rem}
 
 /* Technical chart — native exhibit (fragment inlined, theme-matched) or iframe fallback */
 figure.exhibit.tech-native{border:0;margin:1.2rem 0}
-figure.exhibit.tech-native .tc-card{margin:0}
+figure.exhibit.tech-native .tc-card{margin:0;text-align:left}   /* figure.exhibit centers captions; keep the card left-aligned */
 iframe.tech{width:100%;height:760px;border:1px solid var(--border);border-radius:8px;background:#fff}
+/* Harmonize the inlined technical card with the report. Theme (forest) comes from data-ddr-theme="forest" on
+   <html> (build_report.compose). Font: the card's chart.css ships body{font-family:"Inter"} as a later <style>
+   block, so beat it with higher specificity and put the report — and the card — on the report sans. */
+html body{font-family:var(--sans)}
+figure.exhibit.tech-native .tc-card,
+figure.exhibit.tech-native .tc-card *{font-family:var(--sans)}
 
 /* Footnotes / references */
 .foot{border-top:1px solid var(--border);margin:22px 36px 0;padding:14px 0 30px;color:var(--muted);font-size:.74rem;line-height:1.55}
@@ -250,82 +256,86 @@ table.data td:first-child{font-family:var(--sans);font-size:.84rem}
 </style></head><body><div class="page">
   <div class="mast"><div class="brand"><span class="mark"></span> Equity Research
     <span class="kind">· Initiation of Coverage</span></div>
-    <div class="meta">Industrials — Aerospace &amp; Defense<br>24 June 2026</div></div>
+    <div class="meta">Aerospace — Engine Aftermarket / MRO<br>2026-06-24</div></div>
   <div class="grad"></div>
   <div class="head"><div class="eyebrow">Initiation of Coverage</div>
     <div class="titlerow"><h1>StandardAero, Inc.</h1></div>
     <div class="sub">NYSE: SARO</div>
-    <div class="chips"><span class="chip">Initiation</span><span class="chip sector">Aerospace &amp; Defense</span><span class="chip">Mid-cap · $8.9B</span></div></div>
+    <div class="chips"><span class="chip">Initiation of Coverage</span><span class="chip sector">Engine Aftermarket / MRO</span><span class="chip">Mid cap · $8.9B</span></div></div>
   <div class="exec"><div class="main"><h2 id="executive-summary"><span>Executive Summary</span></h2>
-<p class="lead">StandardAero is the world's largest independent, pure-play provider of aerospace engine aftermarket (MRO) services — an installed-base-driven, ~80%-under-contract model with ~$6.25bn of LTM revenue compounding in the mid-teens. The market prices it on full-engine MRO's low-teens margin; the investable question is whether the higher-margin component-repair mix-shift and the free-cash-flow inflection re-rate it toward its engine-aftermarket peers. We initiate at <strong>Fair Value</strong>.</p>
+<p class="lead">StandardAero (NYSE: SARO) is the world's largest independent, pure-play provider of aerospace <strong>engine aftermarket services</strong> — engine maintenance, repair and overhaul (MRO), component repair, on-wing/field service and asset management — operating two segments, <strong>Engine Services</strong> (full-engine MRO, the scale business at a ~13% margin) and <strong>Component Repair Services / CRS</strong> (~29% margin, ~12% of revenue, the strategic priority). Carlyle acquired the business in 2019 and IPO'd it in October 2024, using the proceeds to retire debt. The investment case rests on a deep book of exclusive and semi-exclusive OEM service authorizations, mid-teens revenue growth against a mid-single-digit market, and a post-IPO deleveraging that has reset the credit profile.</p>
+<p>We initiate at <strong>Fair Value</strong> ($26.85). SARO trades at a clear discount to its direct engine-aftermarket comps, but the discount is largely explained by lower margins, higher leverage and thinner free-cash-flow conversion than the read-across names — so the re-rating is contingent on margin and FCF delivery rather than already mispriced.</p>
+<h3 id="executive-summary-financial-snapshot"><span>Financial snapshot</span><a class="backtoc" href="#toc">↑</a></h3>
 <table class="data">
 <thead>
 <tr>
-<th>($mm unless noted)</th>
+<th>Metric ($mm unless noted)</th>
 <th style="text-align: right;">LTM 1Q26</th>
-<th style="text-align: right;">NTM (consensus)</th>
+<th style="text-align: right;">FY2026E (guidance mid)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-kpi">
 <td>Revenue</td>
 <td style="text-align: right;">6,254</td>
-<td style="text-align: right;">6,425</td>
+<td style="text-align: right;">~6,388</td>
 </tr>
-<tr class="row-kpi">
-<td>Adjusted EBITDA</td>
-<td style="text-align: right;">813</td>
-<td style="text-align: right;">890</td>
+<tr>
+<td>Adjusted EBITDA (margin)</td>
+<td style="text-align: right;"><span class="pct">813 (13.0%)</span></td>
+<td style="text-align: right;"><span class="pct">~890 (~13.9%)</span></td>
 </tr>
 <tr>
 <td>Net income</td>
 <td style="text-align: right;">294</td>
-<td style="text-align: right;">391</td>
-</tr>
-<tr>
-<td>Enterprise value</td>
-<td style="text-align: right;">11,048</td>
 <td style="text-align: right;">—</td>
 </tr>
 <tr>
-<td>Net debt</td>
-<td style="text-align: right;">2,121</td>
+<td>Adjusted EPS</td>
 <td style="text-align: right;">—</td>
+<td style="text-align: right;">~$1.45</td>
+</tr>
+<tr class="row-kpi">
+<td>Free cash flow</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">~285</td>
+</tr>
+<tr>
+<td>EV / Net debt</td>
+<td style="text-align: right;">11,048 / 2,121</td>
+<td style="text-align: right;">— / ≤2.4x trend</td>
 </tr>
 </tbody>
 </table>
-<p><em>NTM = consensus / FY2026 guidance midpoint (Adj. EBITDA, FCF) and consensus EPS × shares (net income, calc.); EV and net debt are point-in-time. Subject figures are the step-4 model's LTM, identical to the Financial DD section.</em></p>
-<p><strong>Investment thesis</strong></p>
+<p><em>LTM = trailing twelve months to 1Q26. NTM = FY2026 company guidance midpoint (raised with the 1Q26 print). EV = market cap $8,927m + net debt $2,121m. Multiples computed from the inputs; peers reported EBITDA, subject Adjusted.</em></p>
+<h3 id="executive-summary-investment-thesis"><span>Investment thesis</span><a class="backtoc" href="#toc">↑</a></h3>
 <ul>
-<li><strong>Share gainer in a steady market.</strong> Revenue compounds ~13.5%/yr with growth <em>accelerating</em> (9.9% → 15.8%), ~2–3x the ~5–6% engine-MRO market — i.e. share gains and over-indexing to growth platforms (LEAP, CFM56), not just riding the cycle.</li>
-<li><strong>Margin mix-shift in motion.</strong> CRS (28.8% margin, 11.5% of revenue) is growing ~20%/yr versus Engine Services (12.9%); group margin should inflect toward ~14% as the LEAP/CFM56 ramp matures.</li>
-<li><strong>FCF inflection + organic deleveraging.</strong> FCF swung from negative (FY22–24) to +$209m (FY25), guided to $270–300m for FY26; net leverage fell 5.6x → 2.6x, the last leg organic.</li>
-<li><strong>Priced fairly, not cheaply.</strong> 13.6x EV/LTM EBITDA is a ~24% discount to the engine-aftermarket core comps (MTU/FTAI/AAR median 18.0x), but ~in line with the closest comp MTU (13.2x); the headline ~53% discount to the full-peer median (29.0x) is a margin/mix artefact (HEICO, Loar, FTAI).</li>
+<li><strong>Share gains in a steady market.</strong> Mid-teens organic growth (FY2025 revenue +15.8%) against a ~5–6% engine-MRO market implies durable share capture, concentrated on the LEAP/CFM56 ramp and component repair.</li>
+<li><strong>Margin mix-shift, gated by the ramp.</strong> CRS (28.8% margin, growing ~20%) is mix-accretive, but at ~12% of revenue its uplift is being absorbed by the dilutive ramp of new platforms in Engine Services — the central operating tension.</li>
+<li><strong>A deleveraging and FCF-inflection story.</strong> Net leverage fell from 5.6x (FY2023) to 2.6x; FCF turned positive in FY2025 (+$209m). The next leg must come from organic cash, which contract-asset working-capital intensity structurally gates.</li>
+<li><strong>Authorizations are the moat.</strong> Exclusive/semi-exclusive OEM licenses (sole-independent on several platforms; first independent LEAP Premier MRO in the Americas) are a genuine but authorization-dependent barrier.</li>
 </ul>
-<p><strong>Key strengths</strong></p>
+<h3 id="executive-summary-key-strengths"><span>Key strengths</span><a class="backtoc" href="#toc">↑</a></h3>
 <ul>
-<li><strong>Authorization moat.</strong> Exclusive / semi-exclusive OEM service authorizations — sole independent in North America on several Rolls-Royce, Honeywell and Safran platforms; first independent LEAP-1A/1B Premier MRO in the Americas.</li>
-<li><strong>Recurring, installed-base revenue</strong> — ~80% under long-term agreements; sticky shop-visit demand.</li>
-<li><strong>End-market diversification</strong> (commercial / business aviation / military) smooths the cycle.</li>
-<li><strong>Accretive CRS roll-up</strong> (ATI, Unified Turbines) consolidating a fragmented, higher-margin niche.</li>
+<li>Largest independent pure-play engine MRO; broad OEM authorization book and end-market diversification (commercial + business aviation + military).</li>
+<li>Recurring revenue base (~80% under long-term agreements) on an installed-base-driven model.</li>
+<li>Demonstrated post-LBO de-risking: leverage 5.6x → 2.6x, interest coverage 1.8x → 4.8x, first positive FCF year in FY2025.</li>
+<li>High-margin CRS platform consolidating a fragmented niche (ATI, Unified Turbines).</li>
 </ul>
-<p><strong>Key risks</strong></p>
+<h3 id="executive-summary-key-risks"><span>Key risks</span><a class="backtoc" href="#toc">↑</a></h3>
 <ul>
-<li><strong>OEM dependence</strong> — the OEMs are authorizer, largest supplier <em>and</em> largest competitor; a key authorization non-renewal is a material, platform-specific risk (top-4 OEM suppliers = a majority of parts purchases).</li>
-<li><strong>Working-capital intensity gates cash.</strong> Contract-asset / unbilled WIP (~$1.25bn) drives a working-capital drag; LTM FCF of $139m sits below the FY25 $209m print on the seasonal build.</li>
-<li><strong>New-platform margin drag</strong> (LEAP, CFM56 DFW) near-term, and <strong>military / DoD budget &amp; shutdown</strong> sensitivity.</li>
+<li><strong>OEM dependence</strong> — OEMs are authorizer, largest supplier and largest competitor; loss/non-renewal of a key authorization is a material, platform-specific risk.</li>
+<li><strong>FCF below the risk-free rate</strong> — a 1.6% LTM FCF yield sits ~280bp under the 4.40% 10-year Treasury; the equity is priced for the FCF inflection.</li>
+<li><strong>New-platform margin drag</strong> (LEAP, CFM56 DFW) near-term, plus military/DoD budget and government-shutdown sensitivity.</li>
 <li><strong>Sponsor overhang</strong> — Carlyle retains a substantial post-IPO stake (secondary sell-down risk).</li>
 </ul>
-<p><strong>Competitive positioning</strong></p>
-<p>StandardAero is the largest independent <em>pure-play</em> engine MRO — distinct from the commercial-airline-centric large independents (Lufthansa Technik, MTU Maintenance) and the OEM service arms (GE, Pratt &amp; Whitney, Rolls-Royce, Safran) that dominate new-platform aftermarket. Its edge is the breadth of OEM authorizations plus end-market diversification; its structural disadvantage is smaller commercial-engine scale than MTU/LHT and dependence on the very OEMs it competes with.</p>
-<p><strong>Entry verdict — Fair Value at $26.85.</strong> Cheaper than the full peer median but largely on margin/mix; broadly in line with the engine-aftermarket comps, and a 1.6% FCF yield below the 4.45% risk-free rate removes the deep-value case until the FY26 cash inflection proves out. <strong>Timing — Wait:</strong> the stock is in a downtrend (price −0.5% below a flattening EMA(100), RSI 52, MACD mixed) — accumulate on a pullback toward the 52-week low ($23.83) or on confirmation of the FCF inflection at the FY26 prints, rather than chasing here.</p>
-</div><aside class="rail"><div class="rating fair"><div class="cap">Fair Value</div><div class="rows"><div class="rrow"><span class="k">At price</span><span class="v">$26.85</span></div><div class="rrow"><span class="k">EV/LTM EBITDA</span><span class="v">13.6x</span></div><div class="rrow"><span class="k">vs core median</span><span class="v">18.0x</span></div></div></div><div class="keydata"><h4>Key data</h4><div class="kd"><span>Market cap</span><strong>$8.9B</strong></div><div class="kd"><span>Net debt / Adj. EBITDA</span><strong>2.6x</strong></div><div class="kd"><span>EV/LTM EBITDA</span><strong>13.6x</strong></div><div class="kd"><span>FCF yield</span><strong>1.6%</strong></div><div class="kd"><span>Dividend yield</span><strong>0.0%</strong></div><div class="kd"><span>52-week range</span><strong>$23.83–34.48</strong></div></div><div class="keydata"><h4>Valuation vs core comps</h4><div class="kd"><span>EV/EBITDA vs core</span><strong>13.6x vs 18.0x</strong></div><div class="kd"><span>NTM P/E vs core</span><strong>15.6x vs 22.7x</strong></div><div class="kd"><span>FCF yield</span><strong>1.6%</strong></div></div></aside></div>
-  <nav class="toc" id="toc"><h4>Contents</h4><ol><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#company-overview"><b class="tnum">1 · </b>Company Overview</a><ol><li><a href="#company-overview-company-description"><b class="tnum">1.1 </b>Company Description</a></li><li><a href="#company-overview-product-offering"><b class="tnum">1.2 </b>Product Offering</a></li><li><a href="#company-overview-key-reporting-segments"><b class="tnum">1.3 </b>Key Reporting Segments</a></li><li><a href="#company-overview-geographies"><b class="tnum">1.4 </b>Geographies</a></li><li><a href="#company-overview-revenue-model"><b class="tnum">1.5 </b>Revenue Model</a></li><li><a href="#company-overview-customers-sales-amp-marketing-distribution"><b class="tnum">1.6 </b>Customers / Sales &amp; Marketing / Distribution</a></li><li><a href="#company-overview-demand-drivers"><b class="tnum">1.7 </b>Demand Drivers</a></li><li><a href="#company-overview-cost-drivers"><b class="tnum">1.8 </b>Cost Drivers</a></li><li><a href="#company-overview-ai-considerations"><b class="tnum">1.9 </b>AI Considerations</a></li><li><a href="#company-overview-research-amp-development"><b class="tnum">1.10 </b>Research &amp; Development</a></li><li><a href="#company-overview-suppliers"><b class="tnum">1.11 </b>Suppliers</a></li><li><a href="#company-overview-employees"><b class="tnum">1.12 </b>Employees</a></li><li><a href="#company-overview-key-ip-or-facilities"><b class="tnum">1.13 </b>Key IP or Facilities</a></li><li><a href="#company-overview-key-acquisitions-and-divestitures"><b class="tnum">1.14 </b>Key Acquisitions and Divestitures</a></li><li><a href="#company-overview-collateral-overview"><b class="tnum">1.15 </b>Collateral Overview</a></li><li><a href="#company-overview-management-overview"><b class="tnum">1.16 </b>Management Overview</a></li><li><a href="#company-overview-other-risks-comments"><b class="tnum">1.17 </b>Other Risks / Comments</a></li></ol></li><li><a href="#industry-amp-competitive-landscape"><b class="tnum">2 · </b>Industry &amp; Competitive Landscape</a><ol><li><a href="#industry-amp-competitive-landscape-industry-definition-amp-boundaries"><b class="tnum">2.1 </b>Industry Definition &amp; Boundaries</a></li><li><a href="#industry-amp-competitive-landscape-industry-characteristics"><b class="tnum">2.2 </b>Industry Characteristics</a></li><li><a href="#industry-amp-competitive-landscape-key-industry-trends-amp-cagrs"><b class="tnum">2.3 </b>Key Industry Trends &amp; CAGRs</a></li><li><a href="#industry-amp-competitive-landscape-end-markets-amp-demand-drivers"><b class="tnum">2.4 </b>End Markets &amp; Demand Drivers</a></li><li><a href="#industry-amp-competitive-landscape-industry-structure"><b class="tnum">2.5 </b>Industry Structure</a></li><li><a href="#industry-amp-competitive-landscape-value-chain-amp-where-the-company-sits"><b class="tnum">2.6 </b>Value Chain &amp; Where the Company Sits</a></li><li><a href="#industry-amp-competitive-landscape-competitors-amp-emerging-entrants"><b class="tnum">2.7 </b>Competitors &amp; Emerging Entrants</a></li><li><a href="#industry-amp-competitive-landscape-bargaining-power"><b class="tnum">2.8 </b>Bargaining Power</a></li><li><a href="#industry-amp-competitive-landscape-supply-constraints-bottlenecks"><b class="tnum">2.9 </b>Supply Constraints / Bottlenecks</a></li><li><a href="#industry-amp-competitive-landscape-structural-advantages-disadvantages"><b class="tnum">2.10 </b>Structural Advantages / Disadvantages</a></li><li><a href="#industry-amp-competitive-landscape-market-share"><b class="tnum">2.11 </b>Market Share</a></li><li><a href="#industry-amp-competitive-landscape-open-industry-questions-for-further-diligence"><b class="tnum">2.12 </b>Open Industry Questions for Further Diligence</a></li></ol></li><li><a href="#financial-due-diligence"><b class="tnum">3 · </b>Financial Due Diligence</a><ol><li><a href="#financial-due-diligence-section-1-financial-summary-charts"><b class="tnum">3.1 </b>Section 1 — Financial Summary Charts</a></li><li><a href="#financial-due-diligence-section-2-summary-financials"><b class="tnum">3.2 </b>Section 2 — Summary Financials</a></li><li><a href="#financial-due-diligence-section-3-financial-trend-assessment-amp-analysis"><b class="tnum">3.3 </b>Section 3 — Financial Trend Assessment &amp; Analysis</a></li><li><a href="#financial-due-diligence-section-4-guidance"><b class="tnum">3.4 </b>Section 4 — Guidance</a></li></ol></li><li><a href="#valuation-amp-technical-analysis"><b class="tnum">4 · </b>Valuation &amp; Technical Analysis</a><ol><li><a href="#valuation-amp-technical-analysis-overall-valuation-amp-entry-assessment"><b class="tnum">4.1 </b>Overall Valuation &amp; Entry Assessment</a></li><li><a href="#valuation-amp-technical-analysis-valuation-comparables"><b class="tnum">4.2 </b>Valuation Comparables</a></li><li><a href="#valuation-amp-technical-analysis-technical-analysis"><b class="tnum">4.3 </b>Technical Analysis</a></li></ol></li><li><a href="#appendix"><b class="tnum">5 · </b>Appendix</a><ol><li><a href="#appendix-key-assumptions-amp-methodology"><b class="tnum">5.1 </b>Key Assumptions &amp; Methodology</a></li><li><a href="#appendix-data-gaps-amp-open-items"><b class="tnum">5.2 </b>Data Gaps &amp; Open Items</a></li><li><a href="#appendix-references"><b class="tnum">5.3 </b>References</a></li></ol></li><li><a href="#disclosures"><b class="tnum">6 · </b>Disclosures</a></li></ol></nav>
+<h3 id="executive-summary-competitive-read"><span>Competitive read</span><a class="backtoc" href="#toc">↑</a></h3>
+<p>The engine aftermarket is secular-growth, highly regulated and OEM-gated rather than freely contestable. OEM service arms (GE Aerospace, CFM, Pratt &amp; Whitney, Rolls-Royce, Safran) dominate newer platforms; large independents (Lufthansa Technik, MTU Maintenance) lead in scale; component repair is fragmented. SARO's differentiation is its pure-play engine focus, breadth of authorizations and three-end-market diversification — a profile distinct from the airline-centric large independents, with MTU Aero Engines its truest public comp.</p>
+<h3 id="executive-summary-entry-verdict-fair-value-timing-wait"><span>Entry verdict — <strong>Fair Value</strong>; timing — <strong>Wait</strong></span><a class="backtoc" href="#toc">↑</a></h3>
+<p>At 13.6x EV/LTM EBITDA and 15.6x NTM P/E, SARO is ~24% / ~31% below its core-comp medians (18.0x / 22.7x) but broadly in line with MTU — a discount that the lower margin and weaker FCF conversion substantially justify. The technical read is <strong>Wait</strong> (deteriorating regime, low confidence): wait for trend repair or a pullback toward the lower Bollinger band / the 52-week low ($23.83) for better risk/reward.</p>
+</div><aside class="rail"><div class="rating fair"><div class="cap">Fair Value</div><div class="rows"><div class="rrow"><span class="k">At price</span><span class="v">$26.85</span></div><div class="rrow"><span class="k">EV/LTM EBITDA</span><span class="v">13.6x</span></div><div class="rrow"><span class="k">vs core median</span><span class="v">18.0x</span></div></div></div><div class="keydata"><h4>Key data</h4><div class="kd"><span>Market cap</span><strong>$8.9B</strong></div><div class="kd"><span>Net debt / EBITDA</span><strong>2.6x</strong></div><div class="kd"><span>LTM FCF yield</span><strong>1.6%</strong></div><div class="kd"><span>NTM P/E</span><strong>15.6x</strong></div></div></aside></div>
+  <nav class="toc" id="toc"><h4>Contents</h4><ol><li><a href="#executive-summary">Executive Summary</a><ol><li><a href="#executive-summary-financial-snapshot">Financial snapshot</a></li><li><a href="#executive-summary-investment-thesis">Investment thesis</a></li><li><a href="#executive-summary-key-strengths">Key strengths</a></li><li><a href="#executive-summary-key-risks">Key risks</a></li><li><a href="#executive-summary-competitive-read">Competitive read</a></li><li><a href="#executive-summary-entry-verdict-fair-value-timing-wait">Entry verdict — <strong>Fair Value</strong>; timing — <strong>Wait</strong></a></li></ol></li><li><a href="#company-overview"><b class="tnum">1 · </b>Company Overview</a><ol><li><a href="#company-overview-company-description"><b class="tnum">1.1 </b>Company Description</a></li><li><a href="#company-overview-product-offering"><b class="tnum">1.2 </b>Product Offering</a></li><li><a href="#company-overview-key-reporting-segments"><b class="tnum">1.3 </b>Key Reporting Segments</a></li><li><a href="#company-overview-geographies"><b class="tnum">1.4 </b>Geographies</a></li><li><a href="#company-overview-revenue-model"><b class="tnum">1.5 </b>Revenue Model</a></li><li><a href="#company-overview-customers-sales-amp-marketing-distribution"><b class="tnum">1.6 </b>Customers / Sales &amp; Marketing / Distribution</a></li><li><a href="#company-overview-demand-drivers"><b class="tnum">1.7 </b>Demand Drivers</a></li><li><a href="#company-overview-cost-drivers"><b class="tnum">1.8 </b>Cost Drivers</a></li><li><a href="#company-overview-ai-considerations"><b class="tnum">1.9 </b>AI Considerations</a></li><li><a href="#company-overview-research-amp-development"><b class="tnum">1.10 </b>Research &amp; Development</a></li><li><a href="#company-overview-suppliers"><b class="tnum">1.11 </b>Suppliers</a></li><li><a href="#company-overview-employees"><b class="tnum">1.12 </b>Employees</a></li><li><a href="#company-overview-key-ip-or-facilities"><b class="tnum">1.13 </b>Key IP or Facilities</a></li><li><a href="#company-overview-key-acquisitions-and-divestitures"><b class="tnum">1.14 </b>Key Acquisitions and Divestitures</a></li><li><a href="#company-overview-collateral-overview"><b class="tnum">1.15 </b>Collateral Overview</a></li><li><a href="#company-overview-management-overview"><b class="tnum">1.16 </b>Management Overview</a></li><li><a href="#company-overview-other-risks-comments"><b class="tnum">1.17 </b>Other Risks / Comments</a></li></ol></li><li><a href="#industry-amp-competitive-landscape"><b class="tnum">2 · </b>Industry &amp; Competitive Landscape</a><ol><li><a href="#industry-amp-competitive-landscape-industry-definition-amp-boundaries"><b class="tnum">2.1 </b>Industry Definition &amp; Boundaries</a></li><li><a href="#industry-amp-competitive-landscape-industry-characteristics"><b class="tnum">2.2 </b>Industry Characteristics</a></li><li><a href="#industry-amp-competitive-landscape-key-industry-trends-amp-cagrs"><b class="tnum">2.3 </b>Key Industry Trends &amp; CAGRs</a></li><li><a href="#industry-amp-competitive-landscape-end-markets-amp-demand-drivers"><b class="tnum">2.4 </b>End Markets &amp; Demand Drivers</a></li><li><a href="#industry-amp-competitive-landscape-industry-structure"><b class="tnum">2.5 </b>Industry Structure</a></li><li><a href="#industry-amp-competitive-landscape-value-chain-amp-where-the-company-sits"><b class="tnum">2.6 </b>Value Chain &amp; Where the Company Sits</a></li><li><a href="#industry-amp-competitive-landscape-competitors-amp-emerging-entrants"><b class="tnum">2.7 </b>Competitors &amp; Emerging Entrants</a></li><li><a href="#industry-amp-competitive-landscape-bargaining-power"><b class="tnum">2.8 </b>Bargaining Power</a></li><li><a href="#industry-amp-competitive-landscape-supply-constraints-bottlenecks"><b class="tnum">2.9 </b>Supply Constraints / Bottlenecks</a></li><li><a href="#industry-amp-competitive-landscape-structural-advantages-disadvantages"><b class="tnum">2.10 </b>Structural Advantages / Disadvantages</a></li><li><a href="#industry-amp-competitive-landscape-market-share"><b class="tnum">2.11 </b>Market Share</a></li><li><a href="#industry-amp-competitive-landscape-open-industry-questions-for-further-diligence"><b class="tnum">2.12 </b>Open Industry Questions for Further Diligence</a></li></ol></li><li><a href="#financial-due-diligence"><b class="tnum">3 · </b>Financial Due Diligence</a><ol><li><a href="#financial-due-diligence-section-1-financial-summary-charts"><b class="tnum">3.1 </b>Section 1 — Financial Summary Charts</a></li><li><a href="#financial-due-diligence-section-2-summary-financials"><b class="tnum">3.2 </b>Section 2 — Summary Financials</a></li><li><a href="#financial-due-diligence-section-3-financial-trend-assessment-amp-analysis"><b class="tnum">3.3 </b>Section 3 — Financial Trend Assessment &amp; Analysis</a></li><li><a href="#financial-due-diligence-section-4-guidance"><b class="tnum">3.4 </b>Section 4 — Guidance</a></li></ol></li><li><a href="#valuation-amp-technical-analysis"><b class="tnum">4 · </b>Valuation &amp; Technical Analysis</a><ol><li><a href="#valuation-amp-technical-analysis-overall-valuation-amp-entry-assessment"><b class="tnum">4.1 </b>Overall Valuation &amp; Entry Assessment</a></li><li><a href="#valuation-amp-technical-analysis-valuation-comparables"><b class="tnum">4.2 </b>Valuation Comparables</a></li><li><a href="#valuation-amp-technical-analysis-technical-analysis"><b class="tnum">4.3 </b>Technical Analysis</a></li></ol></li><li><a href="#appendix"><b class="tnum">5 · </b>Appendix</a><ol><li><a href="#appendix-key-assumptions-amp-methodology"><b class="tnum">5.1 </b>Key Assumptions &amp; Methodology</a></li><li><a href="#appendix-data-gaps-amp-open-items"><b class="tnum">5.2 </b>Data Gaps &amp; Open Items</a></li><li><a href="#appendix-references"><b class="tnum">5.3 </b>References</a></li></ol></li><li><a href="#disclosures"><b class="tnum">6 · </b>Disclosures</a></li></ol></nav>
   <div class="body"><h2 id="company-overview"><span><b class="num">1</b>Company Overview</span><a class="backtoc" href="#toc">↑ Contents</a></h2>
-<p class="opener">What StandardAero does, how it earns money, and the segment mix that drives the margin story.</p>
-
-<div class="takeaways"><h4>Key takeaways</h4><ul><li>Largest independent pure-play engine MRO; ~$6.25bn LTM revenue, ~80% under long-term agreements.</li><li>Profit is bifurcated — CRS earns a ~28.8% margin on 11.5% of revenue vs Engine Services' ~12.9%.</li><li>The moat is intangible: exclusive/semi-exclusive OEM authorizations — durable but authorization-dependent.</li></ul></div>
-
 <p><em>Initiating-coverage Company Overview (IC pipeline step 2). Primary sources (co-equal): SARO_DATAROOM filings
 and the official company website / IR; reputable third-party web sources used where they add value (cited).
 Reported figures from filings/company site are stated without citation; (calc.) = derived, (est.) = estimate.
@@ -365,11 +375,14 @@ EBITDA" is management-defined; segment profitability is disclosed as "Segment Ad
 - Capability detail by platform is published at <a target="_blank" rel="noopener" href="https://www.standardaero.com">https://www.standardaero.com</a> (Engine Services and Component
   Repair Services capability pages).</p>
 <h3 id="company-overview-key-reporting-segments"><span><b class="num">1.3</b>Key Reporting Segments</span><a class="backtoc" href="#toc">↑</a></h3>
-<p>Profit quality is bifurcated, and that is the heart of the segment story: Engine Services is the scale business at a low-teens margin, while Component Repair (CRS) earns a high-20s margin on ~12% of revenue and contributes roughly a quarter of segment profit. The two reportable segments, in order of revenue contribution:</p>
+<p>Profit quality is bifurcated, and that is the heart of the segment story: Engine Services is the scale business at a
+low-teens margin, while CRS earns a high-20s margin on ~12% of revenue and contributes roughly a quarter of segment
+profit. The two reportable segments, in order of revenue contribution:</p>
+<figure class="exhibit"><div class="nested-row"><div class="chart-wrap h-donut"><canvas id="segdonut"></canvas></div><div class="nested-key" id="segdonut_key"></div></div><figcaption><span class="exn">Exhibit 1</span> — Segment mix — revenue (outer) vs Segment Adj. EBITDA (inner), LTM 1Q26 · Source: FY2025 + Q1 2026 + Q1 2025 earnings releases</figcaption></figure>
 <div class="tbl-wrap"><table class="segtbl"><thead><tr><th style="width:24%">Segment</th><th style="width:41%">Segment Description</th><th style="width:35%">Segment Financials</th></tr></thead><tbody id="segBody"></tbody></table></div>
-<figure class="exhibit"><div class="nested-row"><div class="chart-wrap h-donut"><canvas id="segdonut"></canvas></div><div class="nested-key" id="segdonut_key"></div></div><figcaption><span class="exn">Exhibit 1</span> — Segment mix — revenue (outer) vs Segment Adj. EBITDA (inner), LTM 1Q26 · Source: Earnings releases</figcaption></figure>
-<p><em>Consolidated reference (for assembly): FY2023 revenue $4,563.3m / Adj EBITDA $561.1m (12.3%); FY2024 $5,237.2m
-/ $690.5m (13.2%); FY2025 $6,062.5m / $808.2m (13.3%); LTM 1Q26 ~$6,253.7m / ~$813.2m (~13.0%, calc.).</em></p>
+<p>Segment %s are LTM 1Q26; segment margin = Segment Adj. EBITDA / segment revenue (calc.). "Adjusted EBITDA" is
+management-defined; segment profitability is disclosed as "Segment Adjusted EBITDA," pre-corporate/unallocated.</p>
+<p>/ $690.5m (13.2%); FY2025 $6,062.5m / $808.2m (13.3%); LTM 1Q26 ~$6,253.7m / ~$813.2m (~13.0%, calc.).*</p>
 <blockquote>
 <p>Read-through: the margin thesis depends on CRS mix-shift (accretive) outrunning the new-platform ramp in
 Engine Services (dilutive). The evidence is mixed near term — CRS margin is climbing (28.6% FY2025, +250bp)
@@ -382,13 +395,13 @@ Canada together roughly two-thirds of FY2025 revenue and the balance spread acro
 and a long tail of other markets. Revenue is reported by location of customer, and engine-MRO demand follows the
 installed base and operators' fleets, so the geographic mix tracks where StandardAero holds platform authorizations
 more than where its shops sit.</p>
+<figure class="exhibit"><div class="donuts"><div class="donut-col"><div class="donut-yr">FY2023</div><div class="chart-wrap h-donut"><canvas id="geo_0"></canvas></div></div><div class="donut-col"><div class="donut-yr">FY2025</div><div class="chart-wrap h-donut"><canvas id="geo_1"></canvas></div></div></div><div class="legend" id="geo_lg"></div><figcaption><span class="exn">Exhibit 2</span> — Geographic revenue mix — FY2023 vs FY2025 (location of customer) · Source: FY2025 10-K</figcaption></figure>
 <p>The concentration read is benign and improving: no single country outside the US is individually material (each under
 ~13% of revenue), and the mix is broadening over time — the US has gradually ceded share to faster-growing regions,
 led by Asia (commercial-fleet growth) and Canada, while the UK has given back share. There is no acute single-country
 dependency; the more relevant geographic risk is indirect — exposure to US / allied <strong>military budgets</strong> and to
 <strong>cross-border OEM parts supply</strong> rather than to demand in any one customer geography — plus FX translation on the
 ~one-third of revenue earned outside the US.</p>
-<figure class="exhibit"><div class="donuts"><div class="donut-col"><div class="donut-yr">FY2023 · $4,563M</div><div class="chart-wrap h-donut"><canvas id="geomix_0"></canvas></div></div><div class="donut-col"><div class="donut-yr">FY2025 · $6,063M</div><div class="chart-wrap h-donut"><canvas id="geomix_1"></canvas></div></div></div><div class="legend" id="geomix_lg"></div><figcaption><span class="exn">Exhibit 2</span> — Geographic revenue mix shift — FY2023 vs FY2025, by region · Source: FY2025 10-K</figcaption></figure>
 <h3 id="company-overview-revenue-model"><span><b class="num">1.5</b>Revenue Model</span><a class="backtoc" href="#toc">↑</a></h3>
 <p>Roughly 80% of FY2025 revenue was under long-term customer agreements, with most of the rest repeat shop-visit
 work tied to the installed base — so revenue is relatively sticky for an aerospace aftermarket business, closer
@@ -416,6 +429,7 @@ drivers (growth rates as reported):
   budgets and to outsourcing of depot-level maintenance (capped by the US "50% core" rule), and exposed to
   shutdown risk — a US government shutdown dented Q4 2025 military volumes.
 - <strong>New-platform ramps</strong> — LEAP, CFM56 DFW and CF34 expansions add incremental shop volume.</p>
+<figure class="exhibit"><div class="chart-wrap h-mid"><canvas id="endmkt"></canvas></div><figcaption><span class="exn">Exhibit 3</span> — FY2025 revenue growth by end market · Source: Company (FY2025)</figcaption></figure>
 <p>Near-term visibility is high (FY2026 guidance assumes low-double-digit to mid-teens commercial, high-single-
 digit military &amp; helicopter and business aviation). The longer-term growth quality depends on new platforms
 outpacing the flat-to-declining installed base of mature platforms, a structural headwind the company flags.</p>
@@ -532,10 +546,6 @@ residual board influence are standard post-IPO governance watch-items rather tha
 new-platform execution; none appears acute today, but each is monitorable and could re-rate the quality score if
 it deteriorates.</p>
 <h2 id="industry-amp-competitive-landscape"><span><b class="num">2</b>Industry &amp; Competitive Landscape</span><a class="backtoc" href="#toc">↑ Contents</a></h2>
-<p class="opener">The engine-aftermarket structure and growth, and where StandardAero sits in it.</p>
-
-<div class="takeaways"><h4>Key takeaways</h4><ul><li>A ~$42–47bn, mid-single-digit-growth, OEM-gated market; SARO grows mid-teens — i.e. taking share.</li><li>OEM service arms dominate new platforms; independents lead mature fleets and multi-platform flexibility.</li><li>Component repair is fragmented — the consolidation runway SARO's CRS roll-up exploits.</li></ul></div>
-
 <p><em>Initiating-coverage Industry Overview (IC pipeline step 3). Market-sizing and share data are third-party (cited
 with access date); company-specific facts are from SARO_DATAROOM filings (no citation). Market-size estimates
 vary widely by definition — ranges are shown rather than false-precise point figures. FY = calendar year.</em></p>
@@ -590,6 +600,7 @@ than freely contestable:
 +15.8%) — i.e. the company is taking share and/or over-indexed to the faster-growing platforms (LEAP, CFM56),
 not simply riding the market. Sustaining that gap is the core growth debate.</p>
 </blockquote>
+<figure class="exhibit"><div class="chart-wrap h-mid"><canvas id="mromkt"></canvas></div><figcaption><span class="exn">Exhibit 4</span> — Aviation MRO market context — market size ($bn) · Source: Oliver Wyman; Mordor / Fortune Business Insights</figcaption></figure>
 <h3 id="industry-amp-competitive-landscape-key-industry-trends-amp-cagrs"><span><b class="num">2.3</b>Key Industry Trends &amp; CAGRs</span><a class="backtoc" href="#toc">↑</a></h3>
 <ul>
 <li><strong>Next-generation engine ramp (LEAP, GTF).</strong> The installed base is shifting to new-technology narrowbody
@@ -605,14 +616,15 @@ not simply riding the market. Sustaining that gap is the core growth debate.</p>
   used-serviceable-material and PMA parts grow as cost-saving alternatives to new OEM parts.</li>
 </ul>
 <h3 id="industry-amp-competitive-landscape-end-markets-amp-demand-drivers"><span><b class="num">2.4</b>End Markets &amp; Demand Drivers</span><a class="backtoc" href="#toc">↑</a></h3>
-<p><figure class="exhibit"><div class="chart-wrap h-mid"><canvas id="endmkt"></canvas></div><figcaption><span class="exn">Exhibit 10</span> — End-market revenue growth, FY2025 (% YoY) · Source: Earnings releases</figcaption></figure>
-- <strong>Commercial aerospace</strong> — the largest pool; mid-single-digit market CAGR on fleet growth and shop-visit
+<ul>
+<li><strong>Commercial aerospace</strong> — the largest pool; mid-single-digit market CAGR on fleet growth and shop-visit
   cycles. SARO's commercial revenue grew +17.6% in FY2025, well ahead of the market, on platform ramps and
-  share capture.
-- <strong>Business aviation</strong> — growing on bizjet fleet expansion and high utilisation; SARO +12.1% FY2025.
-- <strong>Military &amp; helicopter</strong> — tied to DoD and allied budgets and to the outsourcing of depot-level maintenance
+  share capture.</li>
+<li><strong>Business aviation</strong> — growing on bizjet fleet expansion and high utilisation; SARO +12.1% FY2025.</li>
+<li><strong>Military &amp; helicopter</strong> — tied to DoD and allied budgets and to the outsourcing of depot-level maintenance
   to the civil base (capped in the US by the "50% core" statute); SARO +9.4% FY2025, ~17.8% of revenue, and
-  exposed to budget and government-shutdown timing. Current geopolitical tension is a near-term tailwind.</p>
+  exposed to budget and government-shutdown timing. Current geopolitical tension is a near-term tailwind.</li>
+</ul>
 <p>Demand drivers across all three are the same primitives: <strong>flight hours, the size and age of the installed
 base, shop-visit intervals, and the pace of new-platform introduction</strong> — with OEM authorization access
 determining how much of that demand any given independent can actually serve.</p>
@@ -696,10 +708,6 @@ CFM56) and in component repair — the trend to verify rather than a static shar
   segments (commercial + bizav + military engine MRO + component repair).</li>
 </ul>
 <h2 id="financial-due-diligence"><span><b class="num">3</b>Financial Due Diligence</span><a class="backtoc" href="#toc">↑ Contents</a></h2>
-<p class="opener">The revenue/margin/FCF trajectory and the deleveraging path, on a continuing-ops LTM basis.</p>
-
-<div class="takeaways"><h4>Key takeaways</h4><ul><li>~13.5% revenue CAGR at a ~13% Adjusted-EBITDA margin; CRS mix lifting group margin gradually.</li><li>FCF inflected to +$209m in FY2025 (guided $270–300m FY2026); net leverage 5.6x → 2.6x, now organic.</li><li>Contract-asset working-capital intensity is the cash gate — the key item a credit lens tracks.</li></ul></div>
-
 <p><em>Step 4 of equity initiating-coverage research. Continuing-operations basis (= total company; no discontinued operations). $ in millions unless noted. Companion to <code>StandardAero_Financial_Model_2026-06-22.xlsx</code>. FY ends December 31. LTM = trailing twelve months to 1Q26 (= FY2025 + 1Q26 − 1Q25).</em></p>
 <blockquote>
 <p><strong>Context.</strong> StandardAero is the largest pure-play independent aerospace engine MRO (maintenance, repair &amp; overhaul) provider, operating two segments — <strong>Engine Services</strong> (full-engine MRO, the scale business) and <strong>Component Repair Services / CRS</strong> (higher-margin component repair). Carlyle acquired the business in 2019; it <strong>IPO'd on 2 October 2024</strong> at $24.00/share ($1,202.8m net primary proceeds), the proceeds used to repay debt. FY2022–FY2025 are clean post-LBO years; the IPO is a capital-structure event, not an accounting-basis break.</p>
@@ -707,23 +715,24 @@ CFM56) and in component repair — the trend to verify rather than a static shar
 </blockquote>
 <hr />
 <h3 id="financial-due-diligence-section-1-financial-summary-charts"><span><b class="num">3.1</b>Section 1 — Financial Summary Charts</span><a class="backtoc" href="#toc">↑</a></h3>
-<p><em>FY2022–LTM 1Q26 — the revenue, margin, cash and leverage trajectory.</em></p>
-<figure class="exhibit"><div class="chart-wrap h-tall"><canvas id="revebitda"></canvas></div><figcaption><span class="exn">Exhibit 3</span> — Revenue & Adj. EBITDA (columns), Adj. EBITDA margin (line), YoY revenue growth (chip) · Source: Model</figcaption></figure>
-<figure class="exhibit"><div class="chart-wrap h-mid"><canvas id="segstack"></canvas></div><figcaption><span class="exn">Exhibit 4</span> — Segment revenue mix ($m) — Engine Services + Component Repair · Source: Earnings releases</figcaption></figure>
-<div class="chart-panel"><h4>Cash generation &amp; leverage — FY2022–LTM 1Q26</h4><div class="panel-grid">
-<figure class="exhibit"><div class="chart-wrap h-sm"><canvas id="fcf"></canvas></div><figcaption><span class="exn">Exhibit 5</span> — FCF & conversion · Source: Model</figcaption></figure>
-<figure class="exhibit"><div class="chart-wrap h-sm"><canvas id="netdebt"></canvas></div><figcaption><span class="exn">Exhibit 6</span> — Net debt & net leverage · Source: Model</figcaption></figure>
+<p><em>Four-panel overview, FY2022–LTM 1Q26. Charts are rendered at the Report Assembly stage; underlying data tables provided below.</em></p>
+<div class="chart-panel"><h4>Summary financials — FY2022–LTM 1Q26</h4><div class="panel-grid">
+<figure class="exhibit"><div class="chart-wrap h-sm"><canvas id="c_rev"></canvas></div><figcaption><span class="exn">Exhibit 5</span> — Revenue & YoY growth · Source: Company model / financials</figcaption></figure>
+<figure class="exhibit"><div class="chart-wrap h-sm"><canvas id="c_ebitda"></canvas></div><figcaption><span class="exn">Exhibit 6</span> — Adjusted EBITDA & margin · Source: Company model / financials</figcaption></figure>
+<figure class="exhibit"><div class="chart-wrap h-sm"><canvas id="c_fcf"></canvas></div><figcaption><span class="exn">Exhibit 7</span> — Free cash flow & conversion · Source: Company model / financials</figcaption></figure>
+<figure class="exhibit"><div class="chart-wrap h-sm"><canvas id="c_nd"></canvas></div><figcaption><span class="exn">Exhibit 8</span> — Net debt & net leverage · Source: Company model / financials</figcaption></figure>
 </div></div>
+<hr />
 <h3 id="financial-due-diligence-section-2-summary-financials"><span><b class="num">3.2</b>Section 2 — Summary Financials</span><a class="backtoc" href="#toc">↑</a></h3>
-<p><em>Full Summary dashboard (continuing-ops basis), FY2022–LTM 1Q26.</em></p>
+<p><em>Full Summary dashboard (continuing-ops basis), as in the Excel Summary tab — FY2022–FY2025 plus LTM 1Q26 (full quarterly detail 1Q24–1Q26 is in the Excel Summary tab); excludes the LTM-aggregate trailing-4-quarter memo rows. $mm except per-share, ratios and days. Balance sheet &amp; leverage begin FY2023 (see comparability notes).</em></p>
 <table class="comps fin"><thead><tr><th class="l">($MM unless noted)</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>LTM 1Q26</th></tr></thead><tbody id="finBody"></tbody></table>
+<hr />
 <h3 id="financial-due-diligence-section-3-financial-trend-assessment-amp-analysis"><span><b class="num">3.3</b>Section 3 — Financial Trend Assessment &amp; Analysis</span><a class="backtoc" href="#toc">↑</a></h3>
 <h4>3A. Multi-Year Financial Trend Analysis (FY2022–FY2025)</h4>
 <p><strong>Revenue compounding, and accelerating.</strong> Revenue grew from $4,150m (FY2022) to $6,063m (FY2025), a ~13.5% CAGR, with the growth rate <em>accelerating</em> each year (9.9% → 14.8% → 15.8%). The driver is the commercial-aerospace aftermarket up-cycle plus the deliberate ramp of next-generation platforms — most importantly the CFM <strong>LEAP</strong> program (60 engines inducted in 2025 vs 10 in 2024) and the CFM56 "DFW Center of Excellence" — layered on a recovering military/helicopter book and steady business-aviation demand. ~80% of revenue sits under long-term customer agreements, so the base is recurring rather than project-driven.</p>
 <p><strong>Margin expanding slowly — the central tension.</strong> GAAP gross margin widened from 13.1% to 14.8% and Adjusted EBITDA margin from 12.3% (FY2023) to 13.3% (FY2025). The expansion is modest <em>by design</em>: the high-margin CRS segment (28.6% FY2025 margin, +250bp YoY) is mix-accretive, but it is only ~12% of revenue, and its uplift is being absorbed by the <strong>dilutive ramp of new platforms in Engine Services</strong> (LEAP/CFM56 DFW carry start-up economics while they move down the learning curve). The thesis hinges on CRS mix-shift and platform maturation outrunning that drag — the evidence is favourable but gradual.</p>
 <p><strong>Earnings inflection is a deleveraging story, not just an operating one.</strong> Net income swung from $(21)m / $(35)m losses (FY2022–FY2023) to $11m (FY2024) and $277m (FY2025). EBITDA growth helped, but the larger lever was <strong>interest expense collapsing from $310m (FY2023) to $174m (FY2025)</strong> as the IPO proceeds retired debt — i.e., the profit inflection is substantially a function of the capital structure, which a credit lens makes explicit.</p>
 <p><strong>Free cash flow &amp; the deleveraging path (the core of the credit view).</strong> Free cash flow was <em>negative every year FY2022–FY2024</em> and turned positive only in FY2025 (+$209m). Net leverage fell from 5.6x (FY2023) to 2.4x (FY2025) — but the heavy lifting was <strong>IPO-equity-funded, not organic</strong>: FY2024 financing shows the $1.2bn equity raise and a net ~$1.0bn debt paydown; gross debt has been essentially flat since (~$2.2bn). The FY2025 step from 3.1x to 2.4x, by contrast, <em>was</em> organic (EBITDA growth + cash build, no divestitures). Coverage improved in lockstep — interest coverage 1.8x → 4.6x, fixed-charge cover 1.6x → 4.2x. The structural cash headwind is <strong>contract-asset intensity</strong>: unbilled work-in-process on long-term MRO contracts consumed $80–157m of cash a year and now stands above total inventory on the balance sheet — the single biggest reason FCF lags reported earnings.</p>
-<figure class="exhibit"><div class="chart-wrap h-tall"><canvas id="margins"></canvas></div><figcaption><span class="exn">Exhibit 7</span> — Margin progression — gross vs Adj. EBITDA margin (%) · Source: Model</figcaption></figure>
 <h4>3B. Most-Recent-Quarter Commentary — 1Q26 (transcript-driven)</h4>
 <p><strong>Top line strong and broad.</strong> 1Q26 revenue rose <strong>13.3% to $1,626.9m</strong>, with all three end markets up double digits — <strong>Business Aviation +19.6%, Commercial Aerospace +11.4%, Military &amp; Helicopter +10.3%</strong>. Management called out a sharp late-quarter recovery in the military business as activity normalised after the U.S. government shutdown, and lifted full-year military-and-helicopter growth guidance from high-single-digit to low-double-digit as a result. Net income grew 27% to $79.9m.</p>
 <p><strong>Headline margin optically weak, underlying margin fine.</strong> Adjusted EBITDA rose only <strong>2.5% to $203.2m and margin fell 130bp to 12.5%</strong> — a deceleration that looks alarming next to +13.3% revenue. Management attributed it to the <strong>timing of engine shipments</strong> plus largely transitory/one-time items (including a CFM buyout cost that landed in March, which was contemplated in full-year guidance); <strong>excluding those, in-quarter margin was above 14%</strong>. The segment detail supports the "timing, not structure" read: Engine Services revenue +14.1% but Segment Adj. EBITDA only +2.7% (the LEAP/CFM ramp dilution), while <strong>CRS Segment Adj. EBITDA grew 10.6% with margin +90bp to 29.2%</strong> — the high-margin component-repair engine still firing.</p>
@@ -772,15 +781,10 @@ CFM56) and in component repair — the trend to verify rather than a static shar
 </tbody>
 </table>
 <p>End-market growth guidance was also raised — <strong>military &amp; helicopter from high-single-digit to low-double-digit</strong> (post-shutdown recovery) and <strong>business aviation toward low-double-digit</strong>.</p>
-<figure class="exhibit"><div class="chart-wrap h-mid"><canvas id="guidance"></canvas></div><figcaption><span class="exn">Exhibit 8</span> — FY2026 guidance step-up — Adj. EBITDA & FCF ($mm) · Source: FY2026 guidance</figcaption></figure>
 <p><strong>Read-through.</strong> The guidance implies (i) Adjusted EBITDA margin moving to <strong>~13.8–14.0%</strong> (mid-point ~$890m on ~$6.39bn), continuing the gradual expansion as the LEAP/CFM ramp items and the low-margin-revenue exit roll through; (ii) <strong>continued FCF growth to ~$285m (midpoint), an implied FCF/Adj. EBITDA conversion of ~32%</strong> — a meaningful improvement on FY2025's 26% and consistent with management's "working capital to decline in 2H" framing; and (iii) on ~$285m of FCF plus EBITDA growth and roughly flat debt, <strong>net leverage should trend toward the low end of the 2–3x target absent incremental M&amp;A or buybacks</strong> — the Unified Turbines acquisition and the active repurchase programme are the offsets to watch. The +22% Adjusted-EPS growth is flattered by the full-year benefit of lower post-IPO interest; on an EBITDA basis the growth is high-single/low-double-digit, which is the cleaner read on operating momentum.</p>
 <hr />
 <p><em>Sources: SARO_DATAROOM — SEC XBRL companyfacts; 10-K FY2024 &amp; FY2025; 10-Q 2024-Q3 through 2026-Q1; 8-K earnings releases and Q2-2025–Q1-2026 earnings-call transcripts; investor presentations. All figures derived in the companion Excel model on a continuing-operations basis; every statement ties to reported and the balance sheet balances each period. Net leverage ties to company-reported 3.1x (FY2024) / 2.4x (FY2025).</em></p>
 <h2 id="valuation-amp-technical-analysis"><span><b class="num">4</b>Valuation &amp; Technical Analysis</span><a class="backtoc" href="#toc">↑ Contents</a></h2>
-<p class="opener">Where StandardAero trades versus peers, and whether now is a good entry.</p>
-
-<div class="takeaways"><h4>Key takeaways</h4><ul><li>13.6x EV/LTM EBITDA — ~24% below the engine-aftermarket core-comp median (18.0x); ~in line with MTU.</li><li>1.6% FCF yield sits below the 4.45% risk-free rate — priced for FCF growth, not current cash.</li><li>Verdict Fair Value; technicals say Wait — accumulate on a pullback or on the FY26 FCF inflection.</li></ul></div>
-
 <p><em>Initiating-coverage Valuation &amp; Technical Analysis (IC pipeline step 5). Peer multiples are </em><em>computed from the
 inputs</em><em> (two feeds only: Alpha Vantage <code>COMPANY_OVERVIEW</code> → Yahoo Finance), never lifted from a vendor. Subject
 LTM = the step-4 model (</em><em>Adjusted</em><em> EBITDA); peers = </em><em>reported</em><em> EBITDA — basis difference footnoted. As of
@@ -799,8 +803,8 @@ economics, the stock is priced about right.</p>
   comp) and below only the higher-margin read-across names — so lean on the core read: a <strong>modest discount that the
   lower margin and weaker FCF conversion substantially justify.</strong></li>
 <li><strong>FCF yield vs cost of capital.</strong> SARO's <strong>1.6% LTM FCF yield</strong> edges the peer median (1.1%) and beats the
-  core-comp median (−0.3%, dragged by FTAI), <strong>but sits well below the 4.45% 10-year Treasury yield</strong> — i.e. on
-  current cash generation the equity does not clear the risk-free rate. This is the crux of the call: FCF is
+  core-comp median (−0.3%, dragged by FTAI), <strong>but sits well below the 4.40% 10-year Treasury yield</strong> (^TNX,
+  2026-06-24) — i.e. on current cash generation the equity does not clear the risk-free rate. This is the crux of the call: FCF is
   suppressed by working-capital intensity (contract assets/receivables ~$2.1bn) during the high-growth phase, so
   the re-rating depends on the <strong>FCF inflection</strong> as working capital normalises and leverage falls, not on the
   multiple alone.</li>
@@ -814,13 +818,14 @@ economics, the stock is priced about right.</p>
 <p><strong>Entry verdict — Fair Value.</strong> Priced broadly for its fundamentals: cheap vs the headline peer set for good
 reason (margin/mix), about fair against true comps, with the re-rating contingent on margin and FCF delivery
 rather than already in the price.</p>
-<p><strong>Entry timing — Wait.</strong> The technical setup does not yet support adding: SARO is in a <strong>downtrend</strong>, last $26.85
-<strong>−0.5% below a flattening 100-day EMA</strong>, with <strong>RSI 52</strong> (only just above 50) and a <strong>mixed MACD</strong> — a "wait"
-read at medium confidence. A clean MACD improvement with <strong>RSI reclaiming 50 on above-average volume</strong> would tilt
-toward a starter buy; absent that, wait for trend repair or a pullback toward the lower Bollinger band / the
-52-week low ($23.83) for better risk/reward.</p>
+<p><strong>Entry timing — Wait.</strong> The technical setup does not yet support adding: SARO sits in a <strong>deteriorating</strong> regime —
+price is <strong>~flat to the 100-day EMA (+0.5%) on a flattening slope</strong>, with <strong>RSI 53</strong> (only just above 50) and a
+<strong>mixed MACD</strong> — a "wait" read at low confidence. A clean MACD improvement with <strong>RSI reclaiming 50 on
+above-average volume</strong> would tilt toward a starter buy; absent that, wait for trend repair or a pullback toward the
+lower Bollinger band / the 52-week low ($23.83) for better risk/reward.</p>
 <h3 id="valuation-amp-technical-analysis-valuation-comparables"><span><b class="num">4.2</b>Valuation Comparables</span><a class="backtoc" href="#toc">↑</a></h3>
-<figure class="exhibit"><div class="chart-wrap h-tall"><canvas id="valbubble"></canvas></div><figcaption><span class="exn">Exhibit 9</span> — Valuation map — EV/EBITDA vs EBITDA margin (bubble = market cap) · Source: Two feeds (AV COMPANY_OVERVIEW → Yahoo)</figcaption></figure>
+<figure class="exhibit"><div class="chart-wrap h-tall"><canvas id="valbubble"></canvas></div><figcaption><span class="exn">Exhibit 9</span> — Valuation map — EV/LTM EBITDA vs EBITDA margin (bubble = market cap) · Source: Comps (AV→Yahoo); subject = step-4 model LTM</figcaption></figure>
+<figure class="exhibit"><div class="chart-wrap h-mid"><canvas id="evebitda"></canvas></div><figcaption><span class="exn">Exhibit 10</span> — EV/LTM EBITDA — peer set (SARO highlighted) · Source: Comps (AV→Yahoo)</figcaption></figure>
 <table class="comps"><thead><tr><th class="l">Company</th><th>Price<span class="u">US$</span></th><th>Mkt cap<span class="u">US$M</span></th><th>LTM Rev<span class="u">US$M</span></th><th>LTM EBITDA<span class="u">US$M</span></th><th>EBITDA mgn<span class="u">%</span></th><th>EV/EBITDA<span class="u">x</span></th><th>NTM P/E<span class="u">x</span></th><th>P/FCF<span class="u">x</span></th><th>FCF yld<span class="u">%</span></th><th>Div yld<span class="u">%</span></th></tr></thead><tbody id="compsBody"></tbody></table>
 <p><em>As of 2026-06-24. Multiples computed from the inputs (EV = mkt cap + net debt; FCF yield = FCF ÷ mkt cap), not lifted from a vendor. NTM P/E = price ÷ consensus forward EPS. Stats over peers only (subject excluded); <strong>Core-comp</strong> rows over the tier=core peers (MTX.DE, FTAI, AIR); n/m &amp; n/a skipped. EBITDA basis — SARO: Adjusted (step-4 model); peers: reported (Yahoo); MTX.DE EUR→USD @1.1369.</em></p>
 <h4>Data caveats</h4>
@@ -833,6 +838,10 @@ toward a starter buy; absent that, wait for trend repair or a pullback toward th
 <li>Two feeds only (AV <code>COMPANY_OVERVIEW</code> → Yahoo); no EDGAR/web/release/vendor inputs.</li>
 </ul>
 <h3 id="valuation-amp-technical-analysis-technical-analysis"><span><b class="num">4.3</b>Technical Analysis</span><a class="backtoc" href="#toc">↑</a></h3>
+<p><strong>Tactical read — Wait · deteriorating regime · low confidence.</strong> Last $27.12, <strong>RSI 53</strong>, <strong>+0.5% vs the 100-day
+EMA</strong> — an unresolved setup (a non-rising trend with no confirming momentum or volume), so wait for trend repair
+before adding. <em>(5-indicator read — price + EMA100 + Bollinger, RSI(20), MACD, volume vs 20-day average; research
+illustration, not advice.)</em></p>
 <figure class="exhibit tech-native"><!-- technical-chart card fragment — one ticker. Self-describing: carries its own payload.
      Insert any number of these into a page that includes the shared CSS + ECharts + runtime ONCE.
      All hooks are classes (scoped per-card by the runtime); the id token is a unique instance anchor. -->
@@ -841,7 +850,7 @@ toward a starter buy; absent that, wait for trend repair or a pullback toward th
   <div class="tc-head">
     <div>
       <div class="tc-title">StandardAero, Inc. <span class="tkr">SARO</span> <a href="#" class="tc-top-link">↑ top</a></div>
-      <div class="tc-sub">NYQ · USD · daily · as of 2026-06-23</div>
+      <div class="tc-sub">NYQ · USD · daily · as of 2026-06-24</div>
     </div>
   </div>
   <div class="tc-assess"></div>
@@ -855,53 +864,9 @@ toward a starter buy; absent that, wait for trend repair or a pullback toward th
   </div>
   <div class="tc-chart" id="tc-chart-SARO"></div>
   <p class="tc-foot"></p>
-  <script class="tc-payload" type="application/json">{"ticker":"SARO","name":"StandardAero, Inc.","currency":"USD","exchange":"NYQ","source":"Yahoo Finance (daily, split/dividend-adjusted)","generated":"2026-06-24 01:35","params":{"ema":100,"bb":20,"bb_k":2.0,"rsi":20,"macd_fast":12,"macd_slow":26,"macd_signal":9,"volavg":20},"default_period":"1y","n_bars":431,"limited_history":false,"dates":["2024-10-02","2024-10-03","2024-10-04","2024-10-07","2024-10-08","2024-10-09","2024-10-10","2024-10-11","2024-10-14","2024-10-15","2024-10-16","2024-10-17","2024-10-18","2024-10-21","2024-10-22","2024-10-23","2024-10-24","2024-10-25","2024-10-28","2024-10-29","2024-10-30","2024-10-31","2024-11-01","2024-11-04","2024-11-05","2024-11-06","2024-11-07","2024-11-08","2024-11-11","2024-11-12","2024-11-13","2024-11-14","2024-11-15","2024-11-18","2024-11-19","2024-11-20","2024-11-21","2024-11-22","2024-11-25","2024-11-26","2024-11-27","2024-11-29","2024-12-02","2024-12-03","2024-12-04","2024-12-05","2024-12-06","2024-12-09","2024-12-10","2024-12-11","2024-12-12","2024-12-13","2024-12-16","2024-12-17","2024-12-18","2024-12-19","2024-12-20","2024-12-23","2024-12-24","2024-12-26","2024-12-27","2024-12-30","2024-12-31","2025-01-02","2025-01-03","2025-01-06","2025-01-07","2025-01-08","2025-01-10","2025-01-13","2025-01-14","2025-01-15","2025-01-16","2025-01-17","2025-01-21","2025-01-22","2025-01-23","2025-01-24","2025-01-27","2025-01-28","2025-01-29","2025-01-30","2025-01-31","2025-02-03","2025-02-04","2025-02-05","2025-02-06","2025-02-07","2025-02-10","2025-02-11","2025-02-12","2025-02-13","2025-02-14","2025-02-18","2025-02-19","2025-02-20","2025-02-21","2025-02-24","2025-02-25","2025-02-26","2025-02-27","2025-02-28","2025-03-03","2025-03-04","2025-03-05","2025-03-06","2025-03-07","2025-03-10","2025-03-11","2025-03-12","2025-03-13","2025-03-14","2025-03-17","2025-03-18","2025-03-19","2025-03-20","2025-03-21","2025-03-24","2025-03-25","2025-03-26","2025-03-27","2025-03-28","2025-03-31","2025-04-01","2025-04-02","2025-04-03","2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05","2025-05-06","2025-05-07","2025-05-08","2025-05-09","2025-05-12","2025-05-13","2025-05-14","2025-05-15","2025-05-16","2025-05-19","2025-05-20","2025-05-21","2025-05-22","2025-05-23","2025-05-27","2025-05-28","2025-05-29","2025-05-30","2025-06-02","2025-06-03","2025-06-04","2025-06-05","2025-06-06","2025-06-09","2025-06-10","2025-06-11","2025-06-12","2025-06-13","2025-06-16","2025-06-17","2025-06-18","2025-06-20","2025-06-23","2025-06-24","2025-06-25","2025-06-26","2025-06-27","2025-06-30","2025-07-01","2025-07-02","2025-07-03","2025-07-07","2025-07-08","2025-07-09","2025-07-10","2025-07-11","2025-07-14","2025-07-15","2025-07-16","2025-07-17","2025-07-18","2025-07-21","2025-07-22","2025-07-23","2025-07-24","2025-07-25","2025-07-28","2025-07-29","2025-07-30","2025-07-31","2025-08-01","2025-08-04","2025-08-05","2025-08-06","2025-08-07","2025-08-08","2025-08-11","2025-08-12","2025-08-13","2025-08-14","2025-08-15","2025-08-18","2025-08-19","2025-08-20","2025-08-21","2025-08-22","2025-08-25","2025-08-26","2025-08-27","2025-08-28","2025-08-29","2025-09-02","2025-09-03","2025-09-04","2025-09-05","2025-09-08","2025-09-09","2025-09-10","2025-09-11","2025-09-12","2025-09-15","2025-09-16","2025-09-17","2025-09-18","2025-09-19","2025-09-22","2025-09-23","2025-09-24","2025-09-25","2025-09-26","2025-09-29","2025-09-30","2025-10-01","2025-10-02","2025-10-03","2025-10-06","2025-10-07","2025-10-08","2025-10-09","2025-10-10","2025-10-13","2025-10-14","2025-10-15","2025-10-16","2025-10-17","2025-10-20","2025-10-21","2025-10-22","2025-10-23","2025-10-24","2025-10-27","2025-10-28","2025-10-29","2025-10-30","2025-10-31","2025-11-03","2025-11-04","2025-11-05","2025-11-06","2025-11-07","2025-11-10","2025-11-11","2025-11-12","2025-11-13","2025-11-14","2025-11-17","2025-11-18","2025-11-19","2025-11-20","2025-11-21","2025-11-24","2025-11-25","2025-11-26","2025-11-28","2025-12-01","2025-12-02","2025-12-03","2025-12-04","2025-12-05","2025-12-08","2025-12-09","2025-12-10","2025-12-11","2025-12-12","2025-12-15","2025-12-16","2025-12-17","2025-12-18","2025-12-19","2025-12-22","2025-12-23","2025-12-24","2025-12-26","2025-12-29","2025-12-30","2025-12-31","2026-01-02","2026-01-05","2026-01-06","2026-01-07","2026-01-08","2026-01-09","2026-01-12","2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23"],"close":[32.75,32.97,32.5,32.41,32.89,32.41,31.6,30.75,31.7,32.34,32.08,32.69,31.52,32.05,31.17,31.36,31.17,30.25,29.71,29.2,29.39,28.85,28.5,28.61,29.02,30.04,29.27,29.76,29.9,29.32,29.07,27.1,28.15,28.53,28.35,28.52,28.88,28.66,29.24,29.37,28.5,28.66,28.05,28.26,28.4,28.31,28.45,27.21,27.0,27.28,25.61,26.1,26.19,25.43,24.98,25.01,26.07,25.4,25.48,25.5,25.58,25.37,24.76,24.54,24.04,23.8,23.0,23.04,23.21,23.16,24.01,24.09,23.82,24.64,25.05,24.9,26.9,26.04,26.13,26.03,26.09,26.9,26.84,27.1,27.05,27.17,27.05,27.42,27.35,27.59,27.81,26.99,26.58,26.88,27.1,27.23,26.13,26.24,26.93,27.15,28.03,28.23,27.26,26.81,27.31,26.64,26.85,26.3,28.54,28.06,28.98,28.62,28.89,28.74,29.09,29.13,28.59,28.74,29.32,27.74,28.04,27.18,26.64,26.81,27.19,25.6,23.13,22.56,22.23,25.27,24.53,24.5,25.05,25.62,25.26,25.48,24.22,24.87,25.55,26.26,26.48,26.78,26.93,27.02,27.11,27.89,27.66,27.25,27.12,27.85,27.8,28.6,29.85,30.2,30.21,29.95,29.93,29.0,28.38,28.0,28.16,28.68,28.83,29.02,29.33,29.64,29.73,29.83,29.7,30.53,30.75,30.77,30.74,30.77,30.41,30.5,30.2,29.73,29.2,29.96,30.13,30.16,30.77,31.63,31.65,30.62,30.97,30.88,30.77,30.45,30.06,30.01,29.84,30.56,30.17,30.27,30.77,30.4,29.76,28.87,28.74,28.35,28.25,28.19,28.08,28.18,28.55,27.86,28.4,28.22,28.11,28.19,27.57,28.31,28.67,28.16,27.02,26.55,26.57,26.49,26.64,26.87,27.23,26.91,27.29,26.98,26.96,26.49,26.67,26.69,27.48,26.55,26.91,26.64,26.96,27.35,27.16,27.02,27.31,27.52,27.95,27.58,27.78,26.92,26.18,26.21,26.73,26.46,27.29,27.45,27.34,26.6,26.51,26.55,27.17,26.79,26.42,27.51,28.64,28.33,27.9,27.28,27.57,28.4,27.98,28.93,28.94,28.86,28.53,28.63,28.55,28.89,28.46,27.5,27.29,26.84,26.84,27.54,27.27,26.36,25.58,25.62,24.66,24.49,25.19,24.27,24.74,25.05,25.15,25.64,26.12,25.13,25.47,25.89,26.61,26.56,26.6,26.84,27.41,27.51,27.8,27.4,27.42,27.1,27.93,28.66,29.54,29.4,29.41,29.16,29.0,28.79,28.68,29.64,30.37,30.38,30.36,30.64,30.78,31.88,32.43,32.43,32.55,32.48,32.03,31.93,32.35,32.97,32.72,33.12,31.59,31.18,30.89,30.94,30.53,29.9,29.51,30.57,30.93,30.7,29.89,30.02,30.57,31.04,31.26,31.44,31.96,31.41,31.84,30.83,31.9,30.8,30.73,29.72,30.13,29.3,28.87,28.59,28.51,28.37,26.59,26.06,26.51,26.96,27.16,26.21,25.6,26.14,26.11,26.64,26.29,25.46,25.22,25.83,26.25,26.26,26.37,25.59,26.79,26.93,27.15,27.84,27.57,27.24,26.01,26.76,26.81,25.11,24.36,24.34,24.54,24.49,24.62,24.44,24.86,24.53,24.58,25.1,26.26,26.03,25.14,26.8,26.79,26.74,26.32,25.25,25.74,25.15,26.47,26.11,26.74,27.05,27.5,28.3,28.64,27.36,25.14,24.91,25.55,25.61,24.79,25.58,24.77,25.95,26.91,26.98,26.83,27.16,27.75,27.26,26.85],"open":[31.0,32.24,32.81,32.37,32.41,32.95,32.24,31.6,31.15,31.66,32.36,32.27,32.5,31.35,32.16,30.99,31.25,31.1,30.0,29.3,29.1,29.19,29.0,28.5,28.5,29.56,30.08,29.16,29.91,30.03,29.18,28.48,27.01,28.07,28.51,28.5,28.32,28.72,28.54,28.95,28.94,28.56,28.65,28.0,27.86,28.21,28.35,28.76,26.91,26.9,27.0,25.5,26.2,26.0,25.33,25.01,25.12,25.74,25.51,25.48,25.3,25.19,25.68,25.0,24.55,24.12,23.8,22.84,22.95,23.01,23.24,24.56,24.24,23.81,24.91,25.21,25.25,26.77,25.89,26.3,26.19,26.26,26.99,26.21,27.06,27.36,27.38,27.3,27.34,27.22,27.31,28.01,27.01,26.8,26.99,27.01,27.27,26.33,26.42,27.19,27.35,27.95,28.22,27.16,26.91,27.0,26.5,26.44,25.82,28.86,28.28,28.96,28.62,28.92,28.74,28.86,29.11,27.64,28.51,28.25,27.89,28.02,26.76,27.03,26.5,26.48,24.58,22.17,23.82,22.04,24.86,24.72,24.91,25.18,25.66,25.49,25.27,24.44,25.6,25.51,26.34,26.59,26.67,26.61,26.91,27.66,27.65,27.47,27.27,27.44,27.94,28.9,28.51,29.83,30.43,30.33,29.59,28.99,29.16,28.16,27.7,28.59,28.7,28.89,29.04,29.22,29.81,29.78,30.0,29.94,30.53,30.98,30.69,30.44,30.49,30.77,30.52,30.27,29.86,29.29,30.07,30.29,30.51,30.79,31.76,31.65,30.7,31.01,30.9,30.8,30.83,30.56,29.76,29.84,30.6,30.17,30.46,30.83,30.4,29.61,29.22,28.62,28.42,28.35,28.5,28.24,28.26,28.12,28.32,28.63,28.38,28.28,28.33,27.79,28.42,28.84,25.9,27.03,26.78,26.53,26.66,26.62,27.03,27.26,26.91,27.22,26.96,26.91,26.56,26.7,26.79,27.53,26.82,26.86,26.67,26.91,27.84,27.2,27.26,27.36,27.53,28.0,27.54,27.88,27.24,25.99,26.52,26.94,26.49,27.0,27.44,27.38,26.71,26.56,26.6,27.18,27.09,26.75,27.61,29.14,28.61,27.62,27.45,27.7,28.33,27.95,29.13,29.17,29.09,28.46,28.53,28.53,28.88,27.88,27.07,27.21,26.58,27.09,28.12,27.14,26.36,25.0,25.47,24.66,24.7,25.68,24.27,24.7,24.94,25.22,25.84,25.87,25.4,25.46,26.0,26.57,26.67,26.71,28.0,27.39,27.53,28.1,27.28,27.23,27.45,28.05,28.8,29.36,29.6,29.39,29.13,29.05,28.97,28.81,30.0,30.35,30.38,30.59,30.78,30.77,32.0,32.44,32.8,32.5,34.43,32.18,31.98,32.45,32.99,33.01,31.94,31.93,30.9,30.38,30.86,30.47,29.7,30.17,30.58,31.14,30.84,30.05,30.24,30.6,31.23,31.1,31.39,31.68,31.35,32.05,30.9,30.5,30.76,30.25,29.86,29.72,28.78,28.5,28.77,28.26,27.77,26.84,26.45,26.88,27.26,26.63,25.98,26.3,25.79,26.68,26.15,26.1,25.59,25.67,26.58,25.79,26.56,26.0,26.99,26.57,26.93,26.91,28.04,27.76,27.62,27.0,26.56,26.63,25.46,24.33,24.18,24.54,24.42,24.47,24.53,24.84,24.47,24.85,25.63,26.68,26.44,25.8,26.64,26.68,27.01,25.95,25.35,25.65,25.81,26.1,26.29,27.03,27.4,27.39,28.31,28.1,26.19,24.94,25.2,25.43,25.49,24.94,25.55,25.0,26.19,27.46,27.13,26.89,27.45,27.33,26.76],"high":[33.01,33.25,33.2,33.23,33.75,34.38,32.49,32.05,31.71,32.6,32.59,33.0,32.58,32.38,32.19,31.8,32.0,31.42,30.82,29.59,29.6,29.65,29.213,29.08,29.53,30.57,30.21,30.19,30.36,30.03,29.475,28.92,28.16,28.71,28.73,28.63,29.23,29.15,29.3,29.79,29.75,28.91,28.825,28.81,28.63,28.71,28.47,29.0,27.59,27.385,27.19,26.13,26.87,26.15,25.73,25.32,26.18,25.74,25.83,26.33,25.81,25.56,25.98,25.37,24.72,24.16,23.95,23.06,23.581,23.345,24.165,24.719,24.62,24.66,25.14,25.21,27.09,27.07,26.33,26.7,26.51,27.17,27.28,27.395,27.4,27.97,27.38,27.68,27.46,27.72,27.925,28.05,27.27,27.015,27.23,27.3,27.375,26.46,27.15,27.65,28.06,28.365,28.342,27.55,27.525,27.28,26.99,26.99,28.92,28.86,29.109,29.61,29.16,29.04,29.16,29.59,29.196,28.92,29.99,28.51,28.29,28.16,27.13,27.19,27.35,26.71,24.86,23.68,23.93,25.68,25.04,24.9,25.19,25.66,25.73,25.92,25.51,24.91,26.2,26.47,26.52,26.83,27.09,27.09,27.59,28.01,28.1,27.765,27.6,28.12,28.14,28.99,30.2,30.59,30.5,30.33,30.074,29.56,29.16,28.36,28.32,28.88,28.855,29.04,29.36,29.64,29.94,30.0,30.01,30.58,30.93,31.07,30.94,30.9,30.99,31.0,30.7,30.45,29.89,30.025,30.265,30.29,31.175,31.7,31.97,31.85,30.97,31.23,31.18,30.935,30.86,30.95,30.12,30.74,30.83,30.4,30.93,30.99,30.43,29.79,29.31,28.785,28.545,28.48,28.61,28.5,28.68,28.355,28.79,28.76,28.47,28.44,28.53,28.42,28.99,28.92,27.49,27.22,26.975,26.68,26.73,26.96,27.7,27.54,27.32,27.51,27.12,26.91,26.73,26.92,27.59,27.79,27.1,26.87,26.96,27.48,27.99,27.414,27.51,27.83,28.16,28.0,27.84,28.35,27.395,26.31,26.985,26.949,27.421,27.6,27.67,27.38,26.91,26.795,27.19,27.29,27.22,28.32,28.88,29.64,28.738,27.94,27.75,28.46,28.52,29.025,29.39,29.31,29.09,28.85,29.2,29.01,29.0,28.37,27.5,27.385,26.85,27.64,28.37,27.51,26.766,25.695,25.66,24.98,25.319,25.795,24.86,25.09,25.335,25.74,26.15,25.92,25.72,25.89,26.765,26.65,26.89,27.26,28.13,27.785,28.1,28.1,27.66,27.79,28.225,28.83,29.55,29.65,29.6,29.5,29.215,29.05,28.97,29.759,30.5,30.7,30.76,31.05,31.36,32.08,32.61,32.69,32.97,32.695,34.48,32.49,32.43,33.07,33.05,33.46,32.18,32.205,31.24,31.195,31.1,30.78,29.85,30.64,31.02,31.14,31.02,30.95,30.95,31.25,31.77,31.54,32.04,31.73,31.96,32.22,33.255,30.9,31.04,30.37,30.355,29.84,29.04,28.715,28.92,28.575,28.0,26.95,26.91,27.3,27.74,26.64,26.17,26.43,26.29,26.84,26.52,26.145,25.73,26.26,26.74,26.81,26.73,26.115,27.34,27.33,27.375,28.02,28.1,27.88,27.62,27.47,26.95,26.63,25.76,24.65,24.575,25.13,24.7,24.87,25.095,24.84,24.79,25.11,26.69,26.89,27.2,26.98,26.997,27.155,27.146,26.06,25.965,25.84,26.5,26.47,27.01,27.275,27.77,28.4,28.86,28.47,26.75,25.16,25.83,25.75,25.709,25.77,25.59,26.125,26.985,27.86,27.28,28.13,27.815,27.76,27.19],"low":[30.76,32.12,32.26,32.2,32.27,32.41,31.48,30.73,30.59,31.545,31.43,32.13,31.3,31.02,30.88,30.99,31.11,30.0,29.27,28.41,28.975,28.71,28.45,28.25,28.185,29.2,29.1,28.88,29.75,29.12,28.27,26.96,26.78,28.01,28.0,28.0,28.32,28.13,28.32,28.85,28.49,28.4,27.75,27.84,27.86,28.07,28.0,27.09,25.93,26.63,25.55,25.49,25.9,25.43,24.55,24.58,24.96,25.12,25.225,25.35,25.175,24.81,24.63,24.53,24.03,23.607,22.8,22.5,22.825,22.85,23.01,24.025,23.81,23.77,24.415,24.61,25.13,26.02,25.65,25.82,25.91,26.22,26.7,26.113,26.88,26.98,26.66,26.995,27.03,27.04,27.205,26.82,25.76,26.265,26.64,26.72,26.13,25.805,26.035,26.93,27.11,27.81,27.0,26.63,26.67,26.52,25.66,25.915,25.805,27.44,28.0,28.36,28.5,28.38,28.51,28.72,28.39,27.25,28.2,27.74,27.5,27.14,26.21,26.44,26.29,24.981,23.05,21.31,21.85,22.0,23.91,23.91,24.59,25.18,25.04,25.27,24.05,24.24,25.21,25.35,26.0,26.25,26.52,26.2,26.9,27.45,27.6,27.18,26.9,27.375,27.43,28.03,27.5,29.51,29.84,29.82,29.54,28.89,27.93,27.75,27.61,28.25,28.335,28.44,28.79,28.875,29.36,29.56,29.68,29.84,30.18,30.69,30.06,30.38,30.25,30.44,30.18,29.66,29.1,29.0,29.42,30.015,30.305,30.73,31.46,30.51,30.31,30.83,30.55,30.212,29.98,29.92,29.6,29.7,30.16,29.97,30.22,30.38,29.76,28.65,28.66,28.24,28.03,27.9,27.88,28.0,27.795,27.45,28.16,28.06,27.96,27.903,27.57,27.57,28.25,27.52,25.77,26.525,26.545,26.23,26.05,26.475,26.91,26.86,26.91,26.88,26.81,26.37,25.81,26.47,26.65,26.32,26.75,26.529,26.6,26.91,27.12,26.9,27.06,27.16,27.22,27.43,27.38,26.89,26.165,25.774,26.39,26.325,26.42,27.0,27.065,26.56,26.49,26.23,26.55,26.65,26.23,26.32,27.11,27.72,27.71,26.9,27.2,27.7,27.87,27.844,28.85,28.701,28.24,28.16,28.32,28.37,27.978,27.44,26.865,26.73,26.01,26.9,27.062,26.25,25.42,24.79,24.51,24.25,24.37,24.24,23.97,24.545,24.76,25.21,25.46,25.07,25.255,25.305,25.86,26.02,26.44,26.66,26.65,27.105,27.28,27.121,26.98,26.9,27.359,28.05,28.58,29.23,29.24,29.1,28.82,28.65,28.51,28.62,29.79,30.018,30.0,30.02,30.51,30.77,32.0,31.83,32.41,32.11,32.0,31.22,31.75,32.33,32.27,32.69,31.54,31.1,30.77,30.175,29.89,29.19,28.63,29.93,30.47,30.595,29.695,29.79,30.145,30.42,31.06,30.96,31.29,31.055,31.16,30.74,30.24,30.25,30.0,28.58,29.5,28.29,28.45,27.41,28.41,28.07,26.435,25.74,26.32,26.76,27.13,25.97,25.305,25.59,25.74,26.38,26.05,25.46,24.9,25.225,26.23,25.5,26.19,25.305,26.7,26.37,26.73,26.91,27.45,27.07,25.95,26.58,26.42,25.11,24.08,23.83,23.88,24.38,23.98,24.21,24.31,24.27,24.335,24.54,25.63,25.92,24.77,25.55,25.95,26.15,26.21,25.195,25.11,25.105,25.178,25.74,26.1,26.73,27.15,27.28,27.915,27.09,24.98,24.215,25.2,25.26,24.7,24.725,24.76,24.86,26.18,26.93,26.825,26.89,27.33,27.2,26.55],"ema":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,27.6981,27.7047,27.7151,27.7061,27.6884,27.6809,27.6603,27.6442,27.6176,27.6359,27.6443,27.6707,27.6895,27.7133,27.7336,27.7605,27.7876,27.8035,27.822,27.8517,27.8495,27.8532,27.8399,27.8161,27.7962,27.7842,27.741,27.6497,27.5489,27.4436,27.4005,27.3437,27.2874,27.2431,27.2109,27.1723,27.1388,27.081,27.0372,27.0077,26.9929,26.9828,26.9788,26.9778,26.9786,26.9812,26.9992,27.0123,27.017,27.0191,27.0355,27.0507,27.0813,27.1362,27.1968,27.2565,27.3098,27.3617,27.3942,27.4137,27.4253,27.4398,27.4644,27.4914,27.5217,27.5575,27.5988,27.641,27.6843,27.7242,27.7798,27.8386,27.8966,27.9529,28.0087,28.0563,28.1047,28.1462,28.1775,28.1978,28.2327,28.2702,28.3077,28.3564,28.4212,28.4852,28.5275,28.5758,28.6214,28.664,28.6994,28.7263,28.7517,28.7733,28.8087,28.8356,28.864,28.9018,28.9314,28.9478,28.9463,28.9422,28.9305,28.917,28.9026,28.8863,28.8723,28.8659,28.846,28.8372,28.825,28.8108,28.7985,28.7742,28.765,28.7631,28.7512,28.7169,28.674,28.6323,28.5899,28.5513,28.518,28.4925,28.4612,28.438,28.4091,28.3804,28.343,28.3098,28.2778,28.262,28.2281,28.202,28.171,28.1471,28.1313,28.112,28.0904,28.075,28.064,28.0617,28.0522,28.0468,28.0245,27.9879,27.9527,27.9285,27.8994,27.8874,27.8787,27.8681,27.8429,27.8165,27.7915,27.7792,27.7596,27.733,27.7286,27.7467,27.7582,27.761,27.7515,27.7479,27.7608,27.7652,27.7882,27.811,27.8318,27.8456,27.8612,27.8748,27.8949,27.9061,27.8981,27.886,27.8653,27.845,27.839,27.8277,27.7986,27.7547,27.7124,27.652,27.5894,27.5419,27.4771,27.4229,27.3759,27.3318,27.2983,27.275,27.2325,27.1976,27.1717,27.1606,27.1487,27.1378,27.1319,27.1374,27.1448,27.1578,27.1626,27.1677,27.1663,27.1815,27.2107,27.2569,27.2993,27.3411,27.3771,27.4093,27.4366,27.4612,27.5044,27.5611,27.6169,27.6712,27.73,27.7904,27.8714,27.9617,28.0502,28.1393,28.2252,28.3006,28.3724,28.4512,28.5407,28.6234,28.7125,28.7695,28.8172,28.8582,28.8995,28.9317,28.9509,28.962,28.9938,29.0322,29.0652,29.0815,29.1001,29.1292,29.1671,29.2085,29.2527,29.3063,29.348,29.3973,29.4257,29.4747,29.5009,29.5253,29.5291,29.541,29.5362,29.523,29.5046,29.4849,29.4628,29.4059,29.3397,29.2836,29.2376,29.1965,29.1373,29.0673,29.0093,28.9519,28.9061,28.8543,28.7871,28.7165,28.6593,28.6116,28.565,28.5216,28.4635,28.4304,28.4007,28.3759,28.3653,28.3495,28.3276,28.2817,28.2515,28.223,28.1614,28.0861,28.0119,27.9432,27.8748,27.8103,27.7436,27.6865,27.624,27.5637,27.5149,27.4901,27.4612,27.4152,27.403,27.3909,27.378,27.357,27.3153,27.2841,27.2419,27.2266,27.2045,27.1953,27.1924,27.1985,27.2203,27.2484,27.2506,27.2088,27.1633,27.1314,27.1012,27.0555,27.0262,26.9816,26.9611,26.9601,26.9605,26.9579,26.9619,26.9775,26.9831,26.9805],"bb_up":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,33.7429,33.7381,33.7081,33.7312,33.6811,33.4483,33.2297,33.132,33.0977,32.9516,32.6671,32.4027,32.1269,31.9134,31.4859,31.2293,30.8607,30.4732,30.286,30.2238,30.2417,30.1917,30.1858,30.2028,30.2062,30.1848,29.9898,29.9274,29.8498,29.7155,29.629,29.8516,29.9677,30.0398,30.1453,30.2701,30.3018,30.1482,30.0375,29.7755,29.4267,29.209,28.9265,28.7611,28.5216,28.2312,27.9052,27.5468,27.4108,27.2245,26.902,26.8164,26.6348,26.4115,26.3264,26.334,26.3228,26.5351,26.6411,26.7493,26.8324,26.9129,27.1782,27.4516,27.7568,28.0184,28.2576,28.3683,28.4828,28.5369,28.5412,28.6378,28.5667,28.3305,28.2011,28.1089,27.9066,27.925,27.9065,27.8862,27.8539,27.9648,28.1584,28.1708,28.1679,28.1821,28.1807,28.1776,28.1713,28.4004,28.4735,28.7317,28.9274,29.148,29.3153,29.5303,29.7273,29.7514,29.7722,29.923,29.9118,29.9122,29.9012,29.9406,29.9406,29.944,30.082,30.7337,31.2749,31.5995,31.5276,31.357,31.195,30.9394,30.676,30.318,29.912,29.5717,29.1382,28.5076,28.2724,27.9765,27.9047,27.9528,27.9892,27.974,28.3224,28.5321,28.5105,28.261,28.493,28.6315,28.8763,29.421,29.9815,30.4232,30.7431,30.8309,30.7746,30.6892,30.6335,30.5866,30.58,30.5784,30.5802,30.5983,30.6923,30.7676,30.7838,30.7097,30.8398,30.9619,31.1295,31.255,31.3434,31.3695,31.4343,31.4605,31.4725,31.4274,31.3311,31.2254,31.1705,31.1835,31.3909,31.5869,31.5985,31.646,31.6768,31.6752,31.6721,31.6536,31.6302,31.6112,31.5923,31.5856,31.575,31.6102,31.5995,31.5245,31.6717,31.8036,31.9607,32.0337,31.9175,31.7481,31.7094,31.5543,31.4369,31.2621,31.1272,31.0383,30.9349,30.8734,30.6169,30.4258,30.1731,29.7805,29.4858,29.3046,29.2949,29.2441,29.2052,29.1512,29.1065,29.0589,28.9956,28.8574,28.835,28.7009,28.5805,28.4931,28.3536,28.3044,28.0939,27.695,27.4496,27.4671,27.4753,27.5195,27.588,27.7646,27.8311,27.9164,27.9165,27.9516,27.9859,27.9822,27.984,28.01,28.0506,28.0338,28.0312,28.0397,28.0433,28.0545,28.0231,28.0179,28.0672,28.3466,28.4885,28.4801,28.4509,28.4223,28.6096,28.6664,28.8942,29.1146,29.2632,29.3635,29.4677,29.552,29.6356,29.6197,29.542,29.5343,29.5282,29.4628,29.4618,29.4143,29.485,29.6756,29.8146,30.0622,30.1757,30.1793,30.1109,29.92,29.669,29.4307,29.124,28.8068,28.3385,27.904,27.6785,27.5568,27.5125,27.4733,27.3149,27.3501,27.5691,27.8872,28.0825,28.2319,28.2802,28.4937,28.7227,29.1608,29.4947,29.7634,29.9642,30.1284,30.1132,30.0685,30.1811,30.4814,30.7111,30.877,31.0687,31.291,31.7234,32.2289,32.6011,32.9125,33.0698,33.1727,33.2839,33.4824,33.7532,33.9348,34.1224,34.0546,33.8918,33.639,33.5163,33.502,33.5595,33.6677,33.6714,33.6672,33.6461,33.607,33.5255,33.3771,33.2289,33.1531,33.1009,33.0396,32.7697,32.5913,32.1416,32.199,32.1724,32.1652,32.1893,32.1939,32.2564,32.3469,32.4863,32.5638,32.6357,32.9996,33.3317,33.4435,33.3909,33.245,33.0979,32.8381,32.5478,32.0927,31.7532,31.0931,30.662,30.1645,29.7927,29.2192,28.7906,28.4131,28.0548,27.6739,27.2709,27.3634,27.6419,27.7983,27.8395,27.752,27.7872,27.8073,27.875,28.0371,28.1192,28.1646,28.22,28.2527,28.2905,28.2666,28.2473,28.2013,28.1914,28.1291,28.0227,27.8256,27.6027,27.4333,27.3283,27.3677,27.1944,27.0272,27.0284,27.1481,27.1894,27.3219,27.4789,27.7043,28.0568,28.4566,28.4957,28.4386,28.4559,28.4549,28.4564,28.485,28.4385,28.4216,28.3694,28.4228,28.4932,28.5473,28.6092,28.749,28.8242,28.8321],"bb_mid":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,31.676,31.508,31.302,31.102,30.912,30.7185,30.6,30.4835,30.434,30.344,30.193,30.0425,29.763,29.5945,29.4185,29.2775,29.1355,29.021,28.9415,28.918,28.9265,28.882,28.8725,28.85,28.8325,28.8015,28.715,28.674,28.5465,28.4015,28.2995,28.1265,28.0765,27.9785,27.8235,27.655,27.4795,27.339,27.176,26.988,26.7945,26.6485,26.484,26.3195,26.1335,25.9155,25.69,25.4175,25.209,25.0195,24.8135,24.7335,24.633,24.5145,24.475,24.4785,24.473,24.5145,24.5465,24.579,24.6055,24.631,24.7075,24.8115,24.9395,25.09,25.2585,25.461,25.68,25.887,26.1085,26.2985,26.4435,26.5815,26.6935,26.796,26.9125,26.874,26.884,26.924,26.98,27.077,27.1435,27.1645,27.15,27.163,27.1365,27.1265,27.0705,27.13,27.1535,27.212,27.2935,27.409,27.502,27.6015,27.6965,27.8195,27.9445,28.064,28.0935,28.094,28.0415,28.0105,28.0105,28.0045,27.9525,27.7665,27.5795,27.264,27.1245,26.902,26.696,26.504,26.348,26.1565,25.974,25.7555,25.562,25.3735,25.2995,25.2215,25.2015,25.216,25.2265,25.2225,25.337,25.5635,25.798,26.0425,26.1715,26.335,26.54,26.78,27.009,27.2565,27.48,27.7655,27.972,28.1135,28.2005,28.2845,28.3795,28.4745,28.5745,28.6855,28.773,28.8765,29.0055,29.1345,29.2685,29.416,29.5245,29.569,29.5975,29.6075,29.635,29.6485,29.685,29.726,29.824,29.9225,29.9965,30.0935,30.224,30.34,30.389,30.451,30.5035,30.557,30.553,30.5185,30.4805,30.4355,30.425,30.413,30.4015,30.43,30.4635,30.4915,30.437,30.3675,30.277,30.151,29.979,29.8005,29.6785,29.5575,29.4065,29.288,29.1765,29.079,28.988,28.8745,28.762,28.687,28.5815,28.394,28.2015,28.042,27.923,27.818,27.744,27.693,27.629,27.5895,27.5295,27.45,27.3815,27.295,27.2185,27.187,27.105,27.072,26.9885,26.903,26.8625,26.8695,26.893,26.93,26.9815,27.047,27.0825,27.11,27.1105,27.055,27.0165,27.005,27.0035,27.0345,27.0725,27.0655,27.068,27.048,27.0435,27.054,27.026,26.989,27.0135,27.08,27.1205,27.118,27.103,27.0925,27.1665,27.2565,27.3925,27.503,27.623,27.685,27.744,27.8045,27.919,28.0165,28.064,28.07,28.0725,28.0935,28.095,28.0265,27.928,27.812,27.729,27.5835,27.388,27.2485,27.0155,26.8055,26.615,26.446,26.2965,26.175,25.987,25.8375,25.757,25.723,25.709,25.697,25.662,25.669,25.7265,25.8375,25.9265,26.0645,26.195,26.332,26.5515,26.7915,27.009,27.222,27.398,27.542,27.725,27.8855,28.073,28.261,28.452,28.64,28.83,28.9985,29.217,29.4485,29.7,29.9565,30.2255,30.4305,30.594,30.7345,30.913,31.0785,31.2765,31.406,31.5255,31.636,31.701,31.709,31.685,31.6425,31.639,31.6465,31.5875,31.4605,31.34,31.241,31.169,31.1305,31.106,31.0865,31.0085,30.9645,30.85,30.8655,30.8465,30.8385,30.7775,30.7575,30.7275,30.6955,30.5965,30.4755,30.359,30.194,29.996,29.793,29.589,29.384,29.1225,28.8045,28.541,28.2545,28.045,27.7645,27.4975,27.222,27.0275,26.8335,26.6815,26.5565,26.4065,26.3205,26.2485,26.2765,26.3655,26.4185,26.4325,26.375,26.4025,26.463,26.4115,26.324,26.209,26.1215,26.073,26.043,25.9735,25.904,25.8175,25.728,25.7035,25.677,25.632,25.5315,25.4795,25.4405,25.4155,25.431,25.3555,25.302,25.304,25.4095,25.498,25.608,25.736,25.88,26.073,26.262,26.4035,26.4315,26.422,26.3865,26.3655,26.348,26.287,26.186,26.1465,26.176,26.2625,26.317,26.4175,26.4815,26.539,26.5445],"bb_lo":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,29.6091,29.2779,28.8959,28.4728,28.1429,27.9887,27.9703,27.835,27.7703,27.7364,27.7189,27.6823,27.3991,27.2756,27.3511,27.3257,27.4103,27.5688,27.597,27.6122,27.6113,27.5723,27.5592,27.4972,27.4588,27.4182,27.4402,27.4206,27.2432,27.0875,26.97,26.4014,26.1853,25.9172,25.5017,25.0399,24.6572,24.5298,24.3145,24.2005,24.1623,24.088,24.0415,23.8779,23.7454,23.5998,23.4748,23.2882,23.0072,22.8145,22.725,22.6506,22.6312,22.6175,22.6236,22.623,22.6232,22.4939,22.4519,22.4087,22.3786,22.3491,22.2368,22.1714,22.1222,22.1616,22.2594,22.5537,22.8772,23.2371,23.6758,23.9592,24.3203,24.8325,25.1859,25.4831,25.9184,25.823,25.8615,25.9618,26.1061,26.1892,26.1286,26.1582,26.1321,26.1439,26.0923,26.0754,25.9697,25.8596,25.8335,25.6923,25.6596,25.67,25.6887,25.6727,25.6657,25.8876,26.1168,26.205,26.2752,26.2758,26.1818,26.0804,26.0804,26.065,25.823,24.7993,23.8841,22.9285,22.7214,22.447,22.197,22.0686,22.02,21.995,22.036,21.9393,21.9858,22.2394,22.3266,22.4665,22.4983,22.4792,22.4638,22.471,22.3516,22.5949,23.0855,23.824,23.85,24.0385,24.2037,24.139,24.0365,24.0898,24.2169,24.7001,25.1694,25.5378,25.7675,25.9824,26.179,26.3706,26.5688,26.7727,26.8537,26.9854,27.2272,27.5593,27.6972,27.8701,27.9195,27.883,27.8516,27.8455,27.8357,27.8365,27.8975,28.0246,28.3169,28.6196,28.8225,29.0035,29.0571,29.0931,29.1795,29.256,29.3302,29.4388,29.4339,29.3834,29.3308,29.2598,29.2577,29.2404,29.228,29.2498,29.3275,29.4585,29.2023,28.9314,28.5933,28.2683,28.0405,27.8529,27.6476,27.5607,27.3761,27.3139,27.2258,27.1197,27.0411,26.8756,26.9071,26.9482,26.9899,27.0075,26.9172,26.7794,26.5511,26.3919,26.2828,26.2348,26.1515,26.1201,26.0634,26.0426,25.928,25.8891,25.8565,25.8809,25.8564,25.8396,25.8831,26.111,26.2754,26.2719,26.3107,26.3405,26.375,26.3294,26.3339,26.3036,26.3045,26.1584,26.0471,26.0278,26.023,26.059,26.0944,26.0972,26.1048,26.0563,26.0437,26.0535,26.0289,25.9601,25.9598,25.8134,25.7525,25.7559,25.7551,25.7627,25.7234,25.8466,25.8908,25.8914,25.9828,26.0065,26.0203,26.057,26.2024,26.4133,26.586,26.6057,26.6168,26.7242,26.7282,26.6387,26.371,25.9484,25.6434,25.1048,24.6003,24.3177,23.9201,23.691,23.561,23.4613,23.469,23.5432,23.6355,23.771,23.8355,23.8892,23.9055,23.9207,24.0091,23.9879,23.8839,23.7878,23.7705,23.8971,24.1098,24.1703,24.3803,24.4222,24.5233,24.6806,24.8318,24.9556,25.3368,25.7025,25.9649,26.0406,26.1929,26.403,26.5913,26.706,26.7106,26.6681,26.7989,27.0005,27.3812,27.6883,27.9041,27.9866,28.0728,28.2222,28.4306,28.7574,29.1592,29.633,29.8857,29.916,29.8105,29.6173,29.6066,29.6258,29.5289,29.314,29.1545,29.1049,29.1091,29.1079,29.1111,29.1334,29.2473,29.3377,29.5584,29.532,29.5206,29.5118,29.3657,29.3211,29.1986,29.0441,28.7067,28.3872,28.0823,27.3884,26.6603,26.1425,25.7871,25.523,25.1471,24.7709,24.5342,24.4163,24.3368,24.4359,24.333,24.2795,24.2623,24.4478,24.5724,24.6999,24.7582,24.9671,25.2261,25.1896,25.0891,25.0387,25.0255,24.998,25.0178,25.1187,24.948,24.6109,24.2988,24.0784,23.926,23.8333,23.6565,23.5414,23.3877,23.2547,23.2156,23.2249,23.2413,23.2374,23.3563,23.4477,23.5027,23.4943,23.5166,23.5768,23.5796,23.6709,23.8066,23.8941,23.9931,24.0557,24.0892,24.0674,24.3113,24.4244,24.3881,24.3181,24.2746,24.211,24.1355,23.9504,23.9236,23.9292,24.0318,24.0867,24.2258,24.214,24.2538,24.2569],"pctb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.099,0.0251,-0.0095,0.0052,0.0843,0.1889,0.3935,0.2709,0.3735,0.4149,0.3236,0.294,-0.0633,0.1885,0.2851,0.2624,0.3216,0.4515,0.3953,0.6233,0.6686,0.3542,0.4191,0.2043,0.2916,0.3549,0.3412,0.4106,-0.0127,-0.0333,0.1166,-0.2294,-0.0226,0.0662,-0.0154,-0.0114,0.0625,0.2741,0.1897,0.2295,0.2541,0.2914,0.272,0.1806,0.1664,0.095,0.0734,-0.0677,0.0074,0.0897,0.1041,0.3263,0.3644,0.3169,0.5446,0.654,0.6154,1.0903,0.8565,0.8573,0.8198,0.8197,0.9437,0.8842,0.8834,0.8347,0.8187,0.7733,0.8104,0.7761,0.8045,0.8231,0.6287,0.4996,0.5619,0.6158,0.6597,0.1461,0.1851,0.5031,0.5973,1.0367,1.0353,0.5475,0.333,0.5721,0.2623,0.3685,0.15,1.055,0.8434,1.0817,0.9059,0.9258,0.8414,0.8859,0.8529,0.6994,0.7176,0.8378,0.4028,0.4852,0.2684,0.145,0.189,0.29,-0.0524,-0.2813,-0.1792,-0.0806,0.2894,0.2338,0.2559,0.3361,0.4159,0.3923,0.4373,0.2988,0.4032,0.5282,0.6615,0.7284,0.792,0.8131,0.8246,0.843,0.9276,0.8531,0.7677,0.7428,0.8615,0.819,0.9409,1.0812,1.0368,0.9663,0.8785,0.853,0.6834,0.5517,0.4588,0.473,0.5683,0.5845,0.6111,0.6685,0.7259,0.7257,0.7318,0.6795,0.9014,0.9315,0.888,0.8473,0.8358,0.7277,0.7404,0.6522,0.5126,0.3454,0.5451,0.5796,0.5696,0.8103,1.1024,1.0253,0.5955,0.7172,0.6604,0.5952,0.454,0.298,0.2954,0.2467,0.5578,0.3964,0.444,0.644,0.4721,0.1459,-0.1346,-0.0666,-0.0722,-0.0049,0.0386,0.0583,0.1311,0.2477,0.1192,0.2751,0.2548,0.2527,0.2951,0.1737,0.3782,0.4951,0.3676,0.0045,-0.143,-0.0829,-0.0223,0.087,0.2009,0.3412,0.2567,0.3981,0.3126,0.3259,0.1933,0.2777,0.306,0.6122,0.2777,0.4343,0.3424,0.536,0.9152,0.743,0.609,0.8223,0.944,1.1292,0.8323,0.9154,0.3818,0.0121,0.084,0.3593,0.2228,0.631,0.693,0.6417,0.2571,0.2287,0.2532,0.558,0.3817,0.2235,0.7356,1.1158,0.9421,0.7871,0.5657,0.6795,0.9274,0.7566,1.0119,0.9458,0.8771,0.7517,0.757,0.7133,0.7828,0.6383,0.3092,0.2337,0.0767,0.0423,0.297,0.2275,-0.0035,-0.0988,-0.0056,-0.0897,-0.0198,0.1488,0.0565,0.1684,0.2438,0.2829,0.3839,0.4896,0.3178,0.4111,0.5346,0.7418,0.7359,0.7542,0.8563,1.0178,0.984,0.9787,0.8417,0.8127,0.717,0.8696,0.9856,1.08,0.981,0.9305,0.8433,0.7819,0.723,0.682,0.8717,0.9749,0.9267,0.8844,0.9043,0.8886,1.0312,1.0362,0.9705,0.9387,0.8963,0.7916,0.7483,0.794,0.8621,0.7873,0.8239,0.5347,0.427,0.3138,0.2904,0.1712,0.0239,-0.0265,0.237,0.3227,0.2844,0.1342,0.198,0.3429,0.4687,0.532,0.5837,0.7236,0.614,0.7691,0.4923,0.8879,0.4825,0.4591,0.1255,0.2816,0.0332,-0.0527,-0.0309,0.0294,0.0632,-0.1423,-0.09,0.0503,0.1542,0.212,0.1337,0.1028,0.2004,0.2206,0.3106,0.2785,0.1781,0.1598,0.2835,0.3777,0.4001,0.4498,0.2523,0.6734,0.8333,0.9018,1.0776,0.9173,0.787,0.3675,0.6291,0.6291,0.0553,-0.0732,0.0108,0.113,0.1313,0.178,0.1691,0.2791,0.2351,0.2679,0.3787,0.6189,0.5832,0.4147,0.811,0.8386,0.8462,0.7295,0.4713,0.6269,0.4553,0.805,0.6809,0.8302,0.877,0.944,1.0613,1.0418,0.7286,0.1783,0.1283,0.2978,0.3193,0.1355,0.3357,0.1833,0.4558,0.6633,0.6608,0.615,0.6694,0.7797,0.6578,0.5668],"volume":[27287300.0,5358400.0,1748900.0,2532200.0,8476100.0,1788200.0,1449200.0,1540800.0,1216200.0,1397000.0,797600.0,580200.0,838000.0,1140900.0,744100.0,434400.0,867300.0,1317100.0,1773500.0,2339000.0,429400.0,453000.0,1388200.0,1182100.0,3160500.0,1032500.0,398900.0,652400.0,558200.0,1072700.0,1721800.0,2488100.0,1147300.0,724400.0,1597600.0,544100.0,1219100.0,1594100.0,790700.0,878000.0,896400.0,574900.0,869600.0,891900.0,414700.0,1354900.0,1000500.0,1180900.0,1303000.0,693000.0,1676500.0,1328200.0,1662700.0,1338400.0,2235500.0,2368500.0,12592100.0,2729200.0,630700.0,1117600.0,1065700.0,1066800.0,1742200.0,1274700.0,1959700.0,3133600.0,3527900.0,2313400.0,2093700.0,2147300.0,1228100.0,1593800.0,915700.0,1398100.0,2091400.0,2043500.0,2117900.0,1317900.0,910200.0,494800.0,730100.0,760500.0,845600.0,1001300.0,1201700.0,866900.0,966900.0,789900.0,354600.0,779800.0,585300.0,848800.0,968300.0,610900.0,1918500.0,645900.0,722700.0,511600.0,695200.0,698000.0,618700.0,2264800.0,691100.0,826600.0,969800.0,1839800.0,1484400.0,2013100.0,3532900.0,2061600.0,1658600.0,1782000.0,1435400.0,1295300.0,1764400.0,1405300.0,6668200.0,1909300.0,2804800.0,19158500.0,8731400.0,7988700.0,4349800.0,4203500.0,4592700.0,4870000.0,8416000.0,5363600.0,3274100.0,6032900.0,3072200.0,2661000.0,2040300.0,1946500.0,2209700.0,1301300.0,2787100.0,1288100.0,1844900.0,752000.0,1238900.0,953800.0,3228100.0,1115300.0,1434400.0,943800.0,942800.0,1097100.0,1257000.0,1155100.0,2915900.0,3044800.0,3359800.0,2244400.0,1855200.0,1232300.0,1445800.0,2300600.0,2816100.0,14141200.0,7276800.0,3857400.0,2866000.0,2359800.0,1948300.0,1621800.0,2820500.0,1887300.0,2316200.0,3430500.0,1918600.0,1474700.0,1474100.0,2470500.0,2362200.0,1830800.0,1255600.0,2511700.0,5804000.0,2616100.0,1791000.0,1500400.0,3223100.0,7006100.0,3700100.0,3328700.0,4934000.0,1353300.0,3204600.0,2841000.0,3606800.0,1268700.0,1261700.0,1316300.0,1972800.0,2569600.0,1187600.0,1214900.0,1452100.0,1776100.0,1665300.0,1331600.0,1115500.0,1052600.0,1192200.0,1850800.0,1897600.0,1620800.0,2252100.0,1374900.0,1062700.0,1054200.0,1492200.0,2057200.0,1580400.0,2603200.0,5291700.0,1627900.0,1498500.0,1367100.0,1477500.0,1606600.0,2542200.0,1102500.0,1788800.0,1069200.0,750800.0,884500.0,1274900.0,1313400.0,2645500.0,2120800.0,1338900.0,1154200.0,1534300.0,1298100.0,923900.0,1381000.0,1310400.0,2310700.0,1390100.0,3087200.0,1161100.0,1737200.0,1411600.0,1237800.0,1735800.0,2170900.0,2629000.0,5054900.0,3267400.0,1251500.0,1314300.0,1174400.0,919300.0,1005200.0,1373100.0,3441000.0,2307200.0,2676600.0,2284100.0,1679200.0,1331000.0,1181300.0,1249100.0,1490400.0,1947700.0,1681800.0,1638300.0,1385200.0,1544900.0,1396600.0,1378600.0,3477200.0,1453300.0,998100.0,2520800.0,2367400.0,2320800.0,1364700.0,1588700.0,2130300.0,2164000.0,1470400.0,1761100.0,1174900.0,1402400.0,1211300.0,1473500.0,1327400.0,561800.0,1355300.0,1083400.0,1706500.0,1252900.0,1229500.0,2143800.0,1829100.0,2130500.0,954400.0,2018800.0,1250600.0,1057700.0,1786100.0,1709500.0,2794800.0,1300200.0,878300.0,496100.0,627100.0,872000.0,1836600.0,1527800.0,1471900.0,2588500.0,3086100.0,1628000.0,1791600.0,1335100.0,1933700.0,2164200.0,1540400.0,1802500.0,2430300.0,7759400.0,21684800.0,3112200.0,3225700.0,1913600.0,1333600.0,22705600.0,18898300.0,6005600.0,7332300.0,3380000.0,5176600.0,4979500.0,3153600.0,2554500.0,2392800.0,2412200.0,3299600.0,2469800.0,2568300.0,1809100.0,1792100.0,3097600.0,2683600.0,1880200.0,2929700.0,7415400.0,12729400.0,6510000.0,5205000.0,5511800.0,4633200.0,4241800.0,4643900.0,3738900.0,3339900.0,5735000.0,4929800.0,4391500.0,3104000.0,3740500.0,3698500.0,10377000.0,3662400.0,2689800.0,2116100.0,3332300.0,3590600.0,4204600.0,4574400.0,4101300.0,2313200.0,2400500.0,2988500.0,3556000.0,2502700.0,5368800.0,5289700.0,1908700.0,1673300.0,3223900.0,2363700.0,2074800.0,5143800.0,4719000.0,5779300.0,3557000.0,3831000.0,4086500.0,3910900.0,5492600.0,3003300.0,4166900.0,3999000.0,5343200.0,5787000.0,8306400.0,8861900.0,4827200.0,3139500.0,2783300.0,2627200.0,2460100.0,2830800.0,2414400.0,2575600.0,3697700.0,3056500.0,3253200.0,3151600.0,3558900.0,3947200.0,7234100.0,6082600.0,4006500.0,2383000.0,4107100.0,3898600.0,3028100.0,4472800.0,5080900.0,3154100.0,4375300.0,5956500.0,6189800.0,4050500.0,3650700.0],"vol_avg":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3181320.0,1838425.0,1593155.0,1575120.0,1507615.0,1241835.0,1204050.0,1151535.0,1107115.0,1074215.0,1058000.0,1104210.0,1199605.0,1215070.0,1194245.0,1236920.0,1242405.0,1259995.0,1273845.0,1224705.0,1151655.0,1175005.0,1181100.0,1155170.0,1140660.0,1003370.0,1019490.0,1049570.0,1075995.0,1113235.0,1094250.0,1091985.0,1033990.0,1059760.0,1090460.0,1122355.0,1213575.0,1782225.0,1838980.0,1830980.0,1842960.0,1851425.0,1876020.0,1919650.0,1938790.0,2016040.0,2104975.0,2231345.0,2287970.0,2327505.0,2400220.0,2377800.0,2391080.0,2353730.0,2356715.0,2349510.0,2333260.0,1809550.0,1738985.0,1752960.0,1721820.0,1705040.0,1689725.0,1644895.0,1631225.0,1593325.0,1479990.0,1351940.0,1275765.0,1188810.0,1120435.0,1088295.0,1051045.0,1053675.0,1014315.0,1005670.0,935790.0,866030.0,825715.0,814965.0,825125.0,819555.0,894770.0,887045.0,878310.0,866715.0,915360.0,941235.0,1002395.0,1161310.0,1225400.0,1279065.0,1325725.0,1349080.0,1383300.0,1375595.0,1413565.0,1710840.0,1780725.0,1886205.0,2809230.0,3214865.0,3501060.0,3683995.0,3852840.0,4033985.0,4185495.0,4532075.0,4699600.0,4686660.0,4885225.0,4955905.0,4999855.0,5030100.0,5062660.0,5084925.0,5079725.0,4885670.0,4854610.0,4806615.0,3886290.0,3511665.0,3159920.0,3103835.0,2949425.0,2791510.0,2595200.0,2221540.0,2008215.0,1907360.0,1663470.0,1655655.0,1674845.0,1740820.0,1755715.0,1737990.0,1734540.0,1667475.0,1718100.0,1766660.0,2436120.0,2738015.0,2883195.0,2865090.0,2927315.0,2953010.0,2986910.0,3080795.0,3120305.0,3173265.0,3287035.0,3237170.0,3158665.0,3064380.0,3075685.0,3101035.0,3130960.0,3121450.0,3132005.0,3281400.0,2705145.0,2430855.0,2313005.0,2330860.0,2563175.0,2650765.0,2736110.0,2841785.0,2815085.0,2859505.0,2830030.0,2914440.0,2904140.0,2893520.0,2835810.0,2816340.0,2853280.0,2849880.0,2785040.0,2567445.0,2525445.0,2519160.0,2510720.0,2405340.0,2107665.0,1982270.0,1908375.0,1756555.0,1769930.0,1722305.0,1649000.0,1521795.0,1511070.0,1522595.0,1559640.0,1540020.0,1541700.0,1746905.0,1767555.0,1769875.0,1749425.0,1740035.0,1753785.0,1825120.0,1827615.0,1857445.0,1818365.0,1761025.0,1724210.0,1675350.0,1672275.0,1751415.0,1804745.0,1797080.0,1751930.0,1749625.0,1684370.0,1465980.0,1453635.0,1444230.0,1491410.0,1487040.0,1561070.0,1492015.0,1523750.0,1504890.0,1513320.0,1562570.0,1626890.0,1694595.0,1881670.0,1912765.0,1869300.0,1868070.0,1869080.0,1838330.0,1823685.0,1846145.0,1949145.0,1998985.0,2017280.0,2061980.0,1991580.0,2000075.0,1972280.0,1964155.0,1976785.0,1987380.0,1962925.0,1913390.0,1729905.0,1643780.0,1651035.0,1654250.0,1769390.0,1796090.0,1795735.0,1853120.0,1799440.0,1800120.0,1734525.0,1699755.0,1722310.0,1763960.0,1778415.0,1804015.0,1788240.0,1760975.0,1737450.0,1729210.0,1726320.0,1677165.0,1675100.0,1660340.0,1571805.0,1561785.0,1573355.0,1554505.0,1527590.0,1518075.0,1497560.0,1519065.0,1475080.0,1419765.0,1435550.0,1432970.0,1513965.0,1508855.0,1492205.0,1443335.0,1408320.0,1423830.0,1447895.0,1470115.0,1458385.0,1525165.0,1617995.0,1592205.0,1590330.0,1550560.0,1599525.0,1606795.0,1621285.0,1658525.0,1690735.0,1993230.0,2937730.0,3028330.0,3145700.0,3216575.0,3251900.0,4343580.0,5196665.0,5420555.0,5713575.0,5753150.0,5857675.0,6025250.0,6093350.0,6154320.0,6177275.0,6189675.0,6277635.0,6311000.0,6317900.0,6020385.0,5025750.0,5025020.0,4997915.0,4996245.0,5076050.0,4311540.0,4003095.0,4028315.0,3921950.0,4028540.0,4001370.0,3964485.0,4039000.0,4098220.0,4145575.0,4311715.0,4393225.0,4489310.0,4516095.0,4612665.0,4707985.0,5071955.0,5120895.0,5161375.0,5120695.0,4916540.0,4459600.0,4344330.0,4312800.0,4242275.0,4126275.0,4034210.0,3951440.0,3942295.0,3900435.0,3882125.0,3900120.0,3775980.0,3704445.0,3678615.0,3611875.0,3196765.0,3270835.0,3372295.0,3555455.0,3566690.0,3578710.0,3572805.0,3539630.0,3609195.0,3643700.0,3732020.0,3782545.0,3871905.0,4036120.0,4183000.0,4361610.0,4507535.0,4580845.0,4558815.0,4571990.0,4591255.0,4475605.0,4360375.0,4200190.0,4207225.0,4168500.0,4126835.0,4088870.0,3992185.0,4039380.0,4192740.0,4296920.0,4230085.0,4059885.0,3849920.0,3601755.0,3511800.0,3578465.0,3693345.0,3719690.0,3815450.0,3971735.0,4160505.0,4234250.0,4231900.0],"rsi":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,44.5917,41.8309,40.1356,40.9277,43.8427,50.2692,46.079,48.9305,49.7301,46.5518,45.2399,36.6687,42.7538,44.7752,44.0005,44.9475,46.9472,45.8753,49.1005,49.8062,45.3746,46.2996,43.3535,44.6302,45.4924,45.018,45.941,39.724,38.7883,40.7473,33.9301,37.1763,37.7675,34.8523,33.2525,33.4668,40.5646,37.8762,38.3894,38.523,39.0795,38.126,35.4791,34.568,32.5672,31.6419,28.7734,29.1116,30.5862,30.3905,37.5426,38.172,36.8527,43.1355,45.9651,45.1008,56.5636,51.6795,52.1348,51.5665,51.8977,56.1574,55.7723,57.1138,56.7653,57.4217,56.5184,58.6306,58.0688,59.4703,60.7365,54.1046,51.1642,53.1263,54.5363,55.3713,47.5865,48.3509,52.8874,54.2365,59.1604,60.1853,53.3504,50.5471,53.4103,49.3779,50.6082,47.4302,58.5807,55.9059,59.6253,57.6232,58.7175,57.844,59.3301,59.5018,56.1333,56.8476,59.5299,50.5245,51.9765,47.748,45.3115,46.2209,48.2458,41.383,33.5736,32.102,31.2668,45.1137,42.8992,42.8096,45.0272,47.2582,46.0166,46.9138,42.6414,45.3443,48.0405,50.7129,51.526,52.6474,53.217,53.5698,53.9354,57.0228,55.8607,53.8032,53.1499,56.2876,56.0171,59.3103,63.7717,64.9059,64.9389,63.3091,63.1807,57.4753,54.0501,52.049,52.8231,55.2924,55.9918,56.891,58.3525,59.7876,60.2067,60.6858,59.7021,63.661,64.6304,64.7205,64.4613,64.6105,61.3571,61.8625,59.1483,55.1575,51.0675,55.993,57.0119,57.196,60.7898,65.1341,65.2285,56.8869,58.7727,58.085,57.2235,54.7376,51.848,51.4812,50.21,55.1474,52.1962,52.8769,56.162,53.2693,48.7019,43.271,42.5416,40.3915,39.8479,39.5121,38.8797,39.8016,43.142,38.9043,43.478,42.3652,41.679,42.3933,38.5421,44.8379,47.5874,44.295,38.0937,35.9118,36.0758,35.6912,37.0164,39.0437,42.1136,40.2184,43.4022,41.5041,41.3812,38.5569,40.2022,40.3889,47.2381,41.3506,44.1852,42.5612,45.0794,48.0039,46.7279,45.784,48.0713,49.6892,52.8551,50.005,51.4933,45.3788,40.9722,41.2158,45.3322,43.6611,49.6651,50.7305,49.9651,45.1423,44.5913,44.9059,49.5773,47.0059,44.6333,52.1266,58.2872,56.1988,53.4049,49.6581,51.339,55.7866,53.1967,57.8553,57.9017,57.3695,55.1676,55.7098,55.1482,57.0839,53.9823,47.8701,46.6537,44.1247,44.1247,48.8992,47.2596,42.2354,38.5388,38.8278,34.7049,34.0313,39.1503,35.3549,38.558,40.6015,41.2648,44.4635,47.4165,42.5093,44.5826,47.065,51.0237,50.7463,50.9708,52.3426,55.4583,55.9897,57.536,54.7433,54.8587,52.6012,57.3886,61.0324,64.8469,63.801,63.8449,61.8728,60.6115,58.9512,58.0741,63.1156,66.3541,66.3966,66.2204,67.4922,68.1239,72.5376,74.4029,74.4029,74.8165,74.0816,69.4643,68.4661,70.3498,72.8682,70.3326,71.975,58.856,55.9779,54.0114,54.3028,51.4873,47.5035,45.2234,51.8373,53.8303,52.3728,47.5957,48.391,51.6582,54.2627,55.4454,56.4161,59.1242,55.2987,57.5586,51.1634,56.5473,50.5202,50.1621,45.2862,47.4681,43.7502,41.9581,40.8122,40.4797,39.8812,33.2931,31.6542,34.5344,37.3151,38.5365,35.1155,33.1277,36.4783,36.3718,39.6505,38.2794,35.2375,34.4053,38.3035,40.8511,40.9123,41.6112,38.2353,45.4079,46.1755,47.3989,51.0707,49.6433,47.9203,42.1767,46.3073,46.5751,39.5201,36.9228,36.8548,38.0555,37.8661,38.7014,37.9576,40.754,39.2894,39.6354,43.1804,50.0662,48.8311,44.3724,52.8288,52.7779,52.5118,50.2701,45.1065,47.6963,45.0052,51.4556,49.7794,52.6224,53.9721,55.892,59.0857,60.3695,53.6933,44.6738,43.8702,46.6798,46.9419,43.8417,47.3668,44.3614,49.2949,52.8735,53.1274,52.4895,53.7748,56.0143,53.7383,51.8815],"macd":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.8795,-0.8565,-0.7897,-0.7172,-0.6985,-0.6958,-0.843,-0.8648,-0.8418,-0.8286,-0.7952,-0.7312,-0.6904,-0.6042,-0.5194,-0.5165,-0.4955,-0.5222,-0.5203,-0.5017,-0.4887,-0.4617,-0.5342,-0.6017,-0.6254,-0.77,-0.8355,-0.87,-0.9479,-1.0339,-1.0872,-1.0319,-1.0304,-1.011,-0.9827,-0.943,-0.9178,-0.9363,-0.9577,-1.0034,-1.047,-1.133,-1.1842,-1.1974,-1.198,-1.117,-1.0344,-0.9795,-0.8599,-0.7237,-0.6207,-0.3734,-0.2439,-0.1326,-0.0518,0.0169,0.1351,0.2214,0.3072,0.367,0.4192,0.4457,0.491,0.5152,0.5475,0.5841,0.5407,0.4679,0.4294,0.4119,0.4038,0.3052,0.2332,0.2292,0.241,0.3177,0.3901,0.365,0.3053,0.2949,0.23,0.1932,0.1184,0.2371,0.2891,0.3999,0.4535,0.5118,0.5397,0.5833,0.6141,0.5881,0.5729,0.6008,0.4898,0.4212,0.294,0.1479,0.0454,-0.0052,-0.1716,-0.497,-0.7918,-1.0401,-0.9802,-0.9812,-0.9731,-0.9119,-0.808,-0.7462,-0.6717,-0.7061,-0.6732,-0.5856,-0.4536,-0.3274,-0.2009,-0.0876,0.0094,0.0925,0.2188,0.2968,0.3219,0.3275,0.3864,0.4242,0.5127,0.676,0.8241,0.9316,0.9844,1.013,0.9496,0.8397,0.7137,0.6197,0.5804,0.5549,0.5438,0.5537,0.5798,0.6009,0.6185,0.6149,0.6712,0.7253,0.761,0.7779,0.7846,0.7523,0.7255,0.6724,0.5856,0.4686,0.4323,0.4124,0.3946,0.4248,0.5122,0.5764,0.538,0.5297,0.51,0.4799,0.4254,0.3467,0.2772,0.2059,0.2052,0.1712,0.1506,0.1726,0.1583,0.0943,-0.0279,-0.1337,-0.2462,-0.3395,-0.4135,-0.4756,-0.5108,-0.5031,-0.5463,-0.5309,-0.5271,-0.5269,-0.5144,-0.5482,-0.5093,-0.4444,-0.4292,-0.5033,-0.5931,-0.6551,-0.7026,-0.7198,-0.7068,-0.6598,-0.641,-0.5886,-0.5656,-0.5428,-0.5562,-0.546,-0.5301,-0.4487,-0.454,-0.4242,-0.4176,-0.3821,-0.3188,-0.2808,-0.259,-0.2158,-0.1627,-0.085,-0.0527,-0.0108,-0.0464,-0.1329,-0.1967,-0.203,-0.2271,-0.1772,-0.1233,-0.0885,-0.1192,-0.1491,-0.1677,-0.1308,-0.1308,-0.1588,-0.0919,0.0516,0.1388,0.1712,0.1451,0.1462,0.2116,0.227,0.3122,0.3761,0.4156,0.4155,0.4186,0.4099,0.4256,0.3987,0.2965,0.1962,0.0796,-0.0127,-0.029,-0.063,-0.1615,-0.2991,-0.4003,-0.5515,-0.6773,-0.7124,-0.8051,-0.831,-0.8172,-0.789,-0.7189,-0.6174,-0.6099,-0.5699,-0.4986,-0.3796,-0.2861,-0.2063,-0.1223,-0.0097,0.0867,0.1843,0.2268,0.2591,0.256,0.3168,0.419,0.5646,0.661,0.7298,0.7555,0.7542,0.7279,0.6901,0.7293,0.8099,0.8647,0.8961,0.9328,0.9622,1.0619,1.1719,1.2446,1.297,1.3177,1.283,1.2332,1.2137,1.234,1.2159,1.2198,1.0869,0.9376,0.7869,0.6638,0.5271,0.3638,0.2005,0.1549,0.1461,0.1192,0.0321,-0.0261,-0.0275,0.0092,0.0554,0.1053,0.1847,0.2009,0.2456,0.1973,0.2425,0.1875,0.1366,0.0146,-0.0484,-0.1634,-0.286,-0.4011,-0.4931,-0.5707,-0.767,-0.9544,-1.0544,-1.0848,-1.0803,-1.1403,-1.223,-1.2307,-1.2251,-1.1645,-1.1317,-1.1593,-1.1868,-1.1462,-1.0679,-0.9935,-0.9151,-0.9055,-0.792,-0.6828,-0.5719,-0.4235,-0.3239,-0.2685,-0.3202,-0.2972,-0.2718,-0.3844,-0.5281,-0.6363,-0.6978,-0.7421,-0.7579,-0.776,-0.7479,-0.7436,-0.7278,-0.6657,-0.5169,-0.4127,-0.3974,-0.2485,-0.1298,-0.0393,-0.0014,-0.0571,-0.061,-0.1104,-0.0426,-0.0177,0.0523,0.1313,0.2275,0.3642,0.4942,0.4884,0.3011,0.1326,0.0502,-0.0102,-0.1229,-0.1467,-0.2283,-0.1955,-0.0909,-0.0024,0.055,0.1256,0.2266,0.2641,0.2577],"macd_signal":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.815,-0.8177,-0.8132,-0.7968,-0.7755,-0.7413,-0.6969,-0.6608,-0.6278,-0.6066,-0.5894,-0.5718,-0.5552,-0.5365,-0.536,-0.5492,-0.5644,-0.6055,-0.6515,-0.6952,-0.7457,-0.8034,-0.8601,-0.8945,-0.9217,-0.9395,-0.9482,-0.9471,-0.9413,-0.9403,-0.9438,-0.9557,-0.974,-1.0058,-1.0415,-1.0726,-1.0977,-1.1016,-1.0881,-1.0664,-1.0251,-0.9648,-0.896,-0.7915,-0.682,-0.5721,-0.468,-0.3711,-0.2698,-0.1716,-0.0758,0.0127,0.094,0.1644,0.2297,0.2868,0.3389,0.388,0.4185,0.4284,0.4286,0.4252,0.421,0.3978,0.3649,0.3378,0.3184,0.3183,0.3326,0.3391,0.3323,0.3249,0.3059,0.2834,0.2504,0.2477,0.256,0.2848,0.3185,0.3572,0.3937,0.4316,0.4681,0.4921,0.5083,0.5268,0.5194,0.4997,0.4586,0.3965,0.3262,0.26,0.1737,0.0395,-0.1267,-0.3094,-0.4436,-0.5511,-0.6355,-0.6908,-0.7142,-0.7206,-0.7108,-0.7099,-0.7026,-0.6792,-0.634,-0.5727,-0.4984,-0.4162,-0.3311,-0.2464,-0.1533,-0.0633,0.0137,0.0765,0.1385,0.1956,0.259,0.3424,0.4388,0.5373,0.6267,0.704,0.7531,0.7704,0.7591,0.7312,0.701,0.6718,0.6462,0.6277,0.6181,0.6147,0.6154,0.6153,0.6265,0.6463,0.6692,0.6909,0.7097,0.7182,0.7197,0.7102,0.6853,0.642,0.6,0.5625,0.5289,0.5081,0.5089,0.5224,0.5255,0.5264,0.5231,0.5145,0.4967,0.4667,0.4288,0.3842,0.3484,0.313,0.2805,0.2589,0.2388,0.2099,0.1623,0.1031,0.0333,-0.0413,-0.1157,-0.1877,-0.2523,-0.3025,-0.3512,-0.3872,-0.4152,-0.4375,-0.4529,-0.4719,-0.4794,-0.4724,-0.4638,-0.4717,-0.4959,-0.5278,-0.5627,-0.5942,-0.6167,-0.6253,-0.6284,-0.6205,-0.6095,-0.5962,-0.5882,-0.5797,-0.5698,-0.5456,-0.5273,-0.5066,-0.4888,-0.4675,-0.4378,-0.4064,-0.3769,-0.3447,-0.3083,-0.2636,-0.2214,-0.1793,-0.1527,-0.1487,-0.1583,-0.1673,-0.1792,-0.1788,-0.1677,-0.1519,-0.1454,-0.1461,-0.1504,-0.1465,-0.1434,-0.1464,-0.1355,-0.0981,-0.0507,-0.0064,0.0239,0.0484,0.081,0.1102,0.1506,0.1957,0.2397,0.2749,0.3036,0.3249,0.345,0.3557,0.3439,0.3144,0.2674,0.2114,0.1633,0.118,0.0621,-0.0101,-0.0881,-0.1808,-0.2801,-0.3666,-0.4543,-0.5296,-0.5871,-0.6275,-0.6458,-0.6401,-0.6341,-0.6212,-0.5967,-0.5533,-0.4999,-0.4411,-0.3774,-0.3038,-0.2257,-0.1437,-0.0696,-0.0039,0.0481,0.1018,0.1653,0.2451,0.3283,0.4086,0.478,0.5332,0.5721,0.5957,0.6225,0.66,0.7009,0.7399,0.7785,0.8152,0.8646,0.926,0.9898,1.0512,1.1045,1.1402,1.1588,1.1698,1.1826,1.1893,1.1954,1.1737,1.1265,1.0586,0.9796,0.8891,0.784,0.6673,0.5648,0.4811,0.4087,0.3334,0.2615,0.2037,0.1648,0.1429,0.1354,0.1453,0.1564,0.1742,0.1788,0.1916,0.1908,0.1799,0.1469,0.1078,0.0536,-0.0143,-0.0917,-0.172,-0.2517,-0.3548,-0.4747,-0.5906,-0.6895,-0.7677,-0.8422,-0.9183,-0.9808,-1.0297,-1.0567,-1.0717,-1.0892,-1.1087,-1.1162,-1.1066,-1.0839,-1.0502,-1.0212,-0.9754,-0.9169,-0.8479,-0.763,-0.6752,-0.5939,-0.5391,-0.4907,-0.447,-0.4345,-0.4532,-0.4898,-0.5314,-0.5735,-0.6104,-0.6435,-0.6644,-0.6802,-0.6898,-0.6849,-0.6513,-0.6036,-0.5624,-0.4996,-0.4256,-0.3484,-0.279,-0.2346,-0.1999,-0.182,-0.1541,-0.1268,-0.091,-0.0465,0.0083,0.0795,0.1624,0.2276,0.2423,0.2204,0.1863,0.147,0.093,0.0451,-0.0096,-0.0467,-0.0556,-0.045,-0.025,0.0051,0.0494,0.0924,0.1254],"macd_hist":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.0268,-0.0109,0.018,0.0656,0.0852,0.1371,0.1775,0.1443,0.1322,0.0845,0.0691,0.0701,0.0665,0.0748,0.0018,-0.0525,-0.061,-0.1645,-0.1839,-0.1748,-0.2021,-0.2305,-0.227,-0.1374,-0.1087,-0.0715,-0.0345,0.0042,0.0234,0.0039,-0.014,-0.0477,-0.073,-0.1272,-0.1428,-0.1247,-0.1003,-0.0154,0.0537,0.0869,0.1652,0.2411,0.2753,0.4181,0.438,0.4395,0.4162,0.3879,0.4049,0.393,0.383,0.3542,0.3252,0.2814,0.2613,0.2284,0.2086,0.1961,0.1222,0.0395,0.0008,-0.0134,-0.0171,-0.0926,-0.1317,-0.1086,-0.0774,-0.0006,0.0575,0.0259,-0.027,-0.0299,-0.0759,-0.0901,-0.132,-0.0106,0.0331,0.1151,0.135,0.1546,0.146,0.1517,0.146,0.096,0.0647,0.0741,-0.0296,-0.0786,-0.1646,-0.2485,-0.2809,-0.2651,-0.3452,-0.5365,-0.6651,-0.7307,-0.5366,-0.4301,-0.3376,-0.2211,-0.0938,-0.0256,0.0392,0.0038,0.0293,0.0936,0.1805,0.2453,0.2974,0.3286,0.3405,0.3389,0.3721,0.3601,0.3082,0.251,0.2479,0.2285,0.2537,0.3336,0.3853,0.3942,0.3577,0.309,0.1965,0.0693,-0.0454,-0.1116,-0.1207,-0.1169,-0.1024,-0.074,-0.0383,-0.0138,0.003,-0.0005,0.0447,0.079,0.0918,0.0869,0.075,0.0341,0.0059,-0.0378,-0.0997,-0.1733,-0.1677,-0.1501,-0.1343,-0.0833,0.0033,0.054,0.0125,0.0033,-0.0131,-0.0345,-0.0712,-0.1199,-0.1516,-0.1783,-0.1432,-0.1418,-0.1299,-0.0863,-0.0805,-0.1156,-0.1902,-0.2368,-0.2795,-0.2982,-0.2978,-0.2879,-0.2585,-0.2006,-0.1951,-0.1437,-0.112,-0.0894,-0.0615,-0.0762,-0.0299,0.028,0.0346,-0.0316,-0.0971,-0.1273,-0.1398,-0.1257,-0.0901,-0.0345,-0.0125,0.0318,0.0439,0.0534,0.032,0.0338,0.0397,0.0969,0.0733,0.0825,0.0713,0.0854,0.1189,0.1256,0.1179,0.1289,0.1455,0.1786,0.1688,0.1685,0.1063,0.0159,-0.0383,-0.0357,-0.0479,0.0016,0.0444,0.0634,0.0261,-0.003,-0.0172,0.0157,0.0126,-0.0123,0.0436,0.1497,0.1895,0.1775,0.1212,0.0978,0.1306,0.1167,0.1615,0.1804,0.1759,0.1406,0.115,0.085,0.0805,0.0429,-0.0474,-0.1181,-0.1878,-0.2241,-0.1923,-0.181,-0.2236,-0.289,-0.3121,-0.3707,-0.3972,-0.3458,-0.3508,-0.3014,-0.23,-0.1615,-0.0731,0.0227,0.0242,0.0513,0.0981,0.1737,0.2138,0.2348,0.2551,0.2942,0.3124,0.3281,0.2964,0.263,0.2078,0.2149,0.2538,0.3194,0.3327,0.3212,0.2775,0.221,0.1557,0.0944,0.1069,0.15,0.1638,0.1561,0.1543,0.1469,0.1973,0.2458,0.2549,0.2458,0.2132,0.1428,0.0744,0.0439,0.0514,0.0266,0.0244,-0.0868,-0.1888,-0.2717,-0.3158,-0.362,-0.4203,-0.4668,-0.41,-0.335,-0.2895,-0.3013,-0.2876,-0.2312,-0.1556,-0.0875,-0.0301,0.0394,0.0445,0.0714,0.0185,0.051,-0.0033,-0.0433,-0.1322,-0.1562,-0.217,-0.2717,-0.3094,-0.3211,-0.319,-0.4122,-0.4797,-0.4637,-0.3953,-0.3127,-0.2981,-0.3046,-0.2499,-0.1955,-0.1079,-0.06,-0.0701,-0.0781,-0.03,0.0387,0.0904,0.1351,0.1157,0.1834,0.2341,0.276,0.3395,0.3513,0.3253,0.2189,0.1935,0.1751,0.05,-0.0749,-0.1465,-0.1664,-0.1685,-0.1475,-0.1325,-0.0835,-0.0634,-0.0381,0.0193,0.1345,0.1909,0.1649,0.2511,0.2959,0.3091,0.2775,0.1775,0.1389,0.0716,0.1115,0.1092,0.1433,0.1778,0.2193,0.2847,0.3318,0.2608,0.0588,-0.0877,-0.1362,-0.1572,-0.2159,-0.1918,-0.2187,-0.1487,-0.0354,0.0425,0.0799,0.1205,0.1772,0.1717,0.1323],"up":[true,true,false,false,true,false,false,false,true,true,false,true,false,true,false,true,false,false,false,false,true,false,false,true,true,true,false,true,true,false,false,false,true,true,false,true,true,false,true,true,false,true,false,true,true,false,true,false,false,true,false,true,true,false,false,true,true,false,true,true,true,false,false,false,false,false,false,true,true,false,true,true,false,true,true,false,true,false,true,false,true,true,false,true,false,true,false,true,false,true,true,false,false,true,true,true,false,true,true,true,true,true,false,false,true,false,true,false,true,false,true,false,true,false,true,true,false,true,true,false,true,false,false,true,true,false,false,false,false,true,false,false,true,true,false,true,false,true,true,true,true,true,true,true,true,true,false,false,false,true,false,true,true,true,true,false,false,false,false,false,true,true,true,true,true,true,true,true,false,true,true,true,false,true,false,true,false,false,false,true,true,true,true,true,true,false,true,false,false,false,false,false,false,true,false,true,true,false,false,false,false,false,false,false,false,true,true,false,true,false,false,true,false,true,true,false,false,false,true,false,true,true,true,false,true,false,false,false,true,true,true,false,true,false,true,true,false,false,true,true,true,false,true,false,false,true,true,false,true,true,false,false,false,true,true,false,false,true,true,false,false,false,true,true,false,true,true,false,false,true,false,true,false,false,false,false,true,true,false,false,false,true,false,false,true,false,true,true,true,true,true,false,true,true,true,false,true,true,true,true,true,false,true,false,true,true,true,false,true,false,false,false,false,true,true,true,false,true,true,true,true,true,true,false,false,false,true,true,false,true,false,false,false,true,false,false,false,true,true,false,false,true,true,true,true,true,true,false,true,false,true,false,false,false,true,false,false,false,false,false,false,false,true,true,true,false,false,true,false,true,false,false,false,true,true,true,true,false,true,true,true,true,false,false,false,true,true,false,false,false,true,false,true,false,true,false,true,true,true,false,false,true,false,false,false,false,true,false,true,false,true,true,true,true,true,false,false,false,true,true,false,true,false,true,true,true,false,true,true,false,false],"assessment":{"regime":"downtrend","regime_label":"Downtrend","regime_tone":"neg","regime_desc":"Price is below a 100-day EMA that is flat or falling \u2014 a non-rising trend.","momentum":"Momentum is bearish and aligned with the downtrend (RSI only just above 50 and MACD flat).","action":"wait","action_label":"Wait","action_tone":"warn","confidence":"medium","conf_note":"Regime is readable, but one or two indicators are mixed.","supportive":[],"conflicting":["price below a flattening 100-day EMA"],"rationale":"Downtrend showing only tentative improvement \u2014 wait for the trend to repair before adding.","risk":"Setup is unresolved (0 supportive / 1 conflicting). A clean MACD improvement with RSI reclaiming 50 on above-average volume would tilt this toward a starter buy.","note":"","headline":"SARO: Wait \u2014 downtrend (medium confidence). Last 26.85 USD, RSI 52, -0.5% vs EMA100"},"table":[{"indicator":"Price vs EMA100","value":"-0.5% vs EMA \u00b7 slope -0.3%","signal":"Below, flattening","tone":"neg"},{"indicator":"MACD","value":"hist +0.13","signal":"Mixed","tone":"muted"},{"indicator":"RSI(20)","value":"52","signal":"Early improvement","tone":"warn"},{"indicator":"Bollinger %B (20,2)","value":"0.57","signal":"Mid-band","tone":"muted"},{"indicator":"Volume vs 20d avg","value":"86% of avg","signal":"Light","tone":"muted"}]}</script>
+  <script class="tc-payload" type="application/json">{"ticker":"SARO","name":"StandardAero, Inc.","currency":"USD","exchange":"NYQ","source":"Yahoo Finance (daily, split/dividend-adjusted)","generated":"2026-06-24 19:28","params":{"ema":100,"bb":20,"bb_k":2.0,"rsi":20,"macd_fast":12,"macd_slow":26,"macd_signal":9,"volavg":20},"default_period":"1y","n_bars":432,"limited_history":false,"dates":["2024-10-02","2024-10-03","2024-10-04","2024-10-07","2024-10-08","2024-10-09","2024-10-10","2024-10-11","2024-10-14","2024-10-15","2024-10-16","2024-10-17","2024-10-18","2024-10-21","2024-10-22","2024-10-23","2024-10-24","2024-10-25","2024-10-28","2024-10-29","2024-10-30","2024-10-31","2024-11-01","2024-11-04","2024-11-05","2024-11-06","2024-11-07","2024-11-08","2024-11-11","2024-11-12","2024-11-13","2024-11-14","2024-11-15","2024-11-18","2024-11-19","2024-11-20","2024-11-21","2024-11-22","2024-11-25","2024-11-26","2024-11-27","2024-11-29","2024-12-02","2024-12-03","2024-12-04","2024-12-05","2024-12-06","2024-12-09","2024-12-10","2024-12-11","2024-12-12","2024-12-13","2024-12-16","2024-12-17","2024-12-18","2024-12-19","2024-12-20","2024-12-23","2024-12-24","2024-12-26","2024-12-27","2024-12-30","2024-12-31","2025-01-02","2025-01-03","2025-01-06","2025-01-07","2025-01-08","2025-01-10","2025-01-13","2025-01-14","2025-01-15","2025-01-16","2025-01-17","2025-01-21","2025-01-22","2025-01-23","2025-01-24","2025-01-27","2025-01-28","2025-01-29","2025-01-30","2025-01-31","2025-02-03","2025-02-04","2025-02-05","2025-02-06","2025-02-07","2025-02-10","2025-02-11","2025-02-12","2025-02-13","2025-02-14","2025-02-18","2025-02-19","2025-02-20","2025-02-21","2025-02-24","2025-02-25","2025-02-26","2025-02-27","2025-02-28","2025-03-03","2025-03-04","2025-03-05","2025-03-06","2025-03-07","2025-03-10","2025-03-11","2025-03-12","2025-03-13","2025-03-14","2025-03-17","2025-03-18","2025-03-19","2025-03-20","2025-03-21","2025-03-24","2025-03-25","2025-03-26","2025-03-27","2025-03-28","2025-03-31","2025-04-01","2025-04-02","2025-04-03","2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05","2025-05-06","2025-05-07","2025-05-08","2025-05-09","2025-05-12","2025-05-13","2025-05-14","2025-05-15","2025-05-16","2025-05-19","2025-05-20","2025-05-21","2025-05-22","2025-05-23","2025-05-27","2025-05-28","2025-05-29","2025-05-30","2025-06-02","2025-06-03","2025-06-04","2025-06-05","2025-06-06","2025-06-09","2025-06-10","2025-06-11","2025-06-12","2025-06-13","2025-06-16","2025-06-17","2025-06-18","2025-06-20","2025-06-23","2025-06-24","2025-06-25","2025-06-26","2025-06-27","2025-06-30","2025-07-01","2025-07-02","2025-07-03","2025-07-07","2025-07-08","2025-07-09","2025-07-10","2025-07-11","2025-07-14","2025-07-15","2025-07-16","2025-07-17","2025-07-18","2025-07-21","2025-07-22","2025-07-23","2025-07-24","2025-07-25","2025-07-28","2025-07-29","2025-07-30","2025-07-31","2025-08-01","2025-08-04","2025-08-05","2025-08-06","2025-08-07","2025-08-08","2025-08-11","2025-08-12","2025-08-13","2025-08-14","2025-08-15","2025-08-18","2025-08-19","2025-08-20","2025-08-21","2025-08-22","2025-08-25","2025-08-26","2025-08-27","2025-08-28","2025-08-29","2025-09-02","2025-09-03","2025-09-04","2025-09-05","2025-09-08","2025-09-09","2025-09-10","2025-09-11","2025-09-12","2025-09-15","2025-09-16","2025-09-17","2025-09-18","2025-09-19","2025-09-22","2025-09-23","2025-09-24","2025-09-25","2025-09-26","2025-09-29","2025-09-30","2025-10-01","2025-10-02","2025-10-03","2025-10-06","2025-10-07","2025-10-08","2025-10-09","2025-10-10","2025-10-13","2025-10-14","2025-10-15","2025-10-16","2025-10-17","2025-10-20","2025-10-21","2025-10-22","2025-10-23","2025-10-24","2025-10-27","2025-10-28","2025-10-29","2025-10-30","2025-10-31","2025-11-03","2025-11-04","2025-11-05","2025-11-06","2025-11-07","2025-11-10","2025-11-11","2025-11-12","2025-11-13","2025-11-14","2025-11-17","2025-11-18","2025-11-19","2025-11-20","2025-11-21","2025-11-24","2025-11-25","2025-11-26","2025-11-28","2025-12-01","2025-12-02","2025-12-03","2025-12-04","2025-12-05","2025-12-08","2025-12-09","2025-12-10","2025-12-11","2025-12-12","2025-12-15","2025-12-16","2025-12-17","2025-12-18","2025-12-19","2025-12-22","2025-12-23","2025-12-24","2025-12-26","2025-12-29","2025-12-30","2025-12-31","2026-01-02","2026-01-05","2026-01-06","2026-01-07","2026-01-08","2026-01-09","2026-01-12","2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24"],"close":[32.75,32.97,32.5,32.41,32.89,32.41,31.6,30.75,31.7,32.34,32.08,32.69,31.52,32.05,31.17,31.36,31.17,30.25,29.71,29.2,29.39,28.85,28.5,28.61,29.02,30.04,29.27,29.76,29.9,29.32,29.07,27.1,28.15,28.53,28.35,28.52,28.88,28.66,29.24,29.37,28.5,28.66,28.05,28.26,28.4,28.31,28.45,27.21,27.0,27.28,25.61,26.1,26.19,25.43,24.98,25.01,26.07,25.4,25.48,25.5,25.58,25.37,24.76,24.54,24.04,23.8,23.0,23.04,23.21,23.16,24.01,24.09,23.82,24.64,25.05,24.9,26.9,26.04,26.13,26.03,26.09,26.9,26.84,27.1,27.05,27.17,27.05,27.42,27.35,27.59,27.81,26.99,26.58,26.88,27.1,27.23,26.13,26.24,26.93,27.15,28.03,28.23,27.26,26.81,27.31,26.64,26.85,26.3,28.54,28.06,28.98,28.62,28.89,28.74,29.09,29.13,28.59,28.74,29.32,27.74,28.04,27.18,26.64,26.81,27.19,25.6,23.13,22.56,22.23,25.27,24.53,24.5,25.05,25.62,25.26,25.48,24.22,24.87,25.55,26.26,26.48,26.78,26.93,27.02,27.11,27.89,27.66,27.25,27.12,27.85,27.8,28.6,29.85,30.2,30.21,29.95,29.93,29.0,28.38,28.0,28.16,28.68,28.83,29.02,29.33,29.64,29.73,29.83,29.7,30.53,30.75,30.77,30.74,30.77,30.41,30.5,30.2,29.73,29.2,29.96,30.13,30.16,30.77,31.63,31.65,30.62,30.97,30.88,30.77,30.45,30.06,30.01,29.84,30.56,30.17,30.27,30.77,30.4,29.76,28.87,28.74,28.35,28.25,28.19,28.08,28.18,28.55,27.86,28.4,28.22,28.11,28.19,27.57,28.31,28.67,28.16,27.02,26.55,26.57,26.49,26.64,26.87,27.23,26.91,27.29,26.98,26.96,26.49,26.67,26.69,27.48,26.55,26.91,26.64,26.96,27.35,27.16,27.02,27.31,27.52,27.95,27.58,27.78,26.92,26.18,26.21,26.73,26.46,27.29,27.45,27.34,26.6,26.51,26.55,27.17,26.79,26.42,27.51,28.64,28.33,27.9,27.28,27.57,28.4,27.98,28.93,28.94,28.86,28.53,28.63,28.55,28.89,28.46,27.5,27.29,26.84,26.84,27.54,27.27,26.36,25.58,25.62,24.66,24.49,25.19,24.27,24.74,25.05,25.15,25.64,26.12,25.13,25.47,25.89,26.61,26.56,26.6,26.84,27.41,27.51,27.8,27.4,27.42,27.1,27.93,28.66,29.54,29.4,29.41,29.16,29.0,28.79,28.68,29.64,30.37,30.38,30.36,30.64,30.78,31.88,32.43,32.43,32.55,32.48,32.03,31.93,32.35,32.97,32.72,33.12,31.59,31.18,30.89,30.94,30.53,29.9,29.51,30.57,30.93,30.7,29.89,30.02,30.57,31.04,31.26,31.44,31.96,31.41,31.84,30.83,31.9,30.8,30.73,29.72,30.13,29.3,28.87,28.59,28.51,28.37,26.59,26.06,26.51,26.96,27.16,26.21,25.6,26.14,26.11,26.64,26.29,25.46,25.22,25.83,26.25,26.26,26.37,25.59,26.79,26.93,27.15,27.84,27.57,27.24,26.01,26.76,26.81,25.11,24.36,24.34,24.54,24.49,24.62,24.44,24.86,24.53,24.58,25.1,26.26,26.03,25.14,26.8,26.79,26.74,26.32,25.25,25.74,25.15,26.47,26.11,26.74,27.05,27.5,28.3,28.64,27.36,25.14,24.91,25.55,25.61,24.79,25.58,24.77,25.95,26.91,26.98,26.83,27.16,27.75,27.26,26.85,27.12],"open":[31.0,32.24,32.81,32.37,32.41,32.95,32.24,31.6,31.15,31.66,32.36,32.27,32.5,31.35,32.16,30.99,31.25,31.1,30.0,29.3,29.1,29.19,29.0,28.5,28.5,29.56,30.08,29.16,29.91,30.03,29.18,28.48,27.01,28.07,28.51,28.5,28.32,28.72,28.54,28.95,28.94,28.56,28.65,28.0,27.86,28.21,28.35,28.76,26.91,26.9,27.0,25.5,26.2,26.0,25.33,25.01,25.12,25.74,25.51,25.48,25.3,25.19,25.68,25.0,24.55,24.12,23.8,22.84,22.95,23.01,23.24,24.56,24.24,23.81,24.91,25.21,25.25,26.77,25.89,26.3,26.19,26.26,26.99,26.21,27.06,27.36,27.38,27.3,27.34,27.22,27.31,28.01,27.01,26.8,26.99,27.01,27.27,26.33,26.42,27.19,27.35,27.95,28.22,27.16,26.91,27.0,26.5,26.44,25.82,28.86,28.28,28.96,28.62,28.92,28.74,28.86,29.11,27.64,28.51,28.25,27.89,28.02,26.76,27.03,26.5,26.48,24.58,22.17,23.82,22.04,24.86,24.72,24.91,25.18,25.66,25.49,25.27,24.44,25.6,25.51,26.34,26.59,26.67,26.61,26.91,27.66,27.65,27.47,27.27,27.44,27.94,28.9,28.51,29.83,30.43,30.33,29.59,28.99,29.16,28.16,27.7,28.59,28.7,28.89,29.04,29.22,29.81,29.78,30.0,29.94,30.53,30.98,30.69,30.44,30.49,30.77,30.52,30.27,29.86,29.29,30.07,30.29,30.51,30.79,31.76,31.65,30.7,31.01,30.9,30.8,30.83,30.56,29.76,29.84,30.6,30.17,30.46,30.83,30.4,29.61,29.22,28.62,28.42,28.35,28.5,28.24,28.26,28.12,28.32,28.63,28.38,28.28,28.33,27.79,28.42,28.84,25.9,27.03,26.78,26.53,26.66,26.62,27.03,27.26,26.91,27.22,26.96,26.91,26.56,26.7,26.79,27.53,26.82,26.86,26.67,26.91,27.84,27.2,27.26,27.36,27.53,28.0,27.54,27.88,27.24,25.99,26.52,26.94,26.49,27.0,27.44,27.38,26.71,26.56,26.6,27.18,27.09,26.75,27.61,29.14,28.61,27.62,27.45,27.7,28.33,27.95,29.13,29.17,29.09,28.46,28.53,28.53,28.88,27.88,27.07,27.21,26.58,27.09,28.12,27.14,26.36,25.0,25.47,24.66,24.7,25.68,24.27,24.7,24.94,25.22,25.84,25.87,25.4,25.46,26.0,26.57,26.67,26.71,28.0,27.39,27.53,28.1,27.28,27.23,27.45,28.05,28.8,29.36,29.6,29.39,29.13,29.05,28.97,28.81,30.0,30.35,30.38,30.59,30.78,30.77,32.0,32.44,32.8,32.5,34.43,32.18,31.98,32.45,32.99,33.01,31.94,31.93,30.9,30.38,30.86,30.47,29.7,30.17,30.58,31.14,30.84,30.05,30.24,30.6,31.23,31.1,31.39,31.68,31.35,32.05,30.9,30.5,30.76,30.25,29.86,29.72,28.78,28.5,28.77,28.26,27.77,26.84,26.45,26.88,27.26,26.63,25.98,26.3,25.79,26.68,26.15,26.1,25.59,25.67,26.58,25.79,26.56,26.0,26.99,26.57,26.93,26.91,28.04,27.76,27.62,27.0,26.56,26.63,25.46,24.33,24.18,24.54,24.42,24.47,24.53,24.84,24.47,24.85,25.63,26.68,26.44,25.8,26.64,26.68,27.01,25.95,25.35,25.65,25.81,26.1,26.29,27.03,27.4,27.39,28.31,28.1,26.19,24.94,25.2,25.43,25.49,24.94,25.55,25.0,26.19,27.46,27.13,26.89,27.45,27.33,26.76,26.9],"high":[33.01,33.25,33.2,33.23,33.75,34.38,32.49,32.05,31.71,32.6,32.59,33.0,32.58,32.38,32.19,31.8,32.0,31.42,30.82,29.59,29.6,29.65,29.213,29.08,29.53,30.57,30.21,30.19,30.36,30.03,29.475,28.92,28.16,28.71,28.73,28.63,29.23,29.15,29.3,29.79,29.75,28.91,28.825,28.81,28.63,28.71,28.47,29.0,27.59,27.385,27.19,26.13,26.87,26.15,25.73,25.32,26.18,25.74,25.83,26.33,25.81,25.56,25.98,25.37,24.72,24.16,23.95,23.06,23.581,23.345,24.165,24.719,24.62,24.66,25.14,25.21,27.09,27.07,26.33,26.7,26.51,27.17,27.28,27.395,27.4,27.97,27.38,27.68,27.46,27.72,27.925,28.05,27.27,27.015,27.23,27.3,27.375,26.46,27.15,27.65,28.06,28.365,28.342,27.55,27.525,27.28,26.99,26.99,28.92,28.86,29.109,29.61,29.16,29.04,29.16,29.59,29.196,28.92,29.99,28.51,28.29,28.16,27.13,27.19,27.35,26.71,24.86,23.68,23.93,25.68,25.04,24.9,25.19,25.66,25.73,25.92,25.51,24.91,26.2,26.47,26.52,26.83,27.09,27.09,27.59,28.01,28.1,27.765,27.6,28.12,28.14,28.99,30.2,30.59,30.5,30.33,30.074,29.56,29.16,28.36,28.32,28.88,28.855,29.04,29.36,29.64,29.94,30.0,30.01,30.58,30.93,31.07,30.94,30.9,30.99,31.0,30.7,30.45,29.89,30.025,30.265,30.29,31.175,31.7,31.97,31.85,30.97,31.23,31.18,30.935,30.86,30.95,30.12,30.74,30.83,30.4,30.93,30.99,30.43,29.79,29.31,28.785,28.545,28.48,28.61,28.5,28.68,28.355,28.79,28.76,28.47,28.44,28.53,28.42,28.99,28.92,27.49,27.22,26.975,26.68,26.73,26.96,27.7,27.54,27.32,27.51,27.12,26.91,26.73,26.92,27.59,27.79,27.1,26.87,26.96,27.48,27.99,27.414,27.51,27.83,28.16,28.0,27.84,28.35,27.395,26.31,26.985,26.949,27.421,27.6,27.67,27.38,26.91,26.795,27.19,27.29,27.22,28.32,28.88,29.64,28.738,27.94,27.75,28.46,28.52,29.025,29.39,29.31,29.09,28.85,29.2,29.01,29.0,28.37,27.5,27.385,26.85,27.64,28.37,27.51,26.766,25.695,25.66,24.98,25.319,25.795,24.86,25.09,25.335,25.74,26.15,25.92,25.72,25.89,26.765,26.65,26.89,27.26,28.13,27.785,28.1,28.1,27.66,27.79,28.225,28.83,29.55,29.65,29.6,29.5,29.215,29.05,28.97,29.759,30.5,30.7,30.76,31.05,31.36,32.08,32.61,32.69,32.97,32.695,34.48,32.49,32.43,33.07,33.05,33.46,32.18,32.205,31.24,31.195,31.1,30.78,29.85,30.64,31.02,31.14,31.02,30.95,30.95,31.25,31.77,31.54,32.04,31.73,31.96,32.22,33.255,30.9,31.04,30.37,30.355,29.84,29.04,28.715,28.92,28.575,28.0,26.95,26.91,27.3,27.74,26.64,26.17,26.43,26.29,26.84,26.52,26.145,25.73,26.26,26.74,26.81,26.73,26.115,27.34,27.33,27.375,28.02,28.1,27.88,27.62,27.47,26.95,26.63,25.76,24.65,24.575,25.13,24.7,24.87,25.095,24.84,24.79,25.11,26.69,26.89,27.2,26.98,26.997,27.155,27.146,26.06,25.965,25.84,26.5,26.47,27.01,27.275,27.77,28.4,28.86,28.47,26.75,25.16,25.83,25.75,25.709,25.77,25.59,26.125,26.985,27.86,27.28,28.13,27.815,27.76,27.19,27.69],"low":[30.76,32.12,32.26,32.2,32.27,32.41,31.48,30.73,30.59,31.545,31.43,32.13,31.3,31.02,30.88,30.99,31.11,30.0,29.27,28.41,28.975,28.71,28.45,28.25,28.185,29.2,29.1,28.88,29.75,29.12,28.27,26.96,26.78,28.01,28.0,28.0,28.32,28.13,28.32,28.85,28.49,28.4,27.75,27.84,27.86,28.07,28.0,27.09,25.93,26.63,25.55,25.49,25.9,25.43,24.55,24.58,24.96,25.12,25.225,25.35,25.175,24.81,24.63,24.53,24.03,23.607,22.8,22.5,22.825,22.85,23.01,24.025,23.81,23.77,24.415,24.61,25.13,26.02,25.65,25.82,25.91,26.22,26.7,26.113,26.88,26.98,26.66,26.995,27.03,27.04,27.205,26.82,25.76,26.265,26.64,26.72,26.13,25.805,26.035,26.93,27.11,27.81,27.0,26.63,26.67,26.52,25.66,25.915,25.805,27.44,28.0,28.36,28.5,28.38,28.51,28.72,28.39,27.25,28.2,27.74,27.5,27.14,26.21,26.44,26.29,24.981,23.05,21.31,21.85,22.0,23.91,23.91,24.59,25.18,25.04,25.27,24.05,24.24,25.21,25.35,26.0,26.25,26.52,26.2,26.9,27.45,27.6,27.18,26.9,27.375,27.43,28.03,27.5,29.51,29.84,29.82,29.54,28.89,27.93,27.75,27.61,28.25,28.335,28.44,28.79,28.875,29.36,29.56,29.68,29.84,30.18,30.69,30.06,30.38,30.25,30.44,30.18,29.66,29.1,29.0,29.42,30.015,30.305,30.73,31.46,30.51,30.31,30.83,30.55,30.212,29.98,29.92,29.6,29.7,30.16,29.97,30.22,30.38,29.76,28.65,28.66,28.24,28.03,27.9,27.88,28.0,27.795,27.45,28.16,28.06,27.96,27.903,27.57,27.57,28.25,27.52,25.77,26.525,26.545,26.23,26.05,26.475,26.91,26.86,26.91,26.88,26.81,26.37,25.81,26.47,26.65,26.32,26.75,26.529,26.6,26.91,27.12,26.9,27.06,27.16,27.22,27.43,27.38,26.89,26.165,25.774,26.39,26.325,26.42,27.0,27.065,26.56,26.49,26.23,26.55,26.65,26.23,26.32,27.11,27.72,27.71,26.9,27.2,27.7,27.87,27.844,28.85,28.701,28.24,28.16,28.32,28.37,27.978,27.44,26.865,26.73,26.01,26.9,27.062,26.25,25.42,24.79,24.51,24.25,24.37,24.24,23.97,24.545,24.76,25.21,25.46,25.07,25.255,25.305,25.86,26.02,26.44,26.66,26.65,27.105,27.28,27.121,26.98,26.9,27.359,28.05,28.58,29.23,29.24,29.1,28.82,28.65,28.51,28.62,29.79,30.018,30.0,30.02,30.51,30.77,32.0,31.83,32.41,32.11,32.0,31.22,31.75,32.33,32.27,32.69,31.54,31.1,30.77,30.175,29.89,29.19,28.63,29.93,30.47,30.595,29.695,29.79,30.145,30.42,31.06,30.96,31.29,31.055,31.16,30.74,30.24,30.25,30.0,28.58,29.5,28.29,28.45,27.41,28.41,28.07,26.435,25.74,26.32,26.76,27.13,25.97,25.305,25.59,25.74,26.38,26.05,25.46,24.9,25.225,26.23,25.5,26.19,25.305,26.7,26.37,26.73,26.91,27.45,27.07,25.95,26.58,26.42,25.11,24.08,23.83,23.88,24.38,23.98,24.21,24.31,24.27,24.335,24.54,25.63,25.92,24.77,25.55,25.95,26.15,26.21,25.195,25.11,25.105,25.178,25.74,26.1,26.73,27.15,27.28,27.915,27.09,24.98,24.215,25.2,25.26,24.7,24.725,24.76,24.86,26.18,26.93,26.825,26.89,27.33,27.2,26.55,26.88],"ema":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,27.6981,27.7047,27.7151,27.7061,27.6884,27.6809,27.6603,27.6442,27.6176,27.6359,27.6443,27.6707,27.6895,27.7133,27.7336,27.7605,27.7876,27.8035,27.822,27.8517,27.8495,27.8532,27.8399,27.8161,27.7962,27.7842,27.741,27.6497,27.5489,27.4436,27.4005,27.3437,27.2874,27.2431,27.2109,27.1723,27.1388,27.081,27.0372,27.0077,26.9929,26.9828,26.9788,26.9778,26.9786,26.9812,26.9992,27.0123,27.017,27.0191,27.0355,27.0507,27.0813,27.1362,27.1968,27.2565,27.3098,27.3617,27.3942,27.4137,27.4253,27.4398,27.4644,27.4914,27.5217,27.5575,27.5988,27.641,27.6843,27.7242,27.7798,27.8386,27.8966,27.9529,28.0087,28.0563,28.1047,28.1462,28.1775,28.1978,28.2327,28.2702,28.3077,28.3564,28.4212,28.4852,28.5275,28.5758,28.6214,28.664,28.6994,28.7263,28.7517,28.7733,28.8087,28.8356,28.864,28.9018,28.9314,28.9478,28.9463,28.9422,28.9305,28.917,28.9026,28.8863,28.8723,28.8659,28.846,28.8372,28.825,28.8108,28.7985,28.7742,28.765,28.7631,28.7512,28.7169,28.674,28.6323,28.5899,28.5513,28.518,28.4925,28.4612,28.438,28.4091,28.3804,28.343,28.3098,28.2778,28.262,28.2281,28.202,28.171,28.1471,28.1313,28.112,28.0904,28.075,28.064,28.0617,28.0522,28.0468,28.0245,27.9879,27.9527,27.9285,27.8994,27.8874,27.8787,27.8681,27.8429,27.8165,27.7915,27.7792,27.7596,27.733,27.7286,27.7467,27.7582,27.761,27.7515,27.7479,27.7608,27.7652,27.7882,27.811,27.8318,27.8456,27.8612,27.8748,27.8949,27.9061,27.8981,27.886,27.8653,27.845,27.839,27.8277,27.7986,27.7547,27.7124,27.652,27.5894,27.5419,27.4771,27.4229,27.3759,27.3318,27.2983,27.275,27.2325,27.1976,27.1717,27.1606,27.1487,27.1378,27.1319,27.1374,27.1448,27.1578,27.1626,27.1677,27.1663,27.1815,27.2107,27.2569,27.2993,27.3411,27.3771,27.4093,27.4366,27.4612,27.5044,27.5611,27.6169,27.6712,27.73,27.7904,27.8714,27.9617,28.0502,28.1393,28.2252,28.3006,28.3724,28.4512,28.5407,28.6234,28.7125,28.7695,28.8172,28.8582,28.8995,28.9317,28.9509,28.962,28.9938,29.0322,29.0652,29.0815,29.1001,29.1292,29.1671,29.2085,29.2527,29.3063,29.348,29.3973,29.4257,29.4747,29.5009,29.5253,29.5291,29.541,29.5362,29.523,29.5046,29.4849,29.4628,29.4059,29.3397,29.2836,29.2376,29.1965,29.1373,29.0673,29.0093,28.9519,28.9061,28.8543,28.7871,28.7165,28.6593,28.6116,28.565,28.5216,28.4635,28.4304,28.4007,28.3759,28.3653,28.3495,28.3276,28.2817,28.2515,28.223,28.1614,28.0861,28.0119,27.9432,27.8748,27.8103,27.7436,27.6865,27.624,27.5637,27.5149,27.4901,27.4612,27.4152,27.403,27.3909,27.378,27.357,27.3153,27.2841,27.2419,27.2266,27.2045,27.1953,27.1924,27.1985,27.2203,27.2484,27.2506,27.2088,27.1633,27.1314,27.1012,27.0555,27.0262,26.9816,26.9611,26.9601,26.9605,26.9579,26.9619,26.9775,26.9831,26.9805,26.9833],"bb_up":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,33.7429,33.7381,33.7081,33.7312,33.6811,33.4483,33.2297,33.132,33.0977,32.9516,32.6671,32.4027,32.1269,31.9134,31.4859,31.2293,30.8607,30.4732,30.286,30.2238,30.2417,30.1917,30.1858,30.2028,30.2062,30.1848,29.9898,29.9274,29.8498,29.7155,29.629,29.8516,29.9677,30.0398,30.1453,30.2701,30.3018,30.1482,30.0375,29.7755,29.4267,29.209,28.9265,28.7611,28.5216,28.2312,27.9052,27.5468,27.4108,27.2245,26.902,26.8164,26.6348,26.4115,26.3264,26.334,26.3228,26.5351,26.6411,26.7493,26.8324,26.9129,27.1782,27.4516,27.7568,28.0184,28.2576,28.3683,28.4828,28.5369,28.5412,28.6378,28.5667,28.3305,28.2011,28.1089,27.9066,27.925,27.9065,27.8862,27.8539,27.9648,28.1584,28.1708,28.1679,28.1821,28.1807,28.1776,28.1713,28.4004,28.4735,28.7317,28.9274,29.148,29.3153,29.5303,29.7273,29.7514,29.7722,29.923,29.9118,29.9122,29.9012,29.9406,29.9406,29.944,30.082,30.7337,31.2749,31.5995,31.5276,31.357,31.195,30.9394,30.676,30.318,29.912,29.5717,29.1382,28.5076,28.2724,27.9765,27.9047,27.9528,27.9892,27.974,28.3224,28.5321,28.5105,28.261,28.493,28.6315,28.8763,29.421,29.9815,30.4232,30.7431,30.8309,30.7746,30.6892,30.6335,30.5866,30.58,30.5784,30.5802,30.5983,30.6923,30.7676,30.7838,30.7097,30.8398,30.9619,31.1295,31.255,31.3434,31.3695,31.4343,31.4605,31.4725,31.4274,31.3311,31.2254,31.1705,31.1835,31.3909,31.5869,31.5985,31.646,31.6768,31.6752,31.6721,31.6536,31.6302,31.6112,31.5923,31.5856,31.575,31.6102,31.5995,31.5245,31.6717,31.8036,31.9607,32.0337,31.9175,31.7481,31.7094,31.5543,31.4369,31.2621,31.1272,31.0383,30.9349,30.8734,30.6169,30.4258,30.1731,29.7805,29.4858,29.3046,29.2949,29.2441,29.2052,29.1512,29.1065,29.0589,28.9956,28.8574,28.835,28.7009,28.5805,28.4931,28.3536,28.3044,28.0939,27.695,27.4496,27.4671,27.4753,27.5195,27.588,27.7646,27.8311,27.9164,27.9165,27.9516,27.9859,27.9822,27.984,28.01,28.0506,28.0338,28.0312,28.0397,28.0433,28.0545,28.0231,28.0179,28.0672,28.3466,28.4885,28.4801,28.4509,28.4223,28.6096,28.6664,28.8942,29.1146,29.2632,29.3635,29.4677,29.552,29.6356,29.6197,29.542,29.5343,29.5282,29.4628,29.4618,29.4143,29.485,29.6756,29.8146,30.0622,30.1757,30.1793,30.1109,29.92,29.669,29.4307,29.124,28.8068,28.3385,27.904,27.6785,27.5568,27.5125,27.4733,27.3149,27.3501,27.5691,27.8872,28.0825,28.2319,28.2802,28.4937,28.7227,29.1608,29.4947,29.7634,29.9642,30.1284,30.1132,30.0685,30.1811,30.4814,30.7111,30.877,31.0687,31.291,31.7234,32.2289,32.6011,32.9125,33.0698,33.1727,33.2839,33.4824,33.7532,33.9348,34.1224,34.0546,33.8918,33.639,33.5163,33.502,33.5595,33.6677,33.6714,33.6672,33.6461,33.607,33.5255,33.3771,33.2289,33.1531,33.1009,33.0396,32.7697,32.5913,32.1416,32.199,32.1724,32.1652,32.1893,32.1939,32.2564,32.3469,32.4863,32.5638,32.6357,32.9996,33.3317,33.4435,33.3909,33.245,33.0979,32.8381,32.5478,32.0927,31.7532,31.0931,30.662,30.1645,29.7927,29.2192,28.7906,28.4131,28.0548,27.6739,27.2709,27.3634,27.6419,27.7983,27.8395,27.752,27.7872,27.8073,27.875,28.0371,28.1192,28.1646,28.22,28.2527,28.2905,28.2666,28.2473,28.2013,28.1914,28.1291,28.0227,27.8256,27.6027,27.4333,27.3283,27.3677,27.1944,27.0272,27.0284,27.1481,27.1894,27.3219,27.4789,27.7043,28.0568,28.4566,28.4957,28.4386,28.4559,28.4549,28.4564,28.485,28.4385,28.4216,28.3694,28.4228,28.4932,28.5473,28.6092,28.749,28.8242,28.8321,28.8389],"bb_mid":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,31.676,31.508,31.302,31.102,30.912,30.7185,30.6,30.4835,30.434,30.344,30.193,30.0425,29.763,29.5945,29.4185,29.2775,29.1355,29.021,28.9415,28.918,28.9265,28.882,28.8725,28.85,28.8325,28.8015,28.715,28.674,28.5465,28.4015,28.2995,28.1265,28.0765,27.9785,27.8235,27.655,27.4795,27.339,27.176,26.988,26.7945,26.6485,26.484,26.3195,26.1335,25.9155,25.69,25.4175,25.209,25.0195,24.8135,24.7335,24.633,24.5145,24.475,24.4785,24.473,24.5145,24.5465,24.579,24.6055,24.631,24.7075,24.8115,24.9395,25.09,25.2585,25.461,25.68,25.887,26.1085,26.2985,26.4435,26.5815,26.6935,26.796,26.9125,26.874,26.884,26.924,26.98,27.077,27.1435,27.1645,27.15,27.163,27.1365,27.1265,27.0705,27.13,27.1535,27.212,27.2935,27.409,27.502,27.6015,27.6965,27.8195,27.9445,28.064,28.0935,28.094,28.0415,28.0105,28.0105,28.0045,27.9525,27.7665,27.5795,27.264,27.1245,26.902,26.696,26.504,26.348,26.1565,25.974,25.7555,25.562,25.3735,25.2995,25.2215,25.2015,25.216,25.2265,25.2225,25.337,25.5635,25.798,26.0425,26.1715,26.335,26.54,26.78,27.009,27.2565,27.48,27.7655,27.972,28.1135,28.2005,28.2845,28.3795,28.4745,28.5745,28.6855,28.773,28.8765,29.0055,29.1345,29.2685,29.416,29.5245,29.569,29.5975,29.6075,29.635,29.6485,29.685,29.726,29.824,29.9225,29.9965,30.0935,30.224,30.34,30.389,30.451,30.5035,30.557,30.553,30.5185,30.4805,30.4355,30.425,30.413,30.4015,30.43,30.4635,30.4915,30.437,30.3675,30.277,30.151,29.979,29.8005,29.6785,29.5575,29.4065,29.288,29.1765,29.079,28.988,28.8745,28.762,28.687,28.5815,28.394,28.2015,28.042,27.923,27.818,27.744,27.693,27.629,27.5895,27.5295,27.45,27.3815,27.295,27.2185,27.187,27.105,27.072,26.9885,26.903,26.8625,26.8695,26.893,26.93,26.9815,27.047,27.0825,27.11,27.1105,27.055,27.0165,27.005,27.0035,27.0345,27.0725,27.0655,27.068,27.048,27.0435,27.054,27.026,26.989,27.0135,27.08,27.1205,27.118,27.103,27.0925,27.1665,27.2565,27.3925,27.503,27.623,27.685,27.744,27.8045,27.919,28.0165,28.064,28.07,28.0725,28.0935,28.095,28.0265,27.928,27.812,27.729,27.5835,27.388,27.2485,27.0155,26.8055,26.615,26.446,26.2965,26.175,25.987,25.8375,25.757,25.723,25.709,25.697,25.662,25.669,25.7265,25.8375,25.9265,26.0645,26.195,26.332,26.5515,26.7915,27.009,27.222,27.398,27.542,27.725,27.8855,28.073,28.261,28.452,28.64,28.83,28.9985,29.217,29.4485,29.7,29.9565,30.2255,30.4305,30.594,30.7345,30.913,31.0785,31.2765,31.406,31.5255,31.636,31.701,31.709,31.685,31.6425,31.639,31.6465,31.5875,31.4605,31.34,31.241,31.169,31.1305,31.106,31.0865,31.0085,30.9645,30.85,30.8655,30.8465,30.8385,30.7775,30.7575,30.7275,30.6955,30.5965,30.4755,30.359,30.194,29.996,29.793,29.589,29.384,29.1225,28.8045,28.541,28.2545,28.045,27.7645,27.4975,27.222,27.0275,26.8335,26.6815,26.5565,26.4065,26.3205,26.2485,26.2765,26.3655,26.4185,26.4325,26.375,26.4025,26.463,26.4115,26.324,26.209,26.1215,26.073,26.043,25.9735,25.904,25.8175,25.728,25.7035,25.677,25.632,25.5315,25.4795,25.4405,25.4155,25.431,25.3555,25.302,25.304,25.4095,25.498,25.608,25.736,25.88,26.073,26.262,26.4035,26.4315,26.422,26.3865,26.3655,26.348,26.287,26.186,26.1465,26.176,26.2625,26.317,26.4175,26.4815,26.539,26.5445,26.548],"bb_lo":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,29.6091,29.2779,28.8959,28.4728,28.1429,27.9887,27.9703,27.835,27.7703,27.7364,27.7189,27.6823,27.3991,27.2756,27.3511,27.3257,27.4103,27.5688,27.597,27.6122,27.6113,27.5723,27.5592,27.4972,27.4588,27.4182,27.4402,27.4206,27.2432,27.0875,26.97,26.4014,26.1853,25.9172,25.5017,25.0399,24.6572,24.5298,24.3145,24.2005,24.1623,24.088,24.0415,23.8779,23.7454,23.5998,23.4748,23.2882,23.0072,22.8145,22.725,22.6506,22.6312,22.6175,22.6236,22.623,22.6232,22.4939,22.4519,22.4087,22.3786,22.3491,22.2368,22.1714,22.1222,22.1616,22.2594,22.5537,22.8772,23.2371,23.6758,23.9592,24.3203,24.8325,25.1859,25.4831,25.9184,25.823,25.8615,25.9618,26.1061,26.1892,26.1286,26.1582,26.1321,26.1439,26.0923,26.0754,25.9697,25.8596,25.8335,25.6923,25.6596,25.67,25.6887,25.6727,25.6657,25.8876,26.1168,26.205,26.2752,26.2758,26.1818,26.0804,26.0804,26.065,25.823,24.7993,23.8841,22.9285,22.7214,22.447,22.197,22.0686,22.02,21.995,22.036,21.9393,21.9858,22.2394,22.3266,22.4665,22.4983,22.4792,22.4638,22.471,22.3516,22.5949,23.0855,23.824,23.85,24.0385,24.2037,24.139,24.0365,24.0898,24.2169,24.7001,25.1694,25.5378,25.7675,25.9824,26.179,26.3706,26.5688,26.7727,26.8537,26.9854,27.2272,27.5593,27.6972,27.8701,27.9195,27.883,27.8516,27.8455,27.8357,27.8365,27.8975,28.0246,28.3169,28.6196,28.8225,29.0035,29.0571,29.0931,29.1795,29.256,29.3302,29.4388,29.4339,29.3834,29.3308,29.2598,29.2577,29.2404,29.228,29.2498,29.3275,29.4585,29.2023,28.9314,28.5933,28.2683,28.0405,27.8529,27.6476,27.5607,27.3761,27.3139,27.2258,27.1197,27.0411,26.8756,26.9071,26.9482,26.9899,27.0075,26.9172,26.7794,26.5511,26.3919,26.2828,26.2348,26.1515,26.1201,26.0634,26.0426,25.928,25.8891,25.8565,25.8809,25.8564,25.8396,25.8831,26.111,26.2754,26.2719,26.3107,26.3405,26.375,26.3294,26.3339,26.3036,26.3045,26.1584,26.0471,26.0278,26.023,26.059,26.0944,26.0972,26.1048,26.0563,26.0437,26.0535,26.0289,25.9601,25.9598,25.8134,25.7525,25.7559,25.7551,25.7627,25.7234,25.8466,25.8908,25.8914,25.9828,26.0065,26.0203,26.057,26.2024,26.4133,26.586,26.6057,26.6168,26.7242,26.7282,26.6387,26.371,25.9484,25.6434,25.1048,24.6003,24.3177,23.9201,23.691,23.561,23.4613,23.469,23.5432,23.6355,23.771,23.8355,23.8892,23.9055,23.9207,24.0091,23.9879,23.8839,23.7878,23.7705,23.8971,24.1098,24.1703,24.3803,24.4222,24.5233,24.6806,24.8318,24.9556,25.3368,25.7025,25.9649,26.0406,26.1929,26.403,26.5913,26.706,26.7106,26.6681,26.7989,27.0005,27.3812,27.6883,27.9041,27.9866,28.0728,28.2222,28.4306,28.7574,29.1592,29.633,29.8857,29.916,29.8105,29.6173,29.6066,29.6258,29.5289,29.314,29.1545,29.1049,29.1091,29.1079,29.1111,29.1334,29.2473,29.3377,29.5584,29.532,29.5206,29.5118,29.3657,29.3211,29.1986,29.0441,28.7067,28.3872,28.0823,27.3884,26.6603,26.1425,25.7871,25.523,25.1471,24.7709,24.5342,24.4163,24.3368,24.4359,24.333,24.2795,24.2623,24.4478,24.5724,24.6999,24.7582,24.9671,25.2261,25.1896,25.0891,25.0387,25.0255,24.998,25.0178,25.1187,24.948,24.6109,24.2988,24.0784,23.926,23.8333,23.6565,23.5414,23.3877,23.2547,23.2156,23.2249,23.2413,23.2374,23.3563,23.4477,23.5027,23.4943,23.5166,23.5768,23.5796,23.6709,23.8066,23.8941,23.9931,24.0557,24.0892,24.0674,24.3113,24.4244,24.3881,24.3181,24.2746,24.211,24.1355,23.9504,23.9236,23.9292,24.0318,24.0867,24.2258,24.214,24.2538,24.2569,24.2571],"pctb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.099,0.0251,-0.0095,0.0052,0.0843,0.1889,0.3935,0.2709,0.3735,0.4149,0.3236,0.294,-0.0633,0.1885,0.2851,0.2624,0.3216,0.4515,0.3953,0.6233,0.6686,0.3542,0.4191,0.2043,0.2916,0.3549,0.3412,0.4106,-0.0127,-0.0333,0.1166,-0.2294,-0.0226,0.0662,-0.0154,-0.0114,0.0625,0.2741,0.1897,0.2295,0.2541,0.2914,0.272,0.1806,0.1664,0.095,0.0734,-0.0677,0.0074,0.0897,0.1041,0.3263,0.3644,0.3169,0.5446,0.654,0.6154,1.0903,0.8565,0.8573,0.8198,0.8197,0.9437,0.8842,0.8834,0.8347,0.8187,0.7733,0.8104,0.7761,0.8045,0.8231,0.6287,0.4996,0.5619,0.6158,0.6597,0.1461,0.1851,0.5031,0.5973,1.0367,1.0353,0.5475,0.333,0.5721,0.2623,0.3685,0.15,1.055,0.8434,1.0817,0.9059,0.9258,0.8414,0.8859,0.8529,0.6994,0.7176,0.8378,0.4028,0.4852,0.2684,0.145,0.189,0.29,-0.0524,-0.2813,-0.1792,-0.0806,0.2894,0.2338,0.2559,0.3361,0.4159,0.3923,0.4373,0.2988,0.4032,0.5282,0.6615,0.7284,0.792,0.8131,0.8246,0.843,0.9276,0.8531,0.7677,0.7428,0.8615,0.819,0.9409,1.0812,1.0368,0.9663,0.8785,0.853,0.6834,0.5517,0.4588,0.473,0.5683,0.5845,0.6111,0.6685,0.7259,0.7257,0.7318,0.6795,0.9014,0.9315,0.888,0.8473,0.8358,0.7277,0.7404,0.6522,0.5126,0.3454,0.5451,0.5796,0.5696,0.8103,1.1024,1.0253,0.5955,0.7172,0.6604,0.5952,0.454,0.298,0.2954,0.2467,0.5578,0.3964,0.444,0.644,0.4721,0.1459,-0.1346,-0.0666,-0.0722,-0.0049,0.0386,0.0583,0.1311,0.2477,0.1192,0.2751,0.2548,0.2527,0.2951,0.1737,0.3782,0.4951,0.3676,0.0045,-0.143,-0.0829,-0.0223,0.087,0.2009,0.3412,0.2567,0.3981,0.3126,0.3259,0.1933,0.2777,0.306,0.6122,0.2777,0.4343,0.3424,0.536,0.9152,0.743,0.609,0.8223,0.944,1.1292,0.8323,0.9154,0.3818,0.0121,0.084,0.3593,0.2228,0.631,0.693,0.6417,0.2571,0.2287,0.2532,0.558,0.3817,0.2235,0.7356,1.1158,0.9421,0.7871,0.5657,0.6795,0.9274,0.7566,1.0119,0.9458,0.8771,0.7517,0.757,0.7133,0.7828,0.6383,0.3092,0.2337,0.0767,0.0423,0.297,0.2275,-0.0035,-0.0988,-0.0056,-0.0897,-0.0198,0.1488,0.0565,0.1684,0.2438,0.2829,0.3839,0.4896,0.3178,0.4111,0.5346,0.7418,0.7359,0.7542,0.8563,1.0178,0.984,0.9787,0.8417,0.8127,0.717,0.8696,0.9856,1.08,0.981,0.9305,0.8433,0.7819,0.723,0.682,0.8717,0.9749,0.9267,0.8844,0.9043,0.8886,1.0312,1.0362,0.9705,0.9387,0.8963,0.7916,0.7483,0.794,0.8621,0.7873,0.8239,0.5347,0.427,0.3138,0.2904,0.1712,0.0239,-0.0265,0.237,0.3227,0.2844,0.1342,0.198,0.3429,0.4687,0.532,0.5837,0.7236,0.614,0.7691,0.4923,0.8879,0.4825,0.4591,0.1255,0.2816,0.0332,-0.0527,-0.0309,0.0294,0.0632,-0.1423,-0.09,0.0503,0.1542,0.212,0.1337,0.1028,0.2004,0.2206,0.3106,0.2785,0.1781,0.1598,0.2835,0.3777,0.4001,0.4498,0.2523,0.6734,0.8333,0.9018,1.0776,0.9173,0.787,0.3675,0.6291,0.6291,0.0553,-0.0732,0.0108,0.113,0.1313,0.178,0.1691,0.2791,0.2351,0.2679,0.3787,0.6189,0.5832,0.4147,0.811,0.8386,0.8462,0.7295,0.4713,0.6269,0.4553,0.805,0.6809,0.8302,0.877,0.944,1.0613,1.0418,0.7286,0.1783,0.1283,0.2978,0.3193,0.1355,0.3357,0.1833,0.4558,0.6633,0.6608,0.615,0.6694,0.7797,0.6578,0.5668,0.6248],"volume":[27287300.0,5358400.0,1748900.0,2532200.0,8476100.0,1788200.0,1449200.0,1540800.0,1216200.0,1397000.0,797600.0,580200.0,838000.0,1140900.0,744100.0,434400.0,867300.0,1317100.0,1773500.0,2339000.0,429400.0,453000.0,1388200.0,1182100.0,3160500.0,1032500.0,398900.0,652400.0,558200.0,1072700.0,1721800.0,2488100.0,1147300.0,724400.0,1597600.0,544100.0,1219100.0,1594100.0,790700.0,878000.0,896400.0,574900.0,869600.0,891900.0,414700.0,1354900.0,1000500.0,1180900.0,1303000.0,693000.0,1676500.0,1328200.0,1662700.0,1338400.0,2235500.0,2368500.0,12592100.0,2729200.0,630700.0,1117600.0,1065700.0,1066800.0,1742200.0,1274700.0,1959700.0,3133600.0,3527900.0,2313400.0,2093700.0,2147300.0,1228100.0,1593800.0,915700.0,1398100.0,2091400.0,2043500.0,2117900.0,1317900.0,910200.0,494800.0,730100.0,760500.0,845600.0,1001300.0,1201700.0,866900.0,966900.0,789900.0,354600.0,779800.0,585300.0,848800.0,968300.0,610900.0,1918500.0,645900.0,722700.0,511600.0,695200.0,698000.0,618700.0,2264800.0,691100.0,826600.0,969800.0,1839800.0,1484400.0,2013100.0,3532900.0,2061600.0,1658600.0,1782000.0,1435400.0,1295300.0,1764400.0,1405300.0,6668200.0,1909300.0,2804800.0,19158500.0,8731400.0,7988700.0,4349800.0,4203500.0,4592700.0,4870000.0,8416000.0,5363600.0,3274100.0,6032900.0,3072200.0,2661000.0,2040300.0,1946500.0,2209700.0,1301300.0,2787100.0,1288100.0,1844900.0,752000.0,1238900.0,953800.0,3228100.0,1115300.0,1434400.0,943800.0,942800.0,1097100.0,1257000.0,1155100.0,2915900.0,3044800.0,3359800.0,2244400.0,1855200.0,1232300.0,1445800.0,2300600.0,2816100.0,14141200.0,7276800.0,3857400.0,2866000.0,2359800.0,1948300.0,1621800.0,2820500.0,1887300.0,2316200.0,3430500.0,1918600.0,1474700.0,1474100.0,2470500.0,2362200.0,1830800.0,1255600.0,2511700.0,5804000.0,2616100.0,1791000.0,1500400.0,3223100.0,7006100.0,3700100.0,3328700.0,4934000.0,1353300.0,3204600.0,2841000.0,3606800.0,1268700.0,1261700.0,1316300.0,1972800.0,2569600.0,1187600.0,1214900.0,1452100.0,1776100.0,1665300.0,1331600.0,1115500.0,1052600.0,1192200.0,1850800.0,1897600.0,1620800.0,2252100.0,1374900.0,1062700.0,1054200.0,1492200.0,2057200.0,1580400.0,2603200.0,5291700.0,1627900.0,1498500.0,1367100.0,1477500.0,1606600.0,2542200.0,1102500.0,1788800.0,1069200.0,750800.0,884500.0,1274900.0,1313400.0,2645500.0,2120800.0,1338900.0,1154200.0,1534300.0,1298100.0,923900.0,1381000.0,1310400.0,2310700.0,1390100.0,3087200.0,1161100.0,1737200.0,1411600.0,1237800.0,1735800.0,2170900.0,2629000.0,5054900.0,3267400.0,1251500.0,1314300.0,1174400.0,919300.0,1005200.0,1373100.0,3441000.0,2307200.0,2676600.0,2284100.0,1679200.0,1331000.0,1181300.0,1249100.0,1490400.0,1947700.0,1681800.0,1638300.0,1385200.0,1544900.0,1396600.0,1378600.0,3477200.0,1453300.0,998100.0,2520800.0,2367400.0,2320800.0,1364700.0,1588700.0,2130300.0,2164000.0,1470400.0,1761100.0,1174900.0,1402400.0,1211300.0,1473500.0,1327400.0,561800.0,1355300.0,1083400.0,1706500.0,1252900.0,1229500.0,2143800.0,1829100.0,2130500.0,954400.0,2018800.0,1250600.0,1057700.0,1786100.0,1709500.0,2794800.0,1300200.0,878300.0,496100.0,627100.0,872000.0,1836600.0,1527800.0,1471900.0,2588500.0,3086100.0,1628000.0,1791600.0,1335100.0,1933700.0,2164200.0,1540400.0,1802500.0,2430300.0,7759400.0,21684800.0,3112200.0,3225700.0,1913600.0,1333600.0,22705600.0,18898300.0,6005600.0,7332300.0,3380000.0,5176600.0,4979500.0,3153600.0,2554500.0,2392800.0,2412200.0,3299600.0,2469800.0,2568300.0,1809100.0,1792100.0,3097600.0,2683600.0,1880200.0,2929700.0,7415400.0,12729400.0,6510000.0,5205000.0,5511800.0,4633200.0,4241800.0,4643900.0,3738900.0,3339900.0,5735000.0,4929800.0,4391500.0,3104000.0,3740500.0,3698500.0,10377000.0,3662400.0,2689800.0,2116100.0,3332300.0,3590600.0,4204600.0,4574400.0,4101300.0,2313200.0,2400500.0,2988500.0,3556000.0,2502700.0,5368800.0,5289700.0,1908700.0,1673300.0,3223900.0,2363700.0,2074800.0,5143800.0,4719000.0,5779300.0,3557000.0,3831000.0,4086500.0,3910900.0,5492600.0,3003300.0,4166900.0,3999000.0,5343200.0,5787000.0,8306400.0,8861900.0,4827200.0,3139500.0,2783300.0,2627200.0,2460100.0,2830800.0,2414400.0,2575600.0,3697700.0,3056500.0,3253200.0,3151600.0,3558900.0,3947200.0,7234100.0,6082600.0,4006500.0,2383000.0,4107100.0,3898600.0,3028100.0,4472800.0,5080900.0,3154100.0,4375300.0,5956500.0,6189800.0,4050500.0,3650700.0,2229179.0],"vol_avg":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3181320.0,1838425.0,1593155.0,1575120.0,1507615.0,1241835.0,1204050.0,1151535.0,1107115.0,1074215.0,1058000.0,1104210.0,1199605.0,1215070.0,1194245.0,1236920.0,1242405.0,1259995.0,1273845.0,1224705.0,1151655.0,1175005.0,1181100.0,1155170.0,1140660.0,1003370.0,1019490.0,1049570.0,1075995.0,1113235.0,1094250.0,1091985.0,1033990.0,1059760.0,1090460.0,1122355.0,1213575.0,1782225.0,1838980.0,1830980.0,1842960.0,1851425.0,1876020.0,1919650.0,1938790.0,2016040.0,2104975.0,2231345.0,2287970.0,2327505.0,2400220.0,2377800.0,2391080.0,2353730.0,2356715.0,2349510.0,2333260.0,1809550.0,1738985.0,1752960.0,1721820.0,1705040.0,1689725.0,1644895.0,1631225.0,1593325.0,1479990.0,1351940.0,1275765.0,1188810.0,1120435.0,1088295.0,1051045.0,1053675.0,1014315.0,1005670.0,935790.0,866030.0,825715.0,814965.0,825125.0,819555.0,894770.0,887045.0,878310.0,866715.0,915360.0,941235.0,1002395.0,1161310.0,1225400.0,1279065.0,1325725.0,1349080.0,1383300.0,1375595.0,1413565.0,1710840.0,1780725.0,1886205.0,2809230.0,3214865.0,3501060.0,3683995.0,3852840.0,4033985.0,4185495.0,4532075.0,4699600.0,4686660.0,4885225.0,4955905.0,4999855.0,5030100.0,5062660.0,5084925.0,5079725.0,4885670.0,4854610.0,4806615.0,3886290.0,3511665.0,3159920.0,3103835.0,2949425.0,2791510.0,2595200.0,2221540.0,2008215.0,1907360.0,1663470.0,1655655.0,1674845.0,1740820.0,1755715.0,1737990.0,1734540.0,1667475.0,1718100.0,1766660.0,2436120.0,2738015.0,2883195.0,2865090.0,2927315.0,2953010.0,2986910.0,3080795.0,3120305.0,3173265.0,3287035.0,3237170.0,3158665.0,3064380.0,3075685.0,3101035.0,3130960.0,3121450.0,3132005.0,3281400.0,2705145.0,2430855.0,2313005.0,2330860.0,2563175.0,2650765.0,2736110.0,2841785.0,2815085.0,2859505.0,2830030.0,2914440.0,2904140.0,2893520.0,2835810.0,2816340.0,2853280.0,2849880.0,2785040.0,2567445.0,2525445.0,2519160.0,2510720.0,2405340.0,2107665.0,1982270.0,1908375.0,1756555.0,1769930.0,1722305.0,1649000.0,1521795.0,1511070.0,1522595.0,1559640.0,1540020.0,1541700.0,1746905.0,1767555.0,1769875.0,1749425.0,1740035.0,1753785.0,1825120.0,1827615.0,1857445.0,1818365.0,1761025.0,1724210.0,1675350.0,1672275.0,1751415.0,1804745.0,1797080.0,1751930.0,1749625.0,1684370.0,1465980.0,1453635.0,1444230.0,1491410.0,1487040.0,1561070.0,1492015.0,1523750.0,1504890.0,1513320.0,1562570.0,1626890.0,1694595.0,1881670.0,1912765.0,1869300.0,1868070.0,1869080.0,1838330.0,1823685.0,1846145.0,1949145.0,1998985.0,2017280.0,2061980.0,1991580.0,2000075.0,1972280.0,1964155.0,1976785.0,1987380.0,1962925.0,1913390.0,1729905.0,1643780.0,1651035.0,1654250.0,1769390.0,1796090.0,1795735.0,1853120.0,1799440.0,1800120.0,1734525.0,1699755.0,1722310.0,1763960.0,1778415.0,1804015.0,1788240.0,1760975.0,1737450.0,1729210.0,1726320.0,1677165.0,1675100.0,1660340.0,1571805.0,1561785.0,1573355.0,1554505.0,1527590.0,1518075.0,1497560.0,1519065.0,1475080.0,1419765.0,1435550.0,1432970.0,1513965.0,1508855.0,1492205.0,1443335.0,1408320.0,1423830.0,1447895.0,1470115.0,1458385.0,1525165.0,1617995.0,1592205.0,1590330.0,1550560.0,1599525.0,1606795.0,1621285.0,1658525.0,1690735.0,1993230.0,2937730.0,3028330.0,3145700.0,3216575.0,3251900.0,4343580.0,5196665.0,5420555.0,5713575.0,5753150.0,5857675.0,6025250.0,6093350.0,6154320.0,6177275.0,6189675.0,6277635.0,6311000.0,6317900.0,6020385.0,5025750.0,5025020.0,4997915.0,4996245.0,5076050.0,4311540.0,4003095.0,4028315.0,3921950.0,4028540.0,4001370.0,3964485.0,4039000.0,4098220.0,4145575.0,4311715.0,4393225.0,4489310.0,4516095.0,4612665.0,4707985.0,5071955.0,5120895.0,5161375.0,5120695.0,4916540.0,4459600.0,4344330.0,4312800.0,4242275.0,4126275.0,4034210.0,3951440.0,3942295.0,3900435.0,3882125.0,3900120.0,3775980.0,3704445.0,3678615.0,3611875.0,3196765.0,3270835.0,3372295.0,3555455.0,3566690.0,3578710.0,3572805.0,3539630.0,3609195.0,3643700.0,3732020.0,3782545.0,3871905.0,4036120.0,4183000.0,4361610.0,4507535.0,4580845.0,4558815.0,4571990.0,4591255.0,4475605.0,4360375.0,4200190.0,4207225.0,4168500.0,4126835.0,4088870.0,3992185.0,4039380.0,4192740.0,4296920.0,4230085.0,4059885.0,3849920.0,3601755.0,3511800.0,3578465.0,3693345.0,3719690.0,3815450.0,3971735.0,4160505.0,4234250.0,4231900.0,4190534.0],"rsi":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,44.5917,41.8309,40.1356,40.9277,43.8427,50.2692,46.079,48.9305,49.7301,46.5518,45.2399,36.6687,42.7538,44.7752,44.0005,44.9475,46.9472,45.8753,49.1005,49.8062,45.3746,46.2996,43.3535,44.6302,45.4924,45.018,45.941,39.724,38.7883,40.7473,33.9301,37.1763,37.7675,34.8523,33.2525,33.4668,40.5646,37.8762,38.3894,38.523,39.0795,38.126,35.4791,34.568,32.5672,31.6419,28.7734,29.1116,30.5862,30.3905,37.5426,38.172,36.8527,43.1355,45.9651,45.1008,56.5636,51.6795,52.1348,51.5665,51.8977,56.1574,55.7723,57.1138,56.7653,57.4217,56.5184,58.6306,58.0688,59.4703,60.7365,54.1046,51.1642,53.1263,54.5363,55.3713,47.5865,48.3509,52.8874,54.2365,59.1604,60.1853,53.3504,50.5471,53.4103,49.3779,50.6082,47.4302,58.5807,55.9059,59.6253,57.6232,58.7175,57.844,59.3301,59.5018,56.1333,56.8476,59.5299,50.5245,51.9765,47.748,45.3115,46.2209,48.2458,41.383,33.5736,32.102,31.2668,45.1137,42.8992,42.8096,45.0272,47.2582,46.0166,46.9138,42.6414,45.3443,48.0405,50.7129,51.526,52.6474,53.217,53.5698,53.9354,57.0228,55.8607,53.8032,53.1499,56.2876,56.0171,59.3103,63.7717,64.9059,64.9389,63.3091,63.1807,57.4753,54.0501,52.049,52.8231,55.2924,55.9918,56.891,58.3525,59.7876,60.2067,60.6858,59.7021,63.661,64.6304,64.7205,64.4613,64.6105,61.3571,61.8625,59.1483,55.1575,51.0675,55.993,57.0119,57.196,60.7898,65.1341,65.2285,56.8869,58.7727,58.085,57.2235,54.7376,51.848,51.4812,50.21,55.1474,52.1962,52.8769,56.162,53.2693,48.7019,43.271,42.5416,40.3915,39.8479,39.5121,38.8797,39.8016,43.142,38.9043,43.478,42.3652,41.679,42.3933,38.5421,44.8379,47.5874,44.295,38.0937,35.9118,36.0758,35.6912,37.0164,39.0437,42.1136,40.2184,43.4022,41.5041,41.3812,38.5569,40.2022,40.3889,47.2381,41.3506,44.1852,42.5612,45.0794,48.0039,46.7279,45.784,48.0713,49.6892,52.8551,50.005,51.4933,45.3788,40.9722,41.2158,45.3322,43.6611,49.6651,50.7305,49.9651,45.1423,44.5913,44.9059,49.5773,47.0059,44.6333,52.1266,58.2872,56.1988,53.4049,49.6581,51.339,55.7866,53.1967,57.8553,57.9017,57.3695,55.1676,55.7098,55.1482,57.0839,53.9823,47.8701,46.6537,44.1247,44.1247,48.8992,47.2596,42.2354,38.5388,38.8278,34.7049,34.0313,39.1503,35.3549,38.558,40.6015,41.2648,44.4635,47.4165,42.5093,44.5826,47.065,51.0237,50.7463,50.9708,52.3426,55.4583,55.9897,57.536,54.7433,54.8587,52.6012,57.3886,61.0324,64.8469,63.801,63.8449,61.8728,60.6115,58.9512,58.0741,63.1156,66.3541,66.3966,66.2204,67.4922,68.1239,72.5376,74.4029,74.4029,74.8165,74.0816,69.4643,68.4661,70.3498,72.8682,70.3326,71.975,58.856,55.9779,54.0114,54.3028,51.4873,47.5035,45.2234,51.8373,53.8303,52.3728,47.5957,48.391,51.6582,54.2627,55.4454,56.4161,59.1242,55.2987,57.5586,51.1634,56.5473,50.5202,50.1621,45.2862,47.4681,43.7502,41.9581,40.8122,40.4797,39.8812,33.2931,31.6542,34.5344,37.3151,38.5365,35.1155,33.1277,36.4783,36.3718,39.6505,38.2794,35.2375,34.4053,38.3035,40.8511,40.9123,41.6112,38.2353,45.4079,46.1755,47.3989,51.0707,49.6433,47.9203,42.1767,46.3073,46.5751,39.5201,36.9228,36.8548,38.0555,37.8661,38.7014,37.9576,40.754,39.2894,39.6354,43.1804,50.0662,48.8311,44.3724,52.8288,52.7779,52.5118,50.2701,45.1065,47.6963,45.0052,51.4556,49.7794,52.6224,53.9721,55.892,59.0857,60.3695,53.6933,44.6738,43.8702,46.6798,46.9419,43.8417,47.3668,44.3614,49.2949,52.8735,53.1274,52.4895,53.7748,56.0143,53.7383,51.8815,53.0071],"macd":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.8795,-0.8565,-0.7897,-0.7172,-0.6985,-0.6958,-0.843,-0.8648,-0.8418,-0.8286,-0.7952,-0.7312,-0.6904,-0.6042,-0.5194,-0.5165,-0.4955,-0.5222,-0.5203,-0.5017,-0.4887,-0.4617,-0.5342,-0.6017,-0.6254,-0.77,-0.8355,-0.87,-0.9479,-1.0339,-1.0872,-1.0319,-1.0304,-1.011,-0.9827,-0.943,-0.9178,-0.9363,-0.9577,-1.0034,-1.047,-1.133,-1.1842,-1.1974,-1.198,-1.117,-1.0344,-0.9795,-0.8599,-0.7237,-0.6207,-0.3734,-0.2439,-0.1326,-0.0518,0.0169,0.1351,0.2214,0.3072,0.367,0.4192,0.4457,0.491,0.5152,0.5475,0.5841,0.5407,0.4679,0.4294,0.4119,0.4038,0.3052,0.2332,0.2292,0.241,0.3177,0.3901,0.365,0.3053,0.2949,0.23,0.1932,0.1184,0.2371,0.2891,0.3999,0.4535,0.5118,0.5397,0.5833,0.6141,0.5881,0.5729,0.6008,0.4898,0.4212,0.294,0.1479,0.0454,-0.0052,-0.1716,-0.497,-0.7918,-1.0401,-0.9802,-0.9812,-0.9731,-0.9119,-0.808,-0.7462,-0.6717,-0.7061,-0.6732,-0.5856,-0.4536,-0.3274,-0.2009,-0.0876,0.0094,0.0925,0.2188,0.2968,0.3219,0.3275,0.3864,0.4242,0.5127,0.676,0.8241,0.9316,0.9844,1.013,0.9496,0.8397,0.7137,0.6197,0.5804,0.5549,0.5438,0.5537,0.5798,0.6009,0.6185,0.6149,0.6712,0.7253,0.761,0.7779,0.7846,0.7523,0.7255,0.6724,0.5856,0.4686,0.4323,0.4124,0.3946,0.4248,0.5122,0.5764,0.538,0.5297,0.51,0.4799,0.4254,0.3467,0.2772,0.2059,0.2052,0.1712,0.1506,0.1726,0.1583,0.0943,-0.0279,-0.1337,-0.2462,-0.3395,-0.4135,-0.4756,-0.5108,-0.5031,-0.5463,-0.5309,-0.5271,-0.5269,-0.5144,-0.5482,-0.5093,-0.4444,-0.4292,-0.5033,-0.5931,-0.6551,-0.7026,-0.7198,-0.7068,-0.6598,-0.641,-0.5886,-0.5656,-0.5428,-0.5562,-0.546,-0.5301,-0.4487,-0.454,-0.4242,-0.4176,-0.3821,-0.3188,-0.2808,-0.259,-0.2158,-0.1627,-0.085,-0.0527,-0.0108,-0.0464,-0.1329,-0.1967,-0.203,-0.2271,-0.1772,-0.1233,-0.0885,-0.1192,-0.1491,-0.1677,-0.1308,-0.1308,-0.1588,-0.0919,0.0516,0.1388,0.1712,0.1451,0.1462,0.2116,0.227,0.3122,0.3761,0.4156,0.4155,0.4186,0.4099,0.4256,0.3987,0.2965,0.1962,0.0796,-0.0127,-0.029,-0.063,-0.1615,-0.2991,-0.4003,-0.5515,-0.6773,-0.7124,-0.8051,-0.831,-0.8172,-0.789,-0.7189,-0.6174,-0.6099,-0.5699,-0.4986,-0.3796,-0.2861,-0.2063,-0.1223,-0.0097,0.0867,0.1843,0.2268,0.2591,0.256,0.3168,0.419,0.5646,0.661,0.7298,0.7555,0.7542,0.7279,0.6901,0.7293,0.8099,0.8647,0.8961,0.9328,0.9622,1.0619,1.1719,1.2446,1.297,1.3177,1.283,1.2332,1.2137,1.234,1.2159,1.2198,1.0869,0.9376,0.7869,0.6638,0.5271,0.3638,0.2005,0.1549,0.1461,0.1192,0.0321,-0.0261,-0.0275,0.0092,0.0554,0.1053,0.1847,0.2009,0.2456,0.1973,0.2425,0.1875,0.1366,0.0146,-0.0484,-0.1634,-0.286,-0.4011,-0.4931,-0.5707,-0.767,-0.9544,-1.0544,-1.0848,-1.0803,-1.1403,-1.223,-1.2307,-1.2251,-1.1645,-1.1317,-1.1593,-1.1868,-1.1462,-1.0679,-0.9935,-0.9151,-0.9055,-0.792,-0.6828,-0.5719,-0.4235,-0.3239,-0.2685,-0.3202,-0.2972,-0.2718,-0.3844,-0.5281,-0.6363,-0.6978,-0.7421,-0.7579,-0.776,-0.7479,-0.7436,-0.7278,-0.6657,-0.5169,-0.4127,-0.3974,-0.2485,-0.1298,-0.0393,-0.0014,-0.0571,-0.061,-0.1104,-0.0426,-0.0177,0.0523,0.1313,0.2275,0.3642,0.4942,0.4884,0.3011,0.1326,0.0502,-0.0102,-0.1229,-0.1467,-0.2283,-0.1955,-0.0909,-0.0024,0.055,0.1256,0.2266,0.2641,0.2577,0.2713],"macd_signal":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.815,-0.8177,-0.8132,-0.7968,-0.7755,-0.7413,-0.6969,-0.6608,-0.6278,-0.6066,-0.5894,-0.5718,-0.5552,-0.5365,-0.536,-0.5492,-0.5644,-0.6055,-0.6515,-0.6952,-0.7457,-0.8034,-0.8601,-0.8945,-0.9217,-0.9395,-0.9482,-0.9471,-0.9413,-0.9403,-0.9438,-0.9557,-0.974,-1.0058,-1.0415,-1.0726,-1.0977,-1.1016,-1.0881,-1.0664,-1.0251,-0.9648,-0.896,-0.7915,-0.682,-0.5721,-0.468,-0.3711,-0.2698,-0.1716,-0.0758,0.0127,0.094,0.1644,0.2297,0.2868,0.3389,0.388,0.4185,0.4284,0.4286,0.4252,0.421,0.3978,0.3649,0.3378,0.3184,0.3183,0.3326,0.3391,0.3323,0.3249,0.3059,0.2834,0.2504,0.2477,0.256,0.2848,0.3185,0.3572,0.3937,0.4316,0.4681,0.4921,0.5083,0.5268,0.5194,0.4997,0.4586,0.3965,0.3262,0.26,0.1737,0.0395,-0.1267,-0.3094,-0.4436,-0.5511,-0.6355,-0.6908,-0.7142,-0.7206,-0.7108,-0.7099,-0.7026,-0.6792,-0.634,-0.5727,-0.4984,-0.4162,-0.3311,-0.2464,-0.1533,-0.0633,0.0137,0.0765,0.1385,0.1956,0.259,0.3424,0.4388,0.5373,0.6267,0.704,0.7531,0.7704,0.7591,0.7312,0.701,0.6718,0.6462,0.6277,0.6181,0.6147,0.6154,0.6153,0.6265,0.6463,0.6692,0.6909,0.7097,0.7182,0.7197,0.7102,0.6853,0.642,0.6,0.5625,0.5289,0.5081,0.5089,0.5224,0.5255,0.5264,0.5231,0.5145,0.4967,0.4667,0.4288,0.3842,0.3484,0.313,0.2805,0.2589,0.2388,0.2099,0.1623,0.1031,0.0333,-0.0413,-0.1157,-0.1877,-0.2523,-0.3025,-0.3512,-0.3872,-0.4152,-0.4375,-0.4529,-0.4719,-0.4794,-0.4724,-0.4638,-0.4717,-0.4959,-0.5278,-0.5627,-0.5942,-0.6167,-0.6253,-0.6284,-0.6205,-0.6095,-0.5962,-0.5882,-0.5797,-0.5698,-0.5456,-0.5273,-0.5066,-0.4888,-0.4675,-0.4378,-0.4064,-0.3769,-0.3447,-0.3083,-0.2636,-0.2214,-0.1793,-0.1527,-0.1487,-0.1583,-0.1673,-0.1792,-0.1788,-0.1677,-0.1519,-0.1454,-0.1461,-0.1504,-0.1465,-0.1434,-0.1464,-0.1355,-0.0981,-0.0507,-0.0064,0.0239,0.0484,0.081,0.1102,0.1506,0.1957,0.2397,0.2749,0.3036,0.3249,0.345,0.3557,0.3439,0.3144,0.2674,0.2114,0.1633,0.118,0.0621,-0.0101,-0.0881,-0.1808,-0.2801,-0.3666,-0.4543,-0.5296,-0.5871,-0.6275,-0.6458,-0.6401,-0.6341,-0.6212,-0.5967,-0.5533,-0.4999,-0.4411,-0.3774,-0.3038,-0.2257,-0.1437,-0.0696,-0.0039,0.0481,0.1018,0.1653,0.2451,0.3283,0.4086,0.478,0.5332,0.5721,0.5957,0.6225,0.66,0.7009,0.7399,0.7785,0.8152,0.8646,0.926,0.9898,1.0512,1.1045,1.1402,1.1588,1.1698,1.1826,1.1893,1.1954,1.1737,1.1265,1.0586,0.9796,0.8891,0.784,0.6673,0.5648,0.4811,0.4087,0.3334,0.2615,0.2037,0.1648,0.1429,0.1354,0.1453,0.1564,0.1742,0.1788,0.1916,0.1908,0.1799,0.1469,0.1078,0.0536,-0.0143,-0.0917,-0.172,-0.2517,-0.3548,-0.4747,-0.5906,-0.6895,-0.7677,-0.8422,-0.9183,-0.9808,-1.0297,-1.0567,-1.0717,-1.0892,-1.1087,-1.1162,-1.1066,-1.0839,-1.0502,-1.0212,-0.9754,-0.9169,-0.8479,-0.763,-0.6752,-0.5939,-0.5391,-0.4907,-0.447,-0.4345,-0.4532,-0.4898,-0.5314,-0.5735,-0.6104,-0.6435,-0.6644,-0.6802,-0.6898,-0.6849,-0.6513,-0.6036,-0.5624,-0.4996,-0.4256,-0.3484,-0.279,-0.2346,-0.1999,-0.182,-0.1541,-0.1268,-0.091,-0.0465,0.0083,0.0795,0.1624,0.2276,0.2423,0.2204,0.1863,0.147,0.093,0.0451,-0.0096,-0.0467,-0.0556,-0.045,-0.025,0.0051,0.0494,0.0924,0.1254,0.1546],"macd_hist":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,-0.0268,-0.0109,0.018,0.0656,0.0852,0.1371,0.1775,0.1443,0.1322,0.0845,0.0691,0.0701,0.0665,0.0748,0.0018,-0.0525,-0.061,-0.1645,-0.1839,-0.1748,-0.2021,-0.2305,-0.227,-0.1374,-0.1087,-0.0715,-0.0345,0.0042,0.0234,0.0039,-0.014,-0.0477,-0.073,-0.1272,-0.1428,-0.1247,-0.1003,-0.0154,0.0537,0.0869,0.1652,0.2411,0.2753,0.4181,0.438,0.4395,0.4162,0.3879,0.4049,0.393,0.383,0.3542,0.3252,0.2814,0.2613,0.2284,0.2086,0.1961,0.1222,0.0395,0.0008,-0.0134,-0.0171,-0.0926,-0.1317,-0.1086,-0.0774,-0.0006,0.0575,0.0259,-0.027,-0.0299,-0.0759,-0.0901,-0.132,-0.0106,0.0331,0.1151,0.135,0.1546,0.146,0.1517,0.146,0.096,0.0647,0.0741,-0.0296,-0.0786,-0.1646,-0.2485,-0.2809,-0.2651,-0.3452,-0.5365,-0.6651,-0.7307,-0.5366,-0.4301,-0.3376,-0.2211,-0.0938,-0.0256,0.0392,0.0038,0.0293,0.0936,0.1805,0.2453,0.2974,0.3286,0.3405,0.3389,0.3721,0.3601,0.3082,0.251,0.2479,0.2285,0.2537,0.3336,0.3853,0.3942,0.3577,0.309,0.1965,0.0693,-0.0454,-0.1116,-0.1207,-0.1169,-0.1024,-0.074,-0.0383,-0.0138,0.003,-0.0005,0.0447,0.079,0.0918,0.0869,0.075,0.0341,0.0059,-0.0378,-0.0997,-0.1733,-0.1677,-0.1501,-0.1343,-0.0833,0.0033,0.054,0.0125,0.0033,-0.0131,-0.0345,-0.0712,-0.1199,-0.1516,-0.1783,-0.1432,-0.1418,-0.1299,-0.0863,-0.0805,-0.1156,-0.1902,-0.2368,-0.2795,-0.2982,-0.2978,-0.2879,-0.2585,-0.2006,-0.1951,-0.1437,-0.112,-0.0894,-0.0615,-0.0762,-0.0299,0.028,0.0346,-0.0316,-0.0971,-0.1273,-0.1398,-0.1257,-0.0901,-0.0345,-0.0125,0.0318,0.0439,0.0534,0.032,0.0338,0.0397,0.0969,0.0733,0.0825,0.0713,0.0854,0.1189,0.1256,0.1179,0.1289,0.1455,0.1786,0.1688,0.1685,0.1063,0.0159,-0.0383,-0.0357,-0.0479,0.0016,0.0444,0.0634,0.0261,-0.003,-0.0172,0.0157,0.0126,-0.0123,0.0436,0.1497,0.1895,0.1775,0.1212,0.0978,0.1306,0.1167,0.1615,0.1804,0.1759,0.1406,0.115,0.085,0.0805,0.0429,-0.0474,-0.1181,-0.1878,-0.2241,-0.1923,-0.181,-0.2236,-0.289,-0.3121,-0.3707,-0.3972,-0.3458,-0.3508,-0.3014,-0.23,-0.1615,-0.0731,0.0227,0.0242,0.0513,0.0981,0.1737,0.2138,0.2348,0.2551,0.2942,0.3124,0.3281,0.2964,0.263,0.2078,0.2149,0.2538,0.3194,0.3327,0.3212,0.2775,0.221,0.1557,0.0944,0.1069,0.15,0.1638,0.1561,0.1543,0.1469,0.1973,0.2458,0.2549,0.2458,0.2132,0.1428,0.0744,0.0439,0.0514,0.0266,0.0244,-0.0868,-0.1888,-0.2717,-0.3158,-0.362,-0.4203,-0.4668,-0.41,-0.335,-0.2895,-0.3013,-0.2876,-0.2312,-0.1556,-0.0875,-0.0301,0.0394,0.0445,0.0714,0.0185,0.051,-0.0033,-0.0433,-0.1322,-0.1562,-0.217,-0.2717,-0.3094,-0.3211,-0.319,-0.4122,-0.4797,-0.4637,-0.3953,-0.3127,-0.2981,-0.3046,-0.2499,-0.1955,-0.1079,-0.06,-0.0701,-0.0781,-0.03,0.0387,0.0904,0.1351,0.1157,0.1834,0.2341,0.276,0.3395,0.3513,0.3253,0.2189,0.1935,0.1751,0.05,-0.0749,-0.1465,-0.1664,-0.1685,-0.1475,-0.1325,-0.0835,-0.0634,-0.0381,0.0193,0.1345,0.1909,0.1649,0.2511,0.2959,0.3091,0.2775,0.1775,0.1389,0.0716,0.1115,0.1092,0.1433,0.1778,0.2193,0.2847,0.3318,0.2608,0.0588,-0.0877,-0.1362,-0.1572,-0.2159,-0.1918,-0.2187,-0.1487,-0.0354,0.0425,0.0799,0.1205,0.1772,0.1717,0.1323,0.1167],"up":[true,true,false,false,true,false,false,false,true,true,false,true,false,true,false,true,false,false,false,false,true,false,false,true,true,true,false,true,true,false,false,false,true,true,false,true,true,false,true,true,false,true,false,true,true,false,true,false,false,true,false,true,true,false,false,true,true,false,true,true,true,false,false,false,false,false,false,true,true,false,true,true,false,true,true,false,true,false,true,false,true,true,false,true,false,true,false,true,false,true,true,false,false,true,true,true,false,true,true,true,true,true,false,false,true,false,true,false,true,false,true,false,true,false,true,true,false,true,true,false,true,false,false,true,true,false,false,false,false,true,false,false,true,true,false,true,false,true,true,true,true,true,true,true,true,true,false,false,false,true,false,true,true,true,true,false,false,false,false,false,true,true,true,true,true,true,true,true,false,true,true,true,false,true,false,true,false,false,false,true,true,true,true,true,true,false,true,false,false,false,false,false,false,true,false,true,true,false,false,false,false,false,false,false,false,true,true,false,true,false,false,true,false,true,true,false,false,false,true,false,true,true,true,false,true,false,false,false,true,true,true,false,true,false,true,true,false,false,true,true,true,false,true,false,false,true,true,false,true,true,false,false,false,true,true,false,false,true,true,false,false,false,true,true,false,true,true,false,false,true,false,true,false,false,false,false,true,true,false,false,false,true,false,false,true,false,true,true,true,true,true,false,true,true,true,false,true,true,true,true,true,false,true,false,true,true,true,false,true,false,false,false,false,true,true,true,false,true,true,true,true,true,true,false,false,false,true,true,false,true,false,false,false,true,false,false,false,true,true,false,false,true,true,true,true,true,true,false,true,false,true,false,false,false,true,false,false,false,false,false,false,false,true,true,true,false,false,true,false,true,false,false,false,true,true,true,true,false,true,true,true,true,false,false,false,true,true,false,false,false,true,false,true,false,true,false,true,true,true,false,false,true,false,false,false,false,true,false,true,false,true,true,true,true,true,false,false,false,true,true,false,true,false,true,true,true,false,true,true,false,false,true],"assessment":{"regime":"deteriorating","regime_label":"Deteriorating","regime_tone":"warn","regime_desc":"Price is still above the 100-day EMA, but the EMA has flattened or rolled over \u2014 the trend is tiring.","momentum":"Momentum is fading despite price holding above the EMA (RSI firm but rolling and MACD flat).","action":"wait","action_label":"Wait","action_tone":"warn","confidence":"low","conf_note":"Regime is unconfirmed or the signals conflict \u2014 lean cautious.","supportive":["RSI constructive (45\u201355)"],"conflicting":["100-day EMA flattening (trend fading)"],"rationale":"Signals are split \u2014 no timing edge yet; wait for confirmation.","risk":"Setup is unresolved (1 supportive / 1 conflicting). A clean MACD improvement with RSI reclaiming 50 on above-average volume would tilt this toward a starter buy.","note":"","headline":"SARO: Wait \u2014 deteriorating (low confidence). Last 27.12 USD, RSI 53, +0.5% vs EMA100"},"table":[{"indicator":"Price vs EMA100","value":"+0.5% vs EMA \u00b7 slope -0.2%","signal":"Above, flattening","tone":"warn"},{"indicator":"MACD","value":"hist +0.12","signal":"Mixed","tone":"muted"},{"indicator":"RSI(20)","value":"53","signal":"Constructive (45\u201355)","tone":"pos"},{"indicator":"Bollinger %B (20,2)","value":"0.62","signal":"Normal","tone":"muted"},{"indicator":"Volume vs 20d avg","value":"53% of avg","signal":"Light","tone":"muted"}]}</script>
 </div>
 <figcaption><span class="exn">Exhibit 11</span> — Technical analysis (interactive; theme-matched). Source: technical-chart skill.</figcaption></figure>
-<p><em>Interactive 5-indicator chart: <code>technical-chart-SARO-20260624.html</code> (price + EMA100 + Bollinger, RSI(20), MACD, volume vs 20-day average), theme-matched to the report.</em></p>
-<p><strong>Tactical read — Wait (downtrend, medium confidence).</strong> Last $26.85. The trend is the binding signal: price sits
-<strong>−0.5% below a flattening 100-day EMA</strong> (slope −0.3%), momentum is only tentatively improving (<strong>RSI 52</strong>, MACD
-histogram +0.13 = mixed), and <strong>Bollinger %B 0.57</strong> places price mid-band on <strong>below-average volume (86% of the
-20-day)</strong>. That is an unresolved setup — a non-rising trend with no confirming momentum or volume — so the read is
-to <strong>wait for the trend to repair before adding.</strong> The trigger that would flip it to a starter buy: a clean MACD
-improvement with <strong>RSI reclaiming 50 on above-average volume</strong>; the downside marker to watch is the 52-week low at
-$23.83.</p>
-<table class="data">
-<thead>
-<tr>
-<th>Indicator</th>
-<th>Reading</th>
-<th>Signal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Price vs EMA100</td>
-<td><span class="pct">−0.5% vs EMA · slope −0.3%</span></td>
-<td>Below, flattening</td>
-</tr>
-<tr>
-<td>MACD (12/26/9)</td>
-<td>hist +0.13</td>
-<td>Mixed</td>
-</tr>
-<tr>
-<td>RSI(20)</td>
-<td>52</td>
-<td>Early improvement</td>
-</tr>
-<tr>
-<td><span class="pct">Bollinger %B (20,2)</span></td>
-<td>0.57</td>
-<td>Mid-band</td>
-</tr>
-<tr>
-<td>Volume vs 20d avg</td>
-<td><span class="pct">86%</span></td>
-<td>Below average</td>
-</tr>
-</tbody>
-</table>
 <h2 id="appendix"><span><b class="num">5</b>Appendix</span><a class="backtoc" href="#toc">↑ Contents</a></h2>
 <h3 id="appendix-key-assumptions-amp-methodology"><span><b class="num">5.1</b>Key Assumptions &amp; Methodology</span><a class="backtoc" href="#toc">↑</a></h3>
 <p>Figures are presented on a continuing-operations basis. LTM = latest twelve months (the most recent four reported quarters). Multiples are <strong>computed from the inputs</strong> in the comparables table — EV = market capitalisation + net debt; EV/EBITDA on LTM EBITDA; P/FCF and FCF yield on company-defined free cash flow; NTM P/E on consensus forward EPS — and are not lifted from third-party vendors. Subject financials come from the historical-financials model; peer data from the valuation step's feeds.</p>
@@ -1719,1002 +1684,79 @@ function buildReport(REPORT){
   if(REPORT.segments) renderSegments(REPORT.segmentsEl||'segBody', REPORT.segments);
 }
 </script><script>const REPORT={
- "theme": "naturalforest",
- "charts": [
-  {
-   "id": "revebitda",
-   "kind": "columnLineChip",
-   "h": "h-tall",
-   "caption": "Revenue & Adj. EBITDA (columns), Adj. EBITDA margin (line), YoY revenue growth (chip)",
-   "source": "Model",
-   "labels": [
-    "FY22",
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM 1Q26"
-   ],
-   "rev": [
-    4150,
-    4563,
-    5237,
-    6063,
-    6254
-   ],
-   "ebitda": [
-    null,
-    561,
-    690,
-    808,
-    813
-   ],
-   "margin": [
-    null,
-    12.3,
-    13.2,
-    13.3,
-    13.0
-   ],
-   "yoy": [
-    null,
-    9.9,
-    14.8,
-    15.8,
-    null
-   ],
-   "revLabel": "Revenue",
-   "ebitdaLabel": "Adj. EBITDA",
-   "lineLabel": "Adj. EBITDA margin",
-   "yTitle": "US$M",
-   "y1Title": "Margin %",
-   "y1Max": 20
-  },
-  {
-   "id": "segstack",
-   "kind": "stacked",
-   "h": "h-mid",
-   "caption": "Segment revenue mix ($m) \u2014 Engine Services + Component Repair",
-   "source": "Earnings releases",
-   "labels": [
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM 1Q26"
-   ],
-   "fmt": "money",
-   "labelMin": 300,
-   "series": [
-    {
-     "label": "Engine Services",
-     "data": [
-      4049.9,
-      4644.8,
-      5354.0,
-      5532.8
-     ]
-    },
-    {
-     "label": "Component Repair (CRS)",
-     "data": [
-      513.4,
-      592.4,
-      708.6,
-      721.0
-     ]
-    }
-   ]
-  },
-  {
-   "id": "fcf",
-   "kind": "columnLine",
-   "mini": true,
-   "h": "h-sm",
-   "caption": "FCF & conversion",
-   "source": "Model",
-   "labels": [
-    "FY22",
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM 1Q26"
-   ],
-   "bars": [
-    -14,
-    -14,
-    -45,
-    209,
-    139
-   ],
-   "line": [
-    null,
-    -2.5,
-    -6.5,
-    25.9,
-    17.1
-   ],
-   "barFmt": "money",
-   "lineFmt": "pct"
-  },
-  {
-   "id": "netdebt",
-   "kind": "columnLine",
-   "mini": true,
-   "h": "h-sm",
-   "caption": "Net debt & net leverage",
-   "source": "Model",
-   "labels": [
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM 1Q26"
-   ],
-   "bars": [
-    3141,
-    2129,
-    1925,
-    2121
-   ],
-   "line": [
-    5.6,
-    3.1,
-    2.4,
-    2.6
-   ],
-   "barFmt": "money",
-   "lineFmt": "x"
-  },
-  {
-   "id": "segdonut",
-   "kind": "nestedDonut",
-   "h": "h-donut",
-   "caption": "Segment mix \u2014 revenue (outer) vs Segment Adj. EBITDA (inner), LTM 1Q26",
-   "source": "Earnings releases",
-   "cats": [
-    "Engine Services",
-    "Component Repair (CRS)"
-   ],
-   "outer": [
-    88.5,
-    11.5
-   ],
-   "inner": [
-    77.4,
-    22.6
-   ],
-   "outerLabel": "Revenue share",
-   "innerLabel": "Adj. EBITDA share",
-   "center": "LTM 1Q26",
-   "centerLines": [
-    "Rev $6,254M",
-    "EBITDA $813M"
-   ],
-   "insight": "CRS is 11.5% of revenue but 22.6% of segment EBITDA \u2014 above-portfolio margins; Engine Services is 88.5% of revenue and 77.4% of segment EBITDA."
-  },
-  {
-   "id": "geomix",
-   "kind": "dualDonut",
-   "h": "h-donut",
-   "caption": "Geographic revenue mix shift \u2014 FY2023 vs FY2025, by region",
-   "source": "FY2025 10-K",
-   "cats": [
-    "United States",
-    "Canada",
-    "Rest of Europe",
-    "Asia",
-    "United Kingdom",
-    "Rest of world"
-   ],
-   "donuts": [
-    {
-     "yr": "FY2023 \u00b7 $4,563M",
-     "center": "FY2023",
-     "sub": "$4,563M",
-     "data": [
-      62.7,
-      8.2,
-      7.9,
-      4.6,
-      9.9,
-      6.7
-     ]
-    },
-    {
-     "yr": "FY2025 \u00b7 $6,063M",
-     "center": "FY2025",
-     "sub": "$6,063M",
-     "data": [
-      55.9,
-      12.5,
-      9.0,
-      8.4,
-      7.4,
-      6.9
-     ]
-    }
-   ]
-  },
-  {
-   "id": "endmkt",
-   "kind": "singleColumn",
-   "h": "h-mid",
-   "caption": "End-market revenue growth, FY2025 (% YoY)",
-   "source": "Earnings releases",
-   "labels": [
-    "Commercial",
-    "Business Aviation",
-    "Military & Heli"
-   ],
-   "data": [
-    17.6,
-    12.1,
-    9.4
-   ],
-   "fmt": "pct"
-  },
-  {
-   "id": "margins",
-   "kind": "line",
-   "h": "h-tall",
-   "caption": "Margin progression \u2014 gross vs Adj. EBITDA margin (%)",
-   "source": "Model",
-   "labelPoints": true,
-   "fmt": "pct",
-   "labels": [
-    "FY22",
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM 1Q26"
-   ],
-   "series": [
-    {
-     "label": "Gross margin",
-     "data": [
-      13.1,
-      13.9,
-      14.4,
-      14.8,
-      14.7
-     ]
-    },
-    {
-     "label": "Adj. EBITDA margin",
-     "data": [
-      null,
-      12.3,
-      13.2,
-      13.3,
-      13.0
-     ]
-    }
-   ]
-  },
-  {
-   "id": "guidance",
-   "kind": "groupedColumn",
-   "h": "h-mid",
-   "caption": "FY2026 guidance step-up \u2014 Adj. EBITDA & FCF ($mm)",
-   "source": "FY2026 guidance",
-   "fmt": "money",
-   "yfmt": "money",
-   "labels": [
-    "Adj. EBITDA",
-    "FCF"
-   ],
-   "series": [
-    {
-     "label": "FY2025 actual",
-     "data": [
-      808,
-      209
-     ]
-    },
-    {
-     "label": "FY2026E (mid)",
-     "data": [
-      890,
-      285
-     ]
-    }
-   ]
-  },
-  {
-   "id": "valbubble",
-   "kind": "bubble",
-   "h": "h-tall",
-   "caption": "Valuation map \u2014 EV/EBITDA vs EBITDA margin (bubble = market cap)",
-   "source": "Two feeds (AV COMPANY_OVERVIEW \u2192 Yahoo)",
-   "xTitle": "EBITDA margin %",
-   "yTitle": "EV/LTM EBITDA (x)",
-   "xfmt": "pct",
-   "yfmt": "x1",
-   "points": [
-    {
-     "label": "SARO",
-     "x": 13.0,
-     "y": 13.6,
-     "size": 8927,
-     "hl": true
-    },
-    {
-     "label": "FTAI",
-     "x": 36.0,
-     "y": 29.4,
-     "size": 26886
-    },
-    {
-     "label": "HEI",
-     "x": 28.0,
-     "y": 35.7,
-     "size": 46670
-    },
-    {
-     "label": "AIR",
-     "x": 10.9,
-     "y": 18.0,
-     "size": 5259
-    },
-    {
-     "label": "VSEC",
-     "x": 15.2,
-     "y": 28.7,
-     "size": 5995
-    },
-    {
-     "label": "LOAR",
-     "x": 35.9,
-     "y": 39.3,
-     "size": 6704
-    },
-    {
-     "label": "MTU",
-     "x": 16.4,
-     "y": 13.2,
-     "size": 20674
-    }
-   ]
+  "theme": "naturalforest",
+  "charts": [
+    {"id":"c_rev","kind":"columnLine","mini":true,"h":"h-sm","caption":"Revenue & YoY growth","source":"Company model / financials",
+     "labels":["FY22","FY23","FY24","FY25","LTM 1Q26"],"bars":[4150,4563,5237,6063,6254],"line":[null,9.9,14.8,15.8,null],"barFmt":"money","lineFmt":"pct"},
+    {"id":"c_ebitda","kind":"columnLine","mini":true,"h":"h-sm","caption":"Adjusted EBITDA & margin","source":"Company model / financials",
+     "labels":["FY22","FY23","FY24","FY25","LTM 1Q26"],"bars":[null,561,690,808,813],"line":[null,12.3,13.2,13.3,13.0],"barFmt":"money","lineFmt":"pct"},
+    {"id":"c_fcf","kind":"columnLine","mini":true,"h":"h-sm","caption":"Free cash flow & conversion","source":"Company model / financials",
+     "labels":["FY22","FY23","FY24","FY25","LTM 1Q26"],"bars":[-14,-14,-45,209,139],"line":[null,-2.5,-6.5,25.9,17.1],"barFmt":"money","lineFmt":"pct"},
+    {"id":"c_nd","kind":"columnLine","mini":true,"h":"h-sm","caption":"Net debt & net leverage","source":"Company model / financials",
+     "labels":["FY23","FY24","FY25","LTM 1Q26"],"bars":[3141,2129,1925,2121],"line":[5.6,3.1,2.4,2.6],"barFmt":"money","lineFmt":"x1"},
+    {"id":"segdonut","kind":"nestedDonut","h":"h-donut","caption":"Segment mix — revenue (outer) vs Segment Adj. EBITDA (inner), LTM 1Q26","source":"FY2025 + Q1 2026 + Q1 2025 earnings releases",
+     "cats":["Engine Services","CRS"],"outer":[88.5,11.5],"inner":[77.4,22.6],"outerLabel":"Revenue share","innerLabel":"Adj. EBITDA share",
+     "center":"LTM 1Q26","centerLines":["Rev $6,254M","Adj. EBITDA $813M"],"insight":"CRS is 11.5% of revenue but 22.6% of segment EBITDA — i.e. above-portfolio margins; Engine Services is 88.5% of revenue and 77.4% of segment EBITDA."},
+    {"id":"geo","kind":"dualDonut","h":"h-donut","caption":"Geographic revenue mix — FY2023 vs FY2025 (location of customer)","source":"FY2025 10-K",
+     "cats":["United States","Canada","Rest of Europe","Asia","United Kingdom","Rest of world"],
+     "donuts":[{"data":[62.7,8.2,7.9,4.6,9.9,6.7],"center":"$4,563M","yr":"FY2023"},{"data":[55.9,12.5,9.0,8.4,7.4,6.9],"center":"$6,063M","yr":"FY2025"}]},
+    {"id":"valbubble","kind":"bubble","h":"h-tall","caption":"Valuation map — EV/LTM EBITDA vs EBITDA margin (bubble = market cap)","source":"Comps (AV→Yahoo); subject = step-4 model LTM",
+     "xTitle":"EBITDA margin %","yTitle":"EV/LTM EBITDA (x)","xfmt":"pct","yfmt":"x1",
+     "points":[{"label":"SARO","x":13.0,"y":13.6,"size":8927,"hl":true},{"label":"MTX.DE","x":16.4,"y":13.2,"size":20674},{"label":"FTAI","x":36.0,"y":29.4,"size":26886},{"label":"HEI","x":28.0,"y":35.7,"size":46670},{"label":"AIR","x":10.9,"y":18.0,"size":5259},{"label":"VSEC","x":15.2,"y":28.7,"size":5995},{"label":"LOAR","x":35.9,"y":39.3,"size":6704}]},
+    {"id":"endmkt","kind":"singleColumn","h":"h-mid","caption":"FY2025 revenue growth by end market","source":"Company (FY2025)",
+     "labels":["Commercial","Business aviation","Military & helicopter"],"data":[17.6,12.1,9.4],"fmt":"pct"},
+    {"id":"evebitda","kind":"hbar","h":"h-mid","caption":"EV/LTM EBITDA — peer set (SARO highlighted)","source":"Comps (AV→Yahoo)",
+     "items":[{"label":"SARO","v":13.6,"hl":true},{"label":"MTX.DE","v":13.2},{"label":"FTAI","v":29.4},{"label":"HEI","v":35.7},{"label":"AIR","v":18.0},{"label":"VSEC","v":28.7},{"label":"LOAR","v":39.3}],"fmt":"x1"},
+    {"id":"mromkt","kind":"singleColumn","h":"h-mid","caption":"Aviation MRO market context — market size ($bn)","source":"Oliver Wyman; Mordor / Fortune Business Insights",
+     "labels":["Commercial MRO 2025","Commercial MRO 2035E","Engine MRO 2025"],"data":[119,156,44],"fmt":"num"}
+  ],
+  "segments": [
+    {"name":"Engine Services","revPct":88.5,"ebitdaPct":77.4,"margin":12.9,
+     "desc":"Full-engine MRO — the scale segment: scheduled & unscheduled overhaul of fixed- and rotary-wing engines for commercial, business-aviation, military and helicopter operators. Growth led by commercial aerospace and the LEAP-1A/1B, CFM56 'DFW' and CF34 ramps — margin-dilutive down the learning curve, holding segment margin ~13%.",
+     "years":["FY23","FY24","FY25","LTM"],"rev":[4050,4645,5354,5533],"ebitda":[519,611,707,712],"mgn":[12.8,13.2,13.2,12.9],"yoy":[null,14.7,15.3,null]},
+    {"name":"Component Repair (CRS)","revPct":11.5,"ebitdaPct":22.6,"margin":28.8,
+     "desc":"Specialised repair of high-value engine components (incl. hot-section parts) for commercial, military, land & marine and oil & gas — smaller, structurally higher-margin, faster-growing, and the stated strategic priority. FY2025 revenue +19.6% with margin +250bp to 28.6%.",
+     "years":["FY23","FY24","FY25","LTM"],"rev":[513,592,709,721],"ebitda":[125,155,203,208],"mgn":[24.4,26.1,28.6,28.8],"yoy":[null,15.4,19.6,null]}
+  ],
+  "fin": [
+    ["sec","Summary P&L",[]],
+    ["key","Revenue",["4,150","4,563","5,237","6,063","6,254"]],
+    ["pct","% YoY growth",["–","9.9%","14.8%","15.8%","–"]],
+    ["","Gross profit",["546","635","754","897","919"]],
+    ["pct","% gross margin",["13.1%","13.9%","14.4%","14.8%","14.7%"]],
+    ["","EBITDA (GAAP)",["458","534","590","745","757"]],
+    ["yel","Adjusted EBITDA",["–","561","690","808","813"]],
+    ["pct","% Adj. EBITDA margin",["–","12.3%","13.2%","13.3%","13.0%"]],
+    ["key","Net income",["(21)","(35)","11","277","294"]],
+    ["sec","Summary Cash Flow",[]],
+    ["","Cash flow from operations",["27","68","76","317","221"]],
+    ["ind","Less: capital expenditures",["(41)","(55)","(103)","(82)","(73)"]],
+    ["ind","Less: purchases of intangibles",["(3)","(30)","(20)","(30)","(15)"]],
+    ["ind","Plus: asset disposal proceeds",["3","4","2","5","6"]],
+    ["yel","Free cash flow (company def.)",["(14)","(14)","(45)","209","139"]],
+    ["pct","FCF conversion (FCF / Adj. EBITDA)",["–","(2.5%)","(6.5%)","25.9%","17.1%"]],
+    ["sec","Summary Balance Sheet",[]],
+    ["","Cash & equivalents",["–","58","103","290","89"]],
+    ["","Total debt",["–","3,199","2,231","2,215","2,210"]],
+    ["key","Net debt",["–","3,141","2,129","1,925","2,121"]],
+    ["sec","Key Metrics — leverage, coverage & efficiency",[]],
+    ["key","Net debt / LTM Adj. EBITDA",["–","5.6x","3.1x","2.4x","2.6x"]],
+    ["","Interest coverage (Adj. EBITDA / interest)",["–","1.8x","2.4x","4.6x","4.8x"]],
+    ["","Fixed-charge cover",["–","1.6x","2.1x","4.2x","4.4x"]],
+    ["","Cash conversion cycle (days)",["–","63d","57d","50d","48d"]]
+  ],
+  "comps": {
+    "core": ["MTX.DE","FTAI","AIR"],
+    "saro": {"name":"StandardAero","tk":"SARO","price":26.85,"mktcap":8927,"netDebt":2121,"rev":6254,"ebitda":813,"ntmPE":15.6,"fcf":139,"divYld":0.0},
+    "rows": [
+      {"name":"MTU Aero Engines","tk":"MTX.DE","price":384.04,"mktcap":20674,"netDebt":1263,"rev":10099,"ebitda":1658,"ntmPE":16.6,"fcf":null,"divYld":1.1},
+      {"name":"FTAI Aviation","tk":"FTAI","price":262.09,"mktcap":26886,"netDebt":3084,"rev":2836,"ebitda":1021,"ntmPE":22.7,"fcf":-320,"divYld":0.6},
+      {"name":"HEICO","tk":"HEI","price":334.17,"mktcap":46670,"netDebt":2377,"rev":4911,"ebitda":1374,"ntmPE":48.8,"fcf":708,"divYld":0.1},
+      {"name":"AAR Corp","tk":"AIR","price":132.26,"mktcap":5259,"netDebt":901,"rev":3134,"ebitda":342,"ntmPE":23.4,"fcf":28,"divYld":0.0},
+      {"name":"VSE Corp","tk":"VSEC","price":213.68,"mktcap":5995,"netDebt":-837,"rev":1181,"ebitda":180,"ntmPE":37.3,"fcf":110,"divYld":0.2},
+      {"name":"Loar Holdings","tk":"LOAR","price":71.60,"mktcap":6704,"netDebt":865,"rev":538,"ebitda":193,"ntmPE":45.4,"fcf":74,"divYld":0.0}
+    ]
   }
- ],
- "segments": [
-  {
-   "name": "Engine Services",
-   "revPct": 88.5,
-   "ebitdaPct": 77.4,
-   "margin": 12.9,
-   "marginNote": "LTM 1Q26",
-   "desc": "Full-engine MRO \u2014 the scale segment: scheduled & unscheduled overhaul of fixed- and rotary-wing engines for commercial, business-aviation, military and helicopter operators. Growth led by commercial aerospace and the LEAP-1A/1B, CFM56 'DFW' and CF34 ramps \u2014 margin-dilutive down the learning curve, holding segment margin near 13%.",
-   "years": [
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM"
-   ],
-   "rev": [
-    4049.9,
-    4644.8,
-    5354.0,
-    5532.8
-   ],
-   "ebitda": [
-    519.1,
-    610.9,
-    706.9,
-    711.5
-   ],
-   "mgn": [
-    12.8,
-    13.2,
-    13.2,
-    12.9
-   ],
-   "yoy": [
-    null,
-    14.7,
-    15.3,
-    null
-   ]
-  },
-  {
-   "name": "Component Repair Services (CRS)",
-   "revPct": 11.5,
-   "ebitdaPct": 22.6,
-   "margin": 28.8,
-   "marginNote": "LTM 1Q26",
-   "desc": "Specialised repair of high-value engine components (incl. hot-section parts) for commercial, military, land & marine and oil & gas \u2014 smaller, structurally higher-margin, faster-growing, and the stated strategic priority. FY2025 revenue +19.6% with margin +250bp to 28.6%, aided by the Aero Turbine (ATI) deal, pricing and mix.",
-   "years": [
-    "FY23",
-    "FY24",
-    "FY25",
-    "LTM"
-   ],
-   "rev": [
-    513.4,
-    592.4,
-    708.6,
-    721.0
-   ],
-   "ebitda": [
-    125.3,
-    154.7,
-    202.7,
-    207.7
-   ],
-   "mgn": [
-    24.4,
-    26.1,
-    28.6,
-    28.8
-   ],
-   "yoy": [
-    null,
-    15.4,
-    19.6,
-    null
-   ]
-  }
- ],
- "fin": [
-  [
-   "sec",
-   "Operating KPIs"
-  ],
-  [
-   "pct",
-   "U.S. & Canada % of revenue",
-   [
-    "\u2013",
-    "\u2013",
-    "70.0%",
-    "68.0%",
-    "68.0%"
-   ]
-  ],
-  [
-   "pct",
-   "International % of revenue",
-   [
-    "\u2013",
-    "\u2013",
-    "30.0%",
-    "32.0%",
-    "32.0%"
-   ]
-  ],
-  [
-   "sec",
-   "Summary P&L"
-  ],
-  [
-   "key",
-   "Revenue",
-   [
-    "4,150",
-    "4,563",
-    "5,237",
-    "6,063",
-    "6,254"
-   ]
-  ],
-  [
-   "pct",
-   "% YoY growth",
-   [
-    "\u2013",
-    "9.9%",
-    "14.8%",
-    "15.8%",
-    "\u2013"
-   ]
-  ],
-  [
-   "row",
-   "Gross profit",
-   [
-    "546",
-    "635",
-    "754",
-    "897",
-    "919"
-   ]
-  ],
-  [
-   "pct",
-   "% gross margin",
-   [
-    "13.1%",
-    "13.9%",
-    "14.4%",
-    "14.8%",
-    "14.7%"
-   ]
-  ],
-  [
-   "row blkbot",
-   "EBITDA (GAAP)",
-   [
-    "458",
-    "534",
-    "590",
-    "745",
-    "757"
-   ]
-  ],
-  [
-   "key mtb yel",
-   "Adjusted EBITDA",
-   [
-    "\u2013",
-    "561",
-    "690",
-    "808",
-    "813"
-   ]
-  ],
-  [
-   "pct",
-   "% YoY growth \u2014 Adj. EBITDA",
-   [
-    "\u2013",
-    "\u2013",
-    "23.1%",
-    "17.0%",
-    "\u2013"
-   ]
-  ],
-  [
-   "pct",
-   "% Adj. EBITDA margin",
-   [
-    "\u2013",
-    "12.3%",
-    "13.2%",
-    "13.3%",
-    "13.0%"
-   ]
-  ],
-  [
-   "row",
-   "Net income",
-   [
-    "(21)",
-    "(35)",
-    "11",
-    "277",
-    "294"
-   ]
-  ],
-  [
-   "sec",
-   "Summary Cash Flow"
-  ],
-  [
-   "key",
-   "Cash flow from operations",
-   [
-    "27",
-    "68",
-    "76",
-    "317",
-    "221"
-   ]
-  ],
-  [
-   "in1",
-   "Less: capital expenditures (PP&E)",
-   [
-    "(41)",
-    "(55)",
-    "(103)",
-    "(82)",
-    "(73)"
-   ]
-  ],
-  [
-   "in1",
-   "Less: purchases of intangibles",
-   [
-    "(3)",
-    "(30)",
-    "(20)",
-    "(30)",
-    "(15)"
-   ]
-  ],
-  [
-   "in1 blkbot",
-   "Plus: asset disposal proceeds",
-   [
-    "3",
-    "4",
-    "2",
-    "5",
-    "6"
-   ]
-  ],
-  [
-   "key blkb yel",
-   "Free cash flow (company def.)",
-   [
-    "(14)",
-    "(14)",
-    "(45)",
-    "209",
-    "139"
-   ]
-  ],
-  [
-   "pct",
-   "FCF conversion (FCF / Adj. EBITDA)",
-   [
-    "\u2013",
-    "(2.5%)",
-    "(6.5%)",
-    "25.9%",
-    "17.1%"
-   ]
-  ],
-  [
-   "in1",
-   "Acquisitions, net",
-   [
-    "(20)",
-    "(31)",
-    "(114)",
-    "1",
-    "4"
-   ]
-  ],
-  [
-   "in1",
-   "Change in debt, net",
-   [
-    "(24)",
-    "(9)",
-    "(989)",
-    "(23)",
-    "(133)"
-   ]
-  ],
-  [
-   "in1",
-   "Change in equity (IPO)",
-   [
-    "\u2013",
-    "\u2013",
-    "1,203",
-    "\u2013",
-    "\u2013"
-   ]
-  ],
-  [
-   "in1",
-   "Other, net (incl. FX, other inv/fin)",
-   [
-    "(5)",
-    "(8)",
-    "(11)",
-    "0",
-    "(61)"
-   ]
-  ],
-  [
-   "key shade blkb",
-   "Net change in cash",
-   [
-    "(63)",
-    "(62)",
-    "45",
-    "187",
-    "(52)"
-   ]
-  ],
-  [
-   "sub",
-   "\u0394 working capital"
-  ],
-  [
-   "ind",
-   "Accounts receivable",
-   [
-    "(102)",
-    "19",
-    "(58)",
-    "(74)",
-    "(147)"
-   ]
-  ],
-  [
-   "ind",
-   "Contract assets",
-   [
-    "(80)",
-    "(130)",
-    "(92)",
-    "(157)",
-    "(276)"
-   ]
-  ],
-  [
-   "ind",
-   "Inventories",
-   [
-    "(53)",
-    "(91)",
-    "(138)",
-    "19",
-    "113"
-   ]
-  ],
-  [
-   "ind",
-   "Payables, accrued & other",
-   [
-    "95",
-    "(26)",
-    "104",
-    "41",
-    "58"
-   ]
-  ],
-  [
-   "ind key",
-   "Total change in working capital",
-   [
-    "(144)",
-    "(99)",
-    "(144)",
-    "(162)",
-    "(277)"
-   ]
-  ],
-  [
-   "sec",
-   "Summary Balance Sheet"
-  ],
-  [
-   "row",
-   "Cash & equivalents",
-   [
-    "\u2013",
-    "58",
-    "103",
-    "290",
-    "89"
-   ]
-  ],
-  [
-   "row",
-   "Accounts receivable",
-   [
-    "\u2013",
-    "518",
-    "581",
-    "654",
-    "880"
-   ]
-  ],
-  [
-   "row",
-   "Inventories",
-   [
-    "\u2013",
-    "699",
-    "847",
-    "828",
-    "763"
-   ]
-  ],
-  [
-   "row",
-   "Accounts payable",
-   [
-    "\u2013",
-    "469",
-    "646",
-    "680",
-    "809"
-   ]
-  ],
-  [
-   "row",
-   "Total debt",
-   [
-    "\u2013",
-    "3,199",
-    "2,231",
-    "2,215",
-    "2,210"
-   ]
-  ],
-  [
-   "key",
-   "Net debt",
-   [
-    "\u2013",
-    "3,141",
-    "2,129",
-    "1,925",
-    "2,121"
-   ]
-  ],
-  [
-   "sec",
-   "Key Metrics \u2014 leverage, coverage & returns"
-  ],
-  [
-   "row",
-   "Net debt / LTM Adj. EBITDA",
-   [
-    "\u2013",
-    "5.6x",
-    "3.1x",
-    "2.4x",
-    "2.6x"
-   ]
-  ],
-  [
-   "row",
-   "Interest coverage (Adj. EBITDA / interest)",
-   [
-    "\u2013",
-    "1.8x",
-    "2.4x",
-    "4.6x",
-    "4.8x"
-   ]
-  ],
-  [
-   "row",
-   "Fixed-charge cover ((Adj. EBITDA \u2212 capex)/int)",
-   [
-    "\u2013",
-    "1.6x",
-    "2.1x",
-    "4.2x",
-    "4.4x"
-   ]
-  ],
-  [
-   "sec",
-   "Key Metrics \u2014 working capital & efficiency"
-  ],
-  [
-   "row",
-   "DSO \u2014 days sales outstanding",
-   [
-    "\u2013",
-    "41d",
-    "40d",
-    "39d",
-    "51d"
-   ]
-  ],
-  [
-   "row",
-   "DIO \u2014 days inventory outstanding",
-   [
-    "\u2013",
-    "65d",
-    "69d",
-    "58d",
-    "52d"
-   ]
-  ],
-  [
-   "row",
-   "DPO \u2014 days payable outstanding",
-   [
-    "\u2013",
-    "44d",
-    "53d",
-    "48d",
-    "55d"
-   ]
-  ],
-  [
-   "row",
-   "Cash conversion cycle (DSO+DIO\u2212DPO)",
-   [
-    "\u2013",
-    "63d",
-    "57d",
-    "50d",
-    "48d"
-   ]
-  ]
- ],
- "comps": {
-  "core": [
-   "FTAI",
-   "AIR",
-   "MTX.DE"
-  ],
-  "saro": {
-   "name": "StandardAero",
-   "tk": "SARO",
-   "price": 26.85,
-   "mktcap": 8927,
-   "netDebt": 2121,
-   "rev": 6254,
-   "ebitda": 813,
-   "ntmPE": 15.6,
-   "fcf": 139,
-   "divYld": 0.0
-  },
-  "rows": [
-   {
-    "name": "FTAI Aviation",
-    "tk": "FTAI",
-    "price": 262.09,
-    "mktcap": 26886,
-    "netDebt": 3084,
-    "rev": 2836,
-    "ebitda": 1021,
-    "ntmPE": 22.7,
-    "fcf": -320,
-    "divYld": 0.6
-   },
-   {
-    "name": "HEICO",
-    "tk": "HEI",
-    "price": 334.17,
-    "mktcap": 46670,
-    "netDebt": 2377,
-    "rev": 4911,
-    "ebitda": 1374,
-    "ntmPE": 48.8,
-    "fcf": 708,
-    "divYld": 0.1
-   },
-   {
-    "name": "AAR Corp",
-    "tk": "AIR",
-    "price": 132.26,
-    "mktcap": 5259,
-    "netDebt": 901,
-    "rev": 3134,
-    "ebitda": 342,
-    "ntmPE": 23.4,
-    "fcf": 28,
-    "divYld": 0.0
-   },
-   {
-    "name": "VSE Corp",
-    "tk": "VSEC",
-    "price": 213.68,
-    "mktcap": 5995,
-    "netDebt": -837,
-    "rev": 1181,
-    "ebitda": 180,
-    "ntmPE": 37.3,
-    "fcf": 110,
-    "divYld": 0.2
-   },
-   {
-    "name": "Loar Holdings",
-    "tk": "LOAR",
-    "price": 71.6,
-    "mktcap": 6704,
-    "netDebt": 865,
-    "rev": 538,
-    "ebitda": 193,
-    "ntmPE": 45.4,
-    "fcf": 74,
-    "divYld": 0.0
-   },
-   {
-    "name": "MTU Aero Engines",
-    "tk": "MTX.DE",
-    "price": 384.04,
-    "mktcap": 20674,
-    "netDebt": 1263,
-    "rev": 10099,
-    "ebitda": 1658,
-    "ntmPE": 16.6,
-    "fcf": null,
-    "divYld": 1.1
-   }
-  ]
- }
-};document.addEventListener('DOMContentLoaded',function(){try{buildReport(REPORT);}catch(e){console.error('buildReport',e);}});</script>
+}
+;document.addEventListener('DOMContentLoaded',function(){try{buildReport(REPORT);}catch(e){console.error('buildReport',e);}});</script>
 </body></html>
